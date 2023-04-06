@@ -24,5 +24,14 @@ namespace Homework.Enigmatry.Shop.Persistence
 
             return services;
         }
+        public static IServiceCollection ConfigureInMemoryVendorPersistenceServices(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.AddSingleton(typeof(InMemoryDbContext));
+            
+            services.AddScoped<IArticleRepository, ArticleRepository>();
+
+            return services;
+        }
     }
+   
 }

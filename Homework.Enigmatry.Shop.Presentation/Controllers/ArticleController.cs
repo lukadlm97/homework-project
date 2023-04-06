@@ -5,22 +5,20 @@ using Homework.Enigmatry.Shop.Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Homework.Enigmatry.Shop.API.Controllers
+namespace Homework.Enigmatry.Shop.Presentation.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
     public class ArticleController : ControllerBase
     {
         private readonly IMediator _mediator;
         public ArticleController(IMediator mediator)
         {
-            _mediator=mediator;
+            _mediator = mediator;
         }
         // GET: api/<LeaveAllocationsController>
         [HttpGet("{id}")]
         public async Task<ActionResult<ArticleDto>> Get(int id)
         {
-            var articleOperationResult = await _mediator.Send(new ArticleDetailsRequest(){Id = id});
+            var articleOperationResult = await _mediator.Send(new ArticleDetailsRequest() { Id = id });
 
             return articleOperationResult.Status switch
             {

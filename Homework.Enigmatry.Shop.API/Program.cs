@@ -1,27 +1,35 @@
-using Homework.Enigmatry.Shop.API.Middlewares;
+using Homework.Enigmatry.Shop.API.Extensions;
 using Homework.Enigmatry.Shop.Application;
 using Homework.Enigmatry.Shop.Application.Models;
+using Homework.Enigmatry.Shop.Infrastructure;
 using Homework.Enigmatry.Shop.Persistence;
-using Microsoft.OpenApi.Models;
+using Homework.Enigmatry.Shop.Presentation.Middlewares;
+using Homework.Enigmatry.Shop.Presentation.Swagger;
 
 var builder = WebApplication.CreateBuilder(args);
+
+
 builder.Services.AddOptions<PersistenceSettings>()
     .BindConfiguration(nameof(PersistenceSettings))
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
+builder.Services.AddOptions<VendorSettings>()
+    .BindConfiguration(nameof(VendorSettings))
     .ValidateDataAnnotations()
     .ValidateOnStart();
 
 builder.Services.ConfigureInMemoryPersistenceServices(builder.Configuration);
 builder.Services.ConfigureApplicationServices();
+builder.Services.ConfigureVendorsHttpClient(builder.Configuration);
+builder.Services.ConfigureInfrastructureServices();
 
 
 builder.Services.AddHttpContextAccessor();
-
-
-// Add services to the container.
-AddSwaggerDoc(builder.Services);
 builder.Services.AddControllers();
 
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Add services to the container.
+builder.Services.ConfigureSwaggerServices(builder.Configuration);
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
@@ -38,14 +46,16 @@ var app = builder.Build();
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
-  
     app.UseDeveloperExceptionPage();
 }
 
 app.UseMiddleware<ExceptionMiddleware>();
 app.UseAuthentication();
+
 app.UseSwagger();
-app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Homework.Enigmatry.Shop.API v1"));
+app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", 
+    $"{builder.Configuration.GetSection("ApplicationSettings:Title").Value} {builder.Configuration.GetSection("ApplicationSettings:Version").Value}"));
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
@@ -61,48 +71,4 @@ app.Run();
 
 
 
-
-void AddSwaggerDoc(IServiceCollection services)
-{
-    services.AddSwaggerGen(c =>
-    {
-        c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
-        {
-            Description = @"JWT Authorization header using the Bearer scheme. 
-                      Enter 'Bearer' [space] and then your token in the text input below.
-                      Example: 'Bearer 12345abcdef'",
-            Name = "Authorization",
-            In = ParameterLocation.Header,
-            Type = SecuritySchemeType.ApiKey,
-            Scheme = "Bearer"
-        });
-
-        c.AddSecurityRequirement(new OpenApiSecurityRequirement()
-        {
-            {
-                new OpenApiSecurityScheme
-                {
-                    Reference = new OpenApiReference
-                    {
-                        Type = ReferenceType.SecurityScheme,
-                        Id = "Bearer"
-                    },
-                    Scheme = "oauth2",
-                    Name = "Bearer",
-                    In = ParameterLocation.Header,
-
-                },
-                new List<string>()
-            }
-        });
-
-        c.SwaggerDoc("v1", new OpenApiInfo
-        {
-            Version = "v1",
-            Title = "Homework Enigmatry Shop API",
-
-        });
-
-    });
-}
 

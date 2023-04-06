@@ -1,9 +1,10 @@
-﻿using System.Net;
-using System.Text.Json;
-using Homework.Enigmatry.Shop.Application.DTOs.Error;
+﻿using Homework.Enigmatry.Shop.Application.DTOs.Error;
 using Homework.Enigmatry.Shop.Application.Exceptions;
+using Microsoft.AspNetCore.Http;
+using System.Net;
+using System.Text.Json;
 
-namespace Homework.Enigmatry.Shop.API.Middlewares
+namespace Homework.Enigmatry.Shop.Presentation.Middlewares
 {
     public class ExceptionMiddleware
     {

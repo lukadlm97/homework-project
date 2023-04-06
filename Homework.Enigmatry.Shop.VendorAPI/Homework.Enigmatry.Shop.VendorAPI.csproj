@@ -8,11 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Shop.Persistence.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Shop.Presentation\Homework.Enigmatry.Shop.Presentation.csproj" />
   </ItemGroup>
 
 </Project>

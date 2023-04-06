@@ -1,4 +1,5 @@
 ﻿
+using System.Runtime.Caching;
 using Microsoft.Extensions.DependencyInjection;
 using MediatR;
 
@@ -10,6 +11,7 @@ namespace Homework.Enigmatry.Shop.Application
         {
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
             services.AddMediatR(AppDomain.CurrentDomain.GetAssemblies());
+            services.AddSingleton<MemoryCache>();
 
             return services;
         }

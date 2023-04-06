@@ -15,21 +15,23 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{C07325CA-5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{F6A8151B-790C-4F65-A831-3585FEBE1537}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.API", "Homework.Enigmatry.Shop.API\Homework.Enigmatry.Shop.API.csproj", "{A6647908-2752-4233-AB9E-8B290558F75E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.API", "Homework.Enigmatry.Shop.API\Homework.Enigmatry.Shop.API.csproj", "{A6647908-2752-4233-AB9E-8B290558F75E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.VendorAPI", "Homework.Enigmatry.Shop.VendorAPI\Homework.Enigmatry.Shop.VendorAPI.csproj", "{8DC6C567-987C-4E36-900F-7AC854F94689}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.VendorAPI", "Homework.Enigmatry.Shop.VendorAPI\Homework.Enigmatry.Shop.VendorAPI.csproj", "{8DC6C567-987C-4E36-900F-7AC854F94689}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.VendorGrpcAPI", "Homework.Enigmatry.Shop.VendorGrpcAPI\Homework.Enigmatry.Shop.VendorGrpcAPI.csproj", "{EE983B4D-4309-4B9C-A3A9-D8126186EA14}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.VendorGrpcAPI", "Homework.Enigmatry.Shop.VendorGrpcAPI\Homework.Enigmatry.Shop.VendorGrpcAPI.csproj", "{EE983B4D-4309-4B9C-A3A9-D8126186EA14}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Domain", "Homework.Enigmatry.Shop.Domain\Homework.Enigmatry.Shop.Domain.csproj", "{EACDDF51-B023-4BD3-BF85-8F5F56959E28}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Domain", "Homework.Enigmatry.Shop.Domain\Homework.Enigmatry.Shop.Domain.csproj", "{EACDDF51-B023-4BD3-BF85-8F5F56959E28}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Application", "Homework.Enigmatry.Shop.Application\Homework.Enigmatry.Shop.Application.csproj", "{8579A079-7309-43BB-91AF-F84C789BE8D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Application", "Homework.Enigmatry.Shop.Application\Homework.Enigmatry.Shop.Application.csproj", "{8579A079-7309-43BB-91AF-F84C789BE8D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Infrastructure", "Homework.Enigmatry.Shop.Infrastructure\Homework.Enigmatry.Shop.Infrastructure.csproj", "{2DFD62F3-F79E-44B3-8798-C2632E8361B2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Infrastructure", "Homework.Enigmatry.Shop.Infrastructure\Homework.Enigmatry.Shop.Infrastructure.csproj", "{2DFD62F3-F79E-44B3-8798-C2632E8361B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Persistence", "Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Shop.Persistence.csproj", "{38FBEC7E-FFA5-44E7-83E6-B7CE35658714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Persistence", "Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Shop.Persistence.csproj", "{38FBEC7E-FFA5-44E7-83E6-B7CE35658714}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Application.UnitTests", "Homework.Enigmatry.Shop.Application.UnitTests\Homework.Enigmatry.Shop.Application.UnitTests.csproj", "{1616AEC2-1622-4F2D-BA82-495DF64883C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Application.UnitTests", "Homework.Enigmatry.Shop.Application.UnitTests\Homework.Enigmatry.Shop.Application.UnitTests.csproj", "{1616AEC2-1622-4F2D-BA82-495DF64883C8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Presentation", "Homework.Enigmatry.Shop.Presentation\Homework.Enigmatry.Shop.Presentation.csproj", "{C4AA2923-205F-497C-9263-D9D40A97CD3B}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{1616AEC2-1622-4F2D-BA82-495DF64883C8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1616AEC2-1622-4F2D-BA82-495DF64883C8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1616AEC2-1622-4F2D-BA82-495DF64883C8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4AA2923-205F-497C-9263-D9D40A97CD3B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4AA2923-205F-497C-9263-D9D40A97CD3B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4AA2923-205F-497C-9263-D9D40A97CD3B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4AA2923-205F-497C-9263-D9D40A97CD3B}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -85,6 +91,7 @@ Global
 		{2DFD62F3-F79E-44B3-8798-C2632E8361B2} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 		{38FBEC7E-FFA5-44E7-83E6-B7CE35658714} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 		{1616AEC2-1622-4F2D-BA82-495DF64883C8} = {C89D19CA-D005-4DAB-B37C-983B11207CAC}
+		{C4AA2923-205F-497C-9263-D9D40A97CD3B} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {401ECF21-7003-434E-9D9A-A8C1BFFD16F5}
