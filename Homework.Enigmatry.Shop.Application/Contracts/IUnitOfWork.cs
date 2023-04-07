@@ -1,4 +1,6 @@
 ﻿
+using Homework.Enigmatry.Application.Shared.Contracts;
+
 namespace Homework.Enigmatry.Shop.Application.Contracts
 {
     public interface IUnitOfWork : IDisposable

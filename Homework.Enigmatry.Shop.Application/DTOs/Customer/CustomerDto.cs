@@ -1,4 +1,4 @@
-﻿using Homework.Enigmatry.Shop.Application.DTOs.Common;
+﻿using Homework.Enigmatry.Application.Shared.DTOs.Common;
 
 namespace Homework.Enigmatry.Shop.Application.DTOs.Customer
 {

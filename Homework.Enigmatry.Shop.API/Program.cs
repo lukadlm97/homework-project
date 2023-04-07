@@ -1,3 +1,4 @@
+using Homework.Enigmatry.Application.Shared.Models;
 using Homework.Enigmatry.Shop.API.Extensions;
 using Homework.Enigmatry.Shop.Application;
 using Homework.Enigmatry.Shop.Application.Models;

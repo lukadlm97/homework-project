@@ -1,8 +1,8 @@
 using Homework.Enigmatry.Shop.Application;
-using Homework.Enigmatry.Shop.Application.Models;
 using Homework.Enigmatry.Shop.Persistence;
 using Homework.Enigmatry.Shop.Presentation.Middlewares;
 using Homework.Enigmatry.Shop.Presentation.Swagger;
+using Homework.Enigmatry.Vendor.Application;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,7 +14,7 @@ builder.Services.AddOptions<PersistenceSettings>()
     .ValidateOnStart();*/
 
 builder.Services.ConfigureInMemoryVendorPersistenceServices(builder.Configuration);
-builder.Services.ConfigureApplicationServices();
+builder.Services.ConfigureVendorApplicationServices();
 
 
 builder.Services.AddHttpContextAccessor();
@@ -24,7 +24,7 @@ builder.Services.AddHttpContextAccessor();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddControllers()
-    .AddApplicationPart(typeof(Homework.Enigmatry.Shop.Presentation.AssemblyReference).Assembly);
+    .AddApplicationPart(typeof(Homework.Enigmatry.Shop.Vendor.Presentation.AssemblyReference).Assembly);
 
 
 builder.Services.ConfigureSwaggerServices(builder.Configuration);

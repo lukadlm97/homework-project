@@ -1,5 +1,5 @@
-﻿using Homework.Enigmatry.Shop.Application.Contracts;
-using Homework.Enigmatry.Shop.Application.Models;
+﻿using Homework.Enigmatry.Application.Shared.Contracts;
+using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Persistence.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;

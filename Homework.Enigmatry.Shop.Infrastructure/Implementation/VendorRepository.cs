@@ -1,15 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http;
-using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
+﻿using System.Text.Json;
+using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Shop.Application.Contracts;
-using Homework.Enigmatry.Shop.Application.DTOs.Article;
-using Homework.Enigmatry.Shop.Application.Models;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 
 namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
 {
