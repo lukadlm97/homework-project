@@ -1,4 +1,5 @@
-﻿using Homework.Enigmatry.Shop.Application.Contracts;
+﻿using Homework.Enigmatry.Application.Shared.Contracts;
+using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Domain.Entities;
 using Microsoft.AspNetCore.Http;
 

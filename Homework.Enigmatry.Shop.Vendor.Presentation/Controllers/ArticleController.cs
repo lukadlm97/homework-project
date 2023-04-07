@@ -1,11 +1,11 @@
 ﻿using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Application.Shared.Exceptions;
-using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
+using Homework.Enigmatry.Application.Shared.Features.Articles.Requests.Queries;
 using Homework.Enigmatry.Shop.Domain.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
-namespace Homework.Enigmatry.Shop.Presentation.Controllers
+namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
 {
     public class ArticleController : ControllerBase
     {
@@ -14,11 +14,11 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
         {
             _mediator = mediator;
         }
-        // GET: api/<LeaveAllocationsController>
+        // GET:
         [HttpGet("{id}")]
         public async Task<ActionResult<ArticleDto>> Get(int id)
         {
-            var articleOperationResult = await _mediator.Send(new GetArticleOfferByIdRequest() { Id = id });
+            var articleOperationResult = await _mediator.Send(new GetArticleByIdRequest() { Id = id });
 
             return articleOperationResult.Status switch
             {
@@ -28,6 +28,12 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
                 _ => throw new UnclearOperationsResultException("")
             };
         }
+        [HttpGet("{id}/exist")]
+        public async Task<ActionResult<ArticleDto>> Exist(int id)
+        {
+            var isArticleExist = await _mediator.Send(new IsArticleExistRequest() { Id = id });
 
+            return isArticleExist ? Ok() : NotFound();
+        }
     }
 }

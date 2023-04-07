@@ -1,4 +1,4 @@
-﻿namespace Homework.Enigmatry.Shop.Application.Models
+﻿namespace Homework.Enigmatry.Application.Shared.Models
 {
     public class ApplicationSettings
     {

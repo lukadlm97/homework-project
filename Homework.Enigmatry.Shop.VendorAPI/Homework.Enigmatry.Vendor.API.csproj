@@ -12,7 +12,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Shop.Persistence.csproj" />
-    <ProjectReference Include="..\Homework.Enigmatry.Shop.Presentation\Homework.Enigmatry.Shop.Presentation.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Shop.Vendor.Presentation\Homework.Enigmatry.Vendor.Presentation.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj" />
   </ItemGroup>
 
 </Project>

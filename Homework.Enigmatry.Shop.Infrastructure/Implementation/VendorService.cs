@@ -1,5 +1,5 @@
-﻿using Homework.Enigmatry.Shop.Application.Contracts;
-using Homework.Enigmatry.Shop.Application.DTOs.Article;
+﻿using Homework.Enigmatry.Application.Shared.DTOs.Article;
+using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Models;
 using Microsoft.Extensions.Options;
 

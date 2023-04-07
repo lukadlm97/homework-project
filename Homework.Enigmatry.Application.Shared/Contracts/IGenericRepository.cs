@@ -1,5 +1,5 @@
 ﻿
-namespace Homework.Enigmatry.Shop.Application.Contracts
+namespace Homework.Enigmatry.Application.Shared.Contracts
 {
     public interface IGenericRepository<T> where T : class
     {

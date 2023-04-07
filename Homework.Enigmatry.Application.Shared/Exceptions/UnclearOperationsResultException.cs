@@ -1,6 +1,6 @@
 ﻿
 
-namespace Homework.Enigmatry.Shop.Application.Exceptions
+namespace Homework.Enigmatry.Application.Shared.Exceptions
 {
     public class UnclearOperationsResultException : Exception
     {
