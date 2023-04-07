@@ -11,9 +11,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Shop.Persistence.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Persistence.Shared.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Vendor.Presentation\Homework.Enigmatry.Vendor.Presentation.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Vendor.Infrastructure\Homework.Enigmatry.Vendor.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

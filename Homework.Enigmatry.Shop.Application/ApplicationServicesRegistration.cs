@@ -7,7 +7,7 @@ namespace Homework.Enigmatry.Shop.Application
 {
     public static class ApplicationServicesRegistration
     {
-        public static IServiceCollection ConfigureApplicationServices(this IServiceCollection services)
+        public static IServiceCollection ConfigureShopApplicationServices(this IServiceCollection services)
         {
             services.ConfigureBaseApplicationServices();
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());

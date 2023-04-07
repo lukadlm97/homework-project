@@ -13,5 +13,9 @@
 	<ItemGroup>
 	  <ProjectReference Include="..\Homework.Enigmatry.Application.Shared\Homework.Enigmatry.Application.Shared.csproj" />
 	</ItemGroup>
+	<ItemGroup>
+	  <Folder Include="Features\Handlers\Commands\" />
+	  <Folder Include="Features\Requests\Commands\" />
+	</ItemGroup>
 
 </Project>

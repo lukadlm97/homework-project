@@ -2,6 +2,7 @@
 using Homework.Enigmatry.Application.Shared.Exceptions;
 using Homework.Enigmatry.Application.Shared.Features.Articles.Requests.Queries;
 using Homework.Enigmatry.Shop.Domain.Enums;
+using Homework.Enigmatry.Vendor.Application.Features.Requests.Queries;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 
@@ -31,7 +32,7 @@ namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
         [HttpGet("{id}/exist")]
         public async Task<ActionResult<ArticleDto>> Exist(int id)
         {
-            var isArticleExist = await _mediator.Send(new IsArticleExistRequest() { Id = id });
+            var isArticleExist = await _mediator.Send(new IsVendorArticleExistRequest() { Id = id });
 
             return isArticleExist ? Ok() : NotFound();
         }

@@ -19,7 +19,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
         {
             List<ArticleDto> articles = new List<ArticleDto>();
 
-            ArticleDto article =
+            ArticleDto? article =
                 await _vendorRepository.Get(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken);
             if (article != null)
             {

@@ -27,19 +27,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.App
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Infrastructure", "Homework.Enigmatry.Shop.Infrastructure\Homework.Enigmatry.Shop.Infrastructure.csproj", "{2DFD62F3-F79E-44B3-8798-C2632E8361B2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Persistence", "Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Shop.Persistence.csproj", "{38FBEC7E-FFA5-44E7-83E6-B7CE35658714}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Persistence.Shared", "Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Persistence.Shared.csproj", "{38FBEC7E-FFA5-44E7-83E6-B7CE35658714}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Application.UnitTests", "Homework.Enigmatry.Shop.Application.UnitTests\Homework.Enigmatry.Shop.Application.UnitTests.csproj", "{1616AEC2-1622-4F2D-BA82-495DF64883C8}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Presentation", "Homework.Enigmatry.Shop.Presentation\Homework.Enigmatry.Shop.Presentation.csproj", "{C4AA2923-205F-497C-9263-D9D40A97CD3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Vendor.Presentation", "Homework.Enigmatry.Shop.Vendor.Presentation\Homework.Enigmatry.Vendor.Presentation.csproj", "{37C56315-3FFE-41C8-B8D1-1D7A6975E963}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Vendor.Presentation", "Homework.Enigmatry.Shop.Vendor.Presentation\Homework.Enigmatry.Vendor.Presentation.csproj", "{37C56315-3FFE-41C8-B8D1-1D7A6975E963}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Presentation.Shared", "Homework.Enigmatry.Shop.Presentation.Shared\Homework.Enigmatry.Presentation.Shared.csproj", "{9B26F52E-2A39-453F-ADD3-1BCF205C60E7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Presentation.Shared", "Homework.Enigmatry.Shop.Presentation.Shared\Homework.Enigmatry.Presentation.Shared.csproj", "{9B26F52E-2A39-453F-ADD3-1BCF205C60E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Vendor.Application", "Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj", "{1B519AAA-C36C-499A-8FF9-1A86D52045D3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Vendor.Application", "Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj", "{1B519AAA-C36C-499A-8FF9-1A86D52045D3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Application.Shared", "Homework.Enigmatry.Application.Shared\Homework.Enigmatry.Application.Shared.csproj", "{8E0EA008-E872-4194-99FE-5B664424FD30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Application.Shared", "Homework.Enigmatry.Application.Shared\Homework.Enigmatry.Application.Shared.csproj", "{8E0EA008-E872-4194-99FE-5B664424FD30}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Vendor.Infrastructure", "Homework.Enigmatry.Vendor.Infrastructure\Homework.Enigmatry.Vendor.Infrastructure.csproj", "{E3754475-2348-4EA0-ABDB-CADC77A26739}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -99,6 +101,10 @@ Global
 		{8E0EA008-E872-4194-99FE-5B664424FD30}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8E0EA008-E872-4194-99FE-5B664424FD30}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8E0EA008-E872-4194-99FE-5B664424FD30}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3754475-2348-4EA0-ABDB-CADC77A26739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3754475-2348-4EA0-ABDB-CADC77A26739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3754475-2348-4EA0-ABDB-CADC77A26739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3754475-2348-4EA0-ABDB-CADC77A26739}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -120,6 +126,7 @@ Global
 		{9B26F52E-2A39-453F-ADD3-1BCF205C60E7} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 		{1B519AAA-C36C-499A-8FF9-1A86D52045D3} = {C07325CA-56BC-4505-8365-79090F27DD29}
 		{8E0EA008-E872-4194-99FE-5B664424FD30} = {C07325CA-56BC-4505-8365-79090F27DD29}
+		{E3754475-2348-4EA0-ABDB-CADC77A26739} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {401ECF21-7003-434E-9D9A-A8C1BFFD16F5}

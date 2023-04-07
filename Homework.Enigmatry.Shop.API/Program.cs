@@ -20,7 +20,7 @@ builder.Services.AddOptions<VendorSettings>()
     .ValidateOnStart();
 
 builder.Services.ConfigureInMemoryPersistenceServices(builder.Configuration);
-builder.Services.ConfigureApplicationServices();
+builder.Services.ConfigureShopApplicationServices();
 builder.Services.ConfigureVendorsHttpClient(builder.Configuration);
 builder.Services.ConfigureInfrastructureServices();
 

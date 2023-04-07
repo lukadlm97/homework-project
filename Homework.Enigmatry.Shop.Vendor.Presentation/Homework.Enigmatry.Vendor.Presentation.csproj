@@ -16,6 +16,7 @@
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Application\Homework.Enigmatry.Shop.Application.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Domain\Homework.Enigmatry.Domain.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Presentation.Shared\Homework.Enigmatry.Presentation.Shared.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj" />
   </ItemGroup>
 
 </Project>

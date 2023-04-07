@@ -1,6 +1,6 @@
 ﻿using Homework.Enigmatry.Shop.Domain.Entities;
 
-namespace Homework.Enigmatry.Shop.Persistence
+namespace Homework.Enigmatry.Persistence.Shared
 {
     public class InMemoryDbContext<T> where T : BaseEntity
     {

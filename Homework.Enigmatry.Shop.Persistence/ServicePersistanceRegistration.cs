@@ -1,10 +1,9 @@
 ﻿using Homework.Enigmatry.Application.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
-using Homework.Enigmatry.Shop.Persistence.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace Homework.Enigmatry.Shop.Persistence
+namespace Homework.Enigmatry.Persistence.Shared
 {
     public static class ServicePersistenceRegistration
     {

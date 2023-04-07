@@ -27,7 +27,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
                     using var contentStream =
                         await httpResponseMessage.Content.ReadAsStreamAsync(cancellationToken);
                     return await JsonSerializer.DeserializeAsync
-                        <ArticleDto>(contentStream);
+                        <ArticleDto>(contentStream,cancellationToken:cancellationToken);
                 }
 
                 return null;

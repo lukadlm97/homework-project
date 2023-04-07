@@ -11,8 +11,8 @@ namespace Homework.Enigmatry.Shop.Domain.Entities
     {
         public string Name { get; set; }
         public decimal Price { get; set; }
-        public bool IsSold { get; set; }
-        public DateTime SoldDate { get; set; }
+        public bool? IsSold { get; set; }
+        public DateTime? SoldDate { get; set; }
 
     }
 }
