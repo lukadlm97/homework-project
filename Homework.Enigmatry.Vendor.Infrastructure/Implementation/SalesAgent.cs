@@ -20,10 +20,8 @@ namespace Homework.Enigmatry.Vendor.Infrastructure.Implementation
                 var article = new Article()
                 {
                     Id = productId,
-                    IsSold = null,
                     Name = "product" + productId,
                     Price = new decimal(new Random(productId*100).NextDouble()),
-                    SoldDate = null
                 };
                 await _articleRepository.Add(article);
                 return true;

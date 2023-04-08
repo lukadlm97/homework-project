@@ -13,8 +13,6 @@
 
   <ItemGroup>
     <Folder Include="Extensions\" />
-    <Folder Include="Features\Articles\Handlers\Commands\" />
-    <Folder Include="Features\Articles\Requests\Commands\" />
   </ItemGroup>
 
   <ItemGroup>

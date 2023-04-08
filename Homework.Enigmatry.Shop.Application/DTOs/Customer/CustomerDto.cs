@@ -2,5 +2,5 @@
 
 namespace Homework.Enigmatry.Shop.Application.DTOs.Customer
 {
-    public record CustomerDto(int Id) : BaseDto(Id);
+    public record CustomerDto(int Id,string Username) : BaseDto(Id);
 }

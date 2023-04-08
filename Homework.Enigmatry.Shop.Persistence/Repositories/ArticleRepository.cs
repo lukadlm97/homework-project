@@ -36,10 +36,11 @@ namespace Homework.Enigmatry.Persistence.Shared
         public async Task Update(Article entity)
         {
             var item = _inMemoryDbContext.Articles.SingleOrDefault(x => x.Id == entity.Id);
-            item.Id=entity.Id;
-            item.IsSold=entity.IsSold;
-            item.Name=entity.Name;
-            item.SoldDate=entity.SoldDate;
+            if (item != null)
+            {
+                item.Id = entity.Id;
+                item.Name = entity.Name;
+            }
         }
 
         public async Task Delete(Article entity)

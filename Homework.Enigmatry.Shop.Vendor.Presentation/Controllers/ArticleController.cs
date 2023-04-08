@@ -17,7 +17,7 @@ namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
         }
         // GET:
         [HttpGet("{id}")]
-        public async Task<ActionResult<ArticleDto>> Get(int id)
+        public async Task<ActionResult<ArticleDetailsDto>> Get(int id)
         {
             var articleOperationResult = await _mediator.Send(new GetArticleByIdRequest() { Id = id });
 
@@ -30,7 +30,7 @@ namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
             };
         }
         [HttpGet("{id}/exist")]
-        public async Task<ActionResult<ArticleDto>> Exist(int id)
+        public async Task<ActionResult<ArticleDetailsDto>> Exist(int id)
         {
             var isArticleExist = await _mediator.Send(new IsVendorArticleExistRequest() { Id = id });
 

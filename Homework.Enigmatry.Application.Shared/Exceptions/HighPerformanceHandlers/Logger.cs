@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Homework.Enigmatry.Application.Shared.Exceptions.HighPerformanceHandlers
 {
-    internal class Logger
+    public class Logger
     {
     }
 }

@@ -4,7 +4,7 @@ using MediatR;
 
 namespace Homework.Enigmatry.Application.Shared.Features.Articles.Requests.Queries
 {
-    public class GetArticleByIdRequest : IRequest<OperationResult<ArticleDto>>
+    public class GetArticleByIdRequest : IRequest<OperationResult<ArticleDetailsDto>>
     {
         public int Id { get; set; }
 

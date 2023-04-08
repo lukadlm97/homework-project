@@ -5,6 +5,7 @@ using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Application.Shared.DTOs.Common;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
+using Homework.Enigmatry.Shop.Domain.Entities;
 using Homework.Enigmatry.Shop.Domain.Enums;
 using MediatR;
 using Microsoft.IdentityModel.Tokens;
@@ -27,27 +28,28 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
         }
         public async Task<OperationResult<ArticleDto>> Handle(GetArticleOfferByIdRequest request, CancellationToken cancellationToken)
         {
-            var key = nameof(ArticleDto) + request.Id;
-            var article = (ArticleDto) _memoryCache.Get(key);
+            var key = nameof(Article) + request.Id;
+            var article = (Article) _memoryCache.Get(key);
             if (article != null)
             {
-                return new OperationResult<ArticleDto>(OperationStatus.Success,article);
+                return new OperationResult<ArticleDto>(OperationStatus.Success,_mapper.Map<ArticleDto>(article));
             }
 
             var inventoryArticle = await _articleRepository.Get(request.Id);
             var articles = await _vendorService.Get(request.Id, cancellationToken);
-            if (inventoryArticle != null)
+            if (inventoryArticle == null)
             {
-                articles.Add(_mapper.Map<ArticleDto>(inventoryArticle));
-            }
-            if (articles.IsNullOrEmpty())
-            {
-                return new OperationResult<ArticleDto>(OperationStatus.NotExist);
+                if (articles.IsNullOrEmpty())
+                {
+                    return new OperationResult<ArticleDto>(OperationStatus.NotExist);
+                }
+                var bestVendorOffer = articles.MinBy(x => x.Price);
+                inventoryArticle = _mapper.Map<Article>(bestVendorOffer);
+                await _articleRepository.Add(inventoryArticle);
             }
 
-            var bestDeal = articles.MinBy(x => x.Id);
-            var articleDto = _mapper.Map<ArticleDto>(bestDeal);
-           //TODO _memoryCache.Set(key,articleDto);
+            //TODO _memoryCache.Set(key,inventoryArticle);
+            var articleDto = _mapper.Map<ArticleDto>(inventoryArticle);
             return new OperationResult<ArticleDto>(OperationStatus.Success,articleDto);
         }
     }

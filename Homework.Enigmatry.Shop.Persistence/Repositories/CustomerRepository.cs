@@ -1,5 +1,4 @@
-﻿
-using Homework.Enigmatry.Shop.Application.Contracts;
+﻿using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Domain.Entities;
 
 namespace Homework.Enigmatry.Persistence.Shared
@@ -22,14 +21,18 @@ namespace Homework.Enigmatry.Persistence.Shared
             throw new NotImplementedException();
         }
 
-        public Task<Customer> Add(Customer entity)
+        public async Task<Customer> Add(Customer entity)
         {
-            throw new NotImplementedException();
+            var nextId = _context.Customers.Count;
+            entity.Id= nextId;
+
+            _context.Customers.Add(entity);
+            return entity;
         }
 
-        public Task<bool> Exists(int id)
+        public async Task<bool> Exists(int id)
         {
-            throw new NotImplementedException();
+            return _context.Customers.Any(x => x.Id == id);
         }
 
         public Task Update(Customer entity)
@@ -40,6 +43,12 @@ namespace Homework.Enigmatry.Persistence.Shared
         public Task Delete(Customer entity)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<Customer?> GetByUsername(string username, CancellationToken cancellationToken = default)
+        {
+            return _context.Customers.FirstOrDefault(x =>
+                string.Compare(x.Username, username,StringComparison.InvariantCulture) == 0);
         }
     }
 }

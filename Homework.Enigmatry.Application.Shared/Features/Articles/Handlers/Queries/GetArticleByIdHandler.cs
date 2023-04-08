@@ -8,7 +8,7 @@ using Homework.Enigmatry.Shop.Domain.Enums;
 
 namespace Homework.Enigmatry.Application.Shared.Features.Articles.Handlers.Queries
 {
-    public class GetArticleByIdHandler : IRequestHandler<GetArticleByIdRequest, OperationResult<ArticleDto>>
+    public class GetArticleByIdHandler : IRequestHandler<GetArticleByIdRequest, OperationResult<ArticleDetailsDto>>
     {
         private readonly IArticleRepository _articleRepository;
         private readonly IMapper _mapper;
@@ -18,15 +18,15 @@ namespace Homework.Enigmatry.Application.Shared.Features.Articles.Handlers.Queri
             _articleRepository = articleRepository;
             _mapper = mapper;
         }
-        public async Task<OperationResult<ArticleDto>> Handle(GetArticleByIdRequest request, CancellationToken cancellationToken)
+        public async Task<OperationResult<ArticleDetailsDto>> Handle(GetArticleByIdRequest request, CancellationToken cancellationToken)
         {
             var inventoryArticle = await _articleRepository.Get(request.Id);
             if (inventoryArticle == null)
             {
-                return new OperationResult<ArticleDto>(OperationStatus.NotFound);
+                return new OperationResult<ArticleDetailsDto>(OperationStatus.NotFound);
             }
 
-            return new OperationResult<ArticleDto>(OperationStatus.Success, _mapper.Map<ArticleDto>(inventoryArticle));
+            return new OperationResult<ArticleDetailsDto>(OperationStatus.Success, _mapper.Map<ArticleDetailsDto>(inventoryArticle));
         }
     }
 }

@@ -5,5 +5,6 @@ namespace Homework.Enigmatry.Shop.Application.Contracts
 {
     public interface ICustomerRepository:IGenericRepository<Customer>
     {
+        Task<Customer?> GetByUsername(string username,CancellationToken cancellationToken=default);
     }
 }

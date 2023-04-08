@@ -6,6 +6,8 @@
         NotFound,
         NotExist,
         InvalidValues,
+        InvalidPassword,
+        CustomerExist
 
     }
 }

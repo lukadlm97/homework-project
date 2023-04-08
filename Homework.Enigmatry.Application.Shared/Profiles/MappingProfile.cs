@@ -10,6 +10,7 @@ namespace Homework.Enigmatry.Application.Shared.Profiles
         {
 
             CreateMap<Article, ArticleDto>().ReverseMap();
+            CreateMap<Article, ArticleDetailsDto>().ReverseMap();
             
         }
     }

@@ -1,9 +1,9 @@
 using Homework.Enigmatry.Application.Shared.Models;
+using Homework.Enigmatry.Persistence.Shared;
 using Homework.Enigmatry.Shop.API.Extensions;
 using Homework.Enigmatry.Shop.Application;
 using Homework.Enigmatry.Shop.Application.Models;
 using Homework.Enigmatry.Shop.Infrastructure;
-using Homework.Enigmatry.Shop.Persistence;
 using Homework.Enigmatry.Shop.Presentation.Middlewares;
 using Homework.Enigmatry.Shop.Presentation.Swagger;
 

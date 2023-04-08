@@ -15,7 +15,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
             _logger = logger;
             _httpClientFactory = clientFactory;
         }
-        public async Task<ArticleDto?> Get(int id, string vendorHttpClientName, CancellationToken cancellationToken = default)
+        public async Task<ArticleDetailsDto?> Get(int id, string vendorHttpClientName, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -27,7 +27,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
                     using var contentStream =
                         await httpResponseMessage.Content.ReadAsStreamAsync(cancellationToken);
                     return await JsonSerializer.DeserializeAsync
-                        <ArticleDto>(contentStream,cancellationToken:cancellationToken);
+                        <ArticleDetailsDto>(contentStream,cancellationToken:cancellationToken);
                 }
 
                 return null;

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Homework.Enigmatry.Application.Shared.DTOs.Article;
+using Homework.Enigmatry.Shop.Domain.Entities;
 
 namespace Homework.Enigmatry.Shop.Application.Profiles
 {
@@ -6,8 +8,8 @@ namespace Homework.Enigmatry.Shop.Application.Profiles
     {
         public MappingProfile()
         {
-            
-            
+            CreateMap<ArticleDetailsDto, Article>();
+
         }
     }
 }

@@ -15,11 +15,11 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
             _vendorRepository = vendorRepository;
             _vendorSettings = options.Value;
         }
-        public async Task<List<ArticleDto>> Get(int id, CancellationToken cancellationToken = default)
+        public async Task<List<ArticleDetailsDto>> Get(int id, CancellationToken cancellationToken = default)
         {
-            List<ArticleDto> articles = new List<ArticleDto>();
+            List<ArticleDetailsDto> articles = new List<ArticleDetailsDto>();
 
-            ArticleDto? article =
+            ArticleDetailsDto? article =
                 await _vendorRepository.Get(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken);
             if (article != null)
             {

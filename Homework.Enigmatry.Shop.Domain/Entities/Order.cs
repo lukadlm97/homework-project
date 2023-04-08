@@ -1,6 +1,4 @@
-﻿
-
-namespace Homework.Enigmatry.Shop.Domain.Entities
+﻿namespace Homework.Enigmatry.Shop.Domain.Entities
 {
     public class Order:BaseEntity
     {
@@ -8,6 +6,9 @@ namespace Homework.Enigmatry.Shop.Domain.Entities
         public int CustomerId { get; set; }
         public Article Article { get; set; }
         public int ArticleId { get; set; }
+        public DateTime Date { get; set; }
+        public decimal Price { get; set; }
+        public bool IsDeleted { get; set; } = false;
 
     }
 }
