@@ -9,10 +9,12 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
     {
         private readonly IVendorRepository _vendorRepository;
         private readonly VendorSettings _vendorSettings;
+        private readonly IVendorGrpcRepository _vendorGrpcRepository;
 
-        public VendorService(IOptions<VendorSettings> options, IVendorRepository vendorRepository)
+        public VendorService(IOptions<VendorSettings> options, IVendorRepository vendorRepository,IVendorGrpcRepository vendorGrpcRepository)
         {
             _vendorRepository = vendorRepository;
+            _vendorGrpcRepository = vendorGrpcRepository;
             _vendorSettings = options.Value;
         }
         public async Task<List<ArticleDetailsDto>> GetAvailableArticles(int id, CancellationToken cancellationToken = default)
@@ -39,7 +41,16 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
                 {
                     articles.Add(article);
                 }
+            }
 
+            if (await _vendorGrpcRepository.IsArticleExist(id, cancellationToken))
+            {
+                article =
+                    await _vendorGrpcRepository.GetArticle(id, cancellationToken);
+                if (article != null)
+                {
+                    articles.Add(article);
+                }
             }
 
             return articles;

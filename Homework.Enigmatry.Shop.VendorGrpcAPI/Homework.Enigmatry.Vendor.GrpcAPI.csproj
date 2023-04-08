@@ -7,11 +7,23 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Protobuf Include="Protos\greet.proto" GrpcServices="Server" />
+    <None Remove="Protos\vendor.proto" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Protobuf Include="Protos\vendor.proto">
+      <GrpcServices>Server</GrpcServices>
+    </Protobuf>
   </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Persistence.Shared.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Vendor.Infrastructure\Homework.Enigmatry.Vendor.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

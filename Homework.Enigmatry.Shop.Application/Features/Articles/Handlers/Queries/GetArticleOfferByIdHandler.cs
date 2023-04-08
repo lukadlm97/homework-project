@@ -54,6 +54,7 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
                 {
                     return new OperationResult<ArticleDto>(OperationStatus.ArticleSold);
                 }
+
                 itemForCaching = new CacheItem(key, inventoryArticle);
                 _memoryCache.Set(itemForCaching, cacheItemPolicy);
 
