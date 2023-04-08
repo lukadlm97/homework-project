@@ -2,6 +2,7 @@
 using Homework.Enigmatry.Application.Shared;
 using Microsoft.Extensions.DependencyInjection;
 using MediatR;
+using Microsoft.Extensions.Configuration;
 
 namespace Homework.Enigmatry.Shop.Application
 {

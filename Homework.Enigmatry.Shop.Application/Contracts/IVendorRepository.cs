@@ -4,6 +4,7 @@ namespace Homework.Enigmatry.Shop.Application.Contracts
 {
     public interface IVendorRepository
     {
-        Task<ArticleDetailsDto?> Get(int id,string vendorHttpClientName,CancellationToken cancellationToken=default);
+        Task<ArticleDetailsDto?> GetArticle(int id,string vendorHttpClientName,CancellationToken cancellationToken=default);
+        Task<bool> IsArticleExist(int id,string vendorHttpClientName,CancellationToken cancellationToken=default);
     }
 }

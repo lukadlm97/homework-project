@@ -7,7 +7,9 @@
         NotExist,
         InvalidValues,
         InvalidPassword,
-        CustomerExist
+        CustomerExist,
+        CustomerNotExist,
+        ArticleSold
 
     }
 }

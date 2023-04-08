@@ -4,6 +4,6 @@ namespace Homework.Enigmatry.Shop.Application.Contracts
 {
     public interface IVendorService
     {
-        Task<List<ArticleDetailsDto>> Get(int id,CancellationToken cancellationToken=default);
+        Task<List<ArticleDetailsDto>> GetAvailableArticles(int id,CancellationToken cancellationToken=default);
     }
 }

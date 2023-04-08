@@ -26,7 +26,7 @@ namespace Homework.Enigmatry.Persistence.Shared
 
         public async Task<Order> Add(Order entity)
         {
-            var nextId = _inMemoryDbContext.List.Count;
+            var nextId = _inMemoryDbContext.List.Count+1;
             entity.Id = nextId;
 
             _inMemoryDbContext.List.Add(entity);
@@ -46,6 +46,11 @@ namespace Homework.Enigmatry.Persistence.Shared
         public Task Delete(Order entity)
         {
             throw new NotImplementedException();
+        }
+
+        public async Task<bool> ExistForArticle(int articleId, CancellationToken cancellationToken = default)
+        {
+            return _inMemoryDbContext.List.Any(x => x.ArticleId == articleId && !x.IsDeleted);
         }
     }
 }

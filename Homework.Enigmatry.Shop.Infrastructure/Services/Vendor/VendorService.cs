@@ -15,21 +15,31 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
             _vendorRepository = vendorRepository;
             _vendorSettings = options.Value;
         }
-        public async Task<List<ArticleDetailsDto>> Get(int id, CancellationToken cancellationToken = default)
+        public async Task<List<ArticleDetailsDto>> GetAvailableArticles(int id, CancellationToken cancellationToken = default)
         {
             List<ArticleDetailsDto> articles = new List<ArticleDetailsDto>();
 
-            ArticleDetailsDto? article =
-                await _vendorRepository.Get(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken);
-            if (article != null)
+
+            ArticleDetailsDto? article = null;
+            if (await _vendorRepository.IsArticleExist(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken))
             {
-                articles.Add(article);
+                article=
+                    await _vendorRepository.GetArticle(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken); 
+                
+                if (article != null)
+                {
+                    articles.Add(article);
+                }
             }
-            article =
-                await _vendorRepository.Get(id, _vendorSettings.SecoundVendorHttpClientName, cancellationToken);
-            if (article != null)
+            if (await _vendorRepository.IsArticleExist(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken))
             {
-                articles.Add(article);
+                article =
+                    await _vendorRepository.GetArticle(id, _vendorSettings.SecoundVendorHttpClientName, cancellationToken);
+                if (article != null)
+                {
+                    articles.Add(article);
+                }
+
             }
 
             return articles;

@@ -21,6 +21,11 @@ builder.Services.AddOptions<VendorSettings>()
     .BindConfiguration(nameof(VendorSettings))
     .ValidateDataAnnotations()
     .ValidateOnStart();
+builder.Services.AddOptions<CacheSettings>()
+    .BindConfiguration(nameof(CacheSettings))
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
+
 builder.Services.Configure<TokenSettings>(
     builder.Configuration.GetSection(nameof(TokenSettings)));
 

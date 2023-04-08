@@ -12,15 +12,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Extensions\" />
-  </ItemGroup>
-
-  <ItemGroup>
 	  <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.0" />
 	  <PackageReference Include="BCrypt.Net-Core" Version="1.6.0" />
 	  <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="11.5.1" />
 	  <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
 	  <PackageReference Include="Microsoft.AspNetCore.Http.Abstractions" Version="2.2.0" />
+	  <PackageReference Include="Microsoft.Extensions.Configuration" Version="7.0.0" />
 	  <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.28.1" />
 	  <PackageReference Include="System.Runtime.Caching" Version="7.0.0" />
   </ItemGroup>

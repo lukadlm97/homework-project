@@ -2,5 +2,5 @@
 
 namespace Homework.Enigmatry.Application.Shared.DTOs.Article
 {
-    public record ArticleDto(int Id) : BaseDto(Id);
+    public record ArticleDto(int Id,string Name,decimal Price) : BaseDto(Id);
 }

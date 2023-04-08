@@ -11,9 +11,9 @@ namespace Homework.Enigmatry.Persistence.Shared
         {
             _context = context;
         }
-        public Task<Customer?> Get(int id)
+        public async Task<Customer?> Get(int id)
         {
-            throw new NotImplementedException();
+            return _context.Customers.FirstOrDefault(x => x.Id == id);
         }
 
         public Task<IReadOnlyList<Customer>> GetAll()

@@ -5,5 +5,6 @@ namespace Homework.Enigmatry.Shop.Application.Contracts
 {
     public interface IOrderRepository:IGenericRepository<Order>
     {
+        Task<bool> ExistForArticle(int articleId, CancellationToken cancellationToken = default);
     }
 }

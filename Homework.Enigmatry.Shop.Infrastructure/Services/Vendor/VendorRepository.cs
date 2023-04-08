@@ -15,7 +15,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
             _logger = logger;
             _httpClientFactory = clientFactory;
         }
-        public async Task<ArticleDetailsDto?> Get(int id, string vendorHttpClientName, CancellationToken cancellationToken = default)
+        public async Task<ArticleDetailsDto?> GetArticle(int id, string vendorHttpClientName, CancellationToken cancellationToken = default)
         {
             try
             {
@@ -39,6 +39,25 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
                     _logger.LogError(ex.Message, ex);
                 }
                 return null;
+            }
+        }
+
+        public async Task<bool> IsArticleExist(int id, string vendorHttpClientName, CancellationToken cancellationToken = default)
+        {
+            try
+            {
+                var httpClient = _httpClientFactory.CreateClient(vendorHttpClientName);
+                var httpResponseMessage = await httpClient.GetAsync(id+"/exist", cancellationToken);
+
+                return httpResponseMessage.IsSuccessStatusCode;
+            }
+            catch (Exception ex)
+            {
+                if (_logger.IsEnabled(LogLevel.Error))
+                {
+                    _logger.LogError(ex.Message, ex);
+                }
+                return false;
             }
         }
     }
