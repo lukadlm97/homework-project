@@ -20,16 +20,16 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
         [HttpPost("login")]
         public async Task<ActionResult<ArticleDto>> Login([FromBody] AuthRequestDto requestDto,CancellationToken cancellationToken=default)
         {
-            var articleOperationResult = await _mediator.Send(new LoginRequest()
+            var logInOperationResult = await _mediator.Send(new LoginRequest()
             {
                 Username =requestDto.Username,
                 Password = requestDto.Password
             },cancellationToken);
 
-            return articleOperationResult.Status switch
+            return logInOperationResult.Status switch
             {
-                OperationStatus.Success => Ok(articleOperationResult.Result),
-                OperationStatus.CustomerExist => BadRequest(),
+                OperationStatus.Success => Ok(logInOperationResult.Result),
+                OperationStatus.NotExist or OperationStatus.NotFound => NotFound(),
                 _ => throw new UnclearOperationsResultException("")
             };
         }
@@ -37,15 +37,15 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
         [HttpPost("register")]
         public async Task<ActionResult<ArticleDto>> Register([FromBody] AuthRequestDto requestDto, CancellationToken cancellationToken = default)
         {
-            var articleOperationResult = await _mediator.Send(new RegisterRequest()
+            var registerOperationResult = await _mediator.Send(new RegisterRequest()
             {
                 Username = requestDto.Username,
                 Password = requestDto.Password
             }, cancellationToken);
 
-            return articleOperationResult.Status switch
+            return registerOperationResult.Status switch
             {
-                OperationStatus.Success => Ok(articleOperationResult.Result),
+                OperationStatus.Success => Ok(registerOperationResult.Result),
                 OperationStatus.CustomerExist => BadRequest(),
                 _ => throw new UnclearOperationsResultException("")
             };

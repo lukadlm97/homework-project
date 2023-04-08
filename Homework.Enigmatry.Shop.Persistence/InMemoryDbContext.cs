@@ -1,4 +1,5 @@
-﻿using Homework.Enigmatry.Shop.Domain.Entities;
+﻿using Homework.Enigmatry.Shop.Application.Constants;
+using Homework.Enigmatry.Shop.Domain.Entities;
 
 namespace Homework.Enigmatry.Persistence.Shared
 {
@@ -16,19 +17,23 @@ namespace Homework.Enigmatry.Persistence.Shared
             {
                 Id = 1,
                 Username = "acc-test-one@gmail.com",
-                Password = "passA1ds"
+                Password = "$2b$10$2d0SUdDlNUAf8PYaEk3HduN.7Njy/jB8avpjBWgveQHT2CUbi6L9G",
+                Role =  Constants.ADMIN_ROLE
             },
             new Customer()
             {
                 Id = 2,
                 Username = "acc-test-two@gmail.com",
-                Password = "passA2ds"
+                Password = "$2b$10$2d0SUdDlNUAf8PYaEk3HduN.7Njy/jB8avpjBWgveQHT2CUbi6L9G",
+                Role =  Constants.ADMIN_ROLE
             }, 
             new Customer()
             {
                 Id = 3,
                 Username = "acc-test-three@gmail.com",
-                Password = "passA3ds"
+                Password = "$2b$10$2d0SUdDlNUAf8PYaEk3HduN.7Njy/jB8avpjBWgveQHT2CUbi6L9G",
+                Role=
+                    Constants.CUSTOMER_ROLE
             }
         };
 

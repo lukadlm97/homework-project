@@ -1,5 +1,6 @@
 ﻿using Homework.Enigmatry.Shop.Application.Contracts;
-using Homework.Enigmatry.Shop.Infrastructure.Implementation;
+using Homework.Enigmatry.Shop.Infrastructure.Services.Token;
+using Homework.Enigmatry.Shop.Infrastructure.Services.Vendor;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace Homework.Enigmatry.Shop.Infrastructure
@@ -10,6 +11,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure
         {
             services.AddScoped<IVendorRepository, VendorRepository>();
             services.AddScoped<IVendorService, VendorService>();
+            services.AddScoped<ITokenService, TokenService>();
 
             return services;
         }

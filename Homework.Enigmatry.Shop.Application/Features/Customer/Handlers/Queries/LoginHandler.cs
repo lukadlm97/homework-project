@@ -1,5 +1,4 @@
-﻿using AutoMapper;
-using Homework.Enigmatry.Application.Shared.DTOs.Common;
+﻿using Homework.Enigmatry.Application.Shared.DTOs.Common;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.DTOs.Customer;
 using Homework.Enigmatry.Shop.Application.Features.Customer.Requests.Queries;
@@ -11,12 +10,12 @@ namespace Homework.Enigmatry.Shop.Application.Features.Customer.Handlers.Queries
     public class LoginHandler : IRequestHandler<LoginRequest, OperationResult<AuthDto>>
     {
         private readonly ICustomerRepository _customerRepository;
-        private readonly IMapper _mapper;
+        private readonly ITokenService _tokenService;
 
-        public LoginHandler(ICustomerRepository customerRepository, IMapper mapper)
+        public LoginHandler(ICustomerRepository customerRepository,ITokenService tokenService)
         {
             _customerRepository = customerRepository;
-            _mapper = mapper;
+            _tokenService = tokenService;
         }
         public async Task<OperationResult<AuthDto>> Handle(LoginRequest request, CancellationToken cancellationToken)
         {
@@ -28,21 +27,17 @@ namespace Homework.Enigmatry.Shop.Application.Features.Customer.Handlers.Queries
 
             if (!CheckPassword(request.Password, customer.Password))
             {
-
                 return new OperationResult<AuthDto>(OperationStatus.InvalidPassword);
             }
-            //TODO generate token
-
-            return new OperationResult<AuthDto>(OperationStatus.Success, new AuthDto("token", customer.Username));
+            
+            var authDto = new AuthDto(_tokenService.CreateToken(customer, customer.Role),
+                customer.Username);
+            return new OperationResult<AuthDto>(OperationStatus.Success, authDto);
         }
 
         private bool CheckPassword(string password, string hashedPassword)
         {
-            if (string.IsNullOrEmpty(password) || password != hashedPassword)
-            {
-                return false;
-            }
-            return true;
+           return BCrypt.Net.BCrypt.Verify(password, hashedPassword);
         }
     }
 }

@@ -3,14 +3,14 @@ using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Microsoft.Extensions.Logging;
 
-namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
+namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
 {
-    public class VendorRepository:IVendorRepository
+    public class VendorRepository : IVendorRepository
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly ILogger<VendorRepository> _logger;
 
-        public VendorRepository(ILogger<VendorRepository> logger,IHttpClientFactory clientFactory)
+        public VendorRepository(ILogger<VendorRepository> logger, IHttpClientFactory clientFactory)
         {
             _logger = logger;
             _httpClientFactory = clientFactory;
@@ -20,14 +20,14 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
             try
             {
                 var httpClient = _httpClientFactory.CreateClient(vendorHttpClientName);
-                var httpResponseMessage = await httpClient.GetAsync(id.ToString(),cancellationToken);
+                var httpResponseMessage = await httpClient.GetAsync(id.ToString(), cancellationToken);
 
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
                     using var contentStream =
                         await httpResponseMessage.Content.ReadAsStreamAsync(cancellationToken);
                     return await JsonSerializer.DeserializeAsync
-                        <ArticleDetailsDto>(contentStream,cancellationToken:cancellationToken);
+                        <ArticleDetailsDto>(contentStream, cancellationToken: cancellationToken);
                 }
 
                 return null;
@@ -36,7 +36,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Implementation
             {
                 if (_logger.IsEnabled(LogLevel.Error))
                 {
-                    _logger.LogError(ex.Message,ex);
+                    _logger.LogError(ex.Message, ex);
                 }
                 return null;
             }
