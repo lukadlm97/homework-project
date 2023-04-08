@@ -14,7 +14,6 @@ namespace Homework.Enigmatry.Shop.API.Extensions
                 {
                     // Set the base address of the named client.
                     client.BaseAddress = new Uri(configuration.GetSection($"{nameof(VendorSettings)}:FirstVendorUrl").Value);
-
                     // Add a user-agent default request header.
                     client.DefaultRequestHeaders.UserAgent.ParseAdd("dotnet-docs");
                 });

@@ -9,7 +9,8 @@
         InvalidPassword,
         CustomerExist,
         CustomerNotExist,
-        ArticleSold
+        ArticleSold,
+        PriceGreaterThanLimit
 
     }
 }

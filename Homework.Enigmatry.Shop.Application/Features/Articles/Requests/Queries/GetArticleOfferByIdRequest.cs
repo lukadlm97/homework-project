@@ -7,5 +7,6 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries
     public class GetArticleOfferByIdRequest : IRequest<OperationResult<ArticleDto>>
     {
         public int Id { get; set; }
+        public decimal MaxPriceLimit { get; set; }
     }
 }

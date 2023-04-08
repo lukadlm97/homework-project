@@ -13,7 +13,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Homework.Enigmatry.Shop.Presentation.Controllers
 {
-    [Route("v1/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v1/[controller]")]
     public class ArticleController : ControllerBase
     {
         private readonly IMediator _mediator;
@@ -59,15 +60,18 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
 
         [Authorize(Roles = Constants.CUSTOMER_ROLE)]
         [HttpGet("{id}/offers")]
-        public async Task<ActionResult<ArticleDto>> GetOffers(int id,CancellationToken cancellationToken=default)
+        public async Task<ActionResult<ArticleDto>> GetOffers(int id, [FromQuery]ArticleRequestDto articleRequestDto,CancellationToken cancellationToken=default)
         {
-            var articleOperationResult = await _mediator.Send(new GetArticleOfferByIdRequest() { Id = id }, cancellationToken);
+            var articleOperationResult = await _mediator.Send(new GetArticleOfferByIdRequest() { Id = id,
+                MaxPriceLimit = articleRequestDto.MaxArticlePrice }, cancellationToken);
 
             return articleOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(articleOperationResult.Result),
-                OperationStatus.InvalidValues => BadRequest(),
+                OperationStatus.InvalidValues  => BadRequest(articleOperationResult.ErrorMessage),
                 OperationStatus.NotExist or OperationStatus.NotFound => NotFound($"Article with id: {id} not exist"),
+                OperationStatus.ArticleSold  => NotFound($"Article with id: {id} is sold"),
+                OperationStatus.PriceGreaterThanLimit  => NotFound($"Article with id: {id} don\'t fit at price limit"),
                 _ => throw new UnclearOperationsResultException("")
             };
         }
@@ -84,13 +88,15 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
                     return Unauthorized();
                 }
 
-                var articleOperationResult = await _mediator.Send(new BuyArticleRequest() { ArticleId = id, CustomerId = customerId }, cancellationToken);
+                var articleOperationResult = await _mediator.Send(new BuyArticleRequest() { ArticleId = id,
+                    CustomerId = customerId }, cancellationToken);
 
                 return articleOperationResult.Status switch
                 {
                     OperationStatus.Success => Ok(articleOperationResult.Result),
                     OperationStatus.InvalidValues => BadRequest(),
                     OperationStatus.NotExist or OperationStatus.NotFound => NotFound($"Article with id: {id} not exist"),
+                    OperationStatus.ArticleSold => BadRequest($"Article with id: {id} is sold"),
                     _ => throw new UnclearOperationsResultException("")
                 };
             }

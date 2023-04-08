@@ -8,7 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
 {
-    [Route("v1/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v1/[controller]")]
     public class ArticleController : ControllerBase
     {
         private readonly IMediator _mediator;

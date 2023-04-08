@@ -9,7 +9,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Swagger
     {
         public static IServiceCollection ConfigureSwaggerServices(this IServiceCollection services, IConfiguration configuration)
         {
-
+           
             services.AddSwaggerGen(c =>
             {
                 c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme

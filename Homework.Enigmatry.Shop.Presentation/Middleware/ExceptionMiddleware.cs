@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Http;
 using System.Net;
 using System.Text.Json;
+using FluentValidation;
 using Homework.Enigmatry.Application.Shared.DTOs.Error;
 using Homework.Enigmatry.Application.Shared.Exceptions;
 
@@ -35,6 +36,9 @@ namespace Homework.Enigmatry.Shop.Presentation.Middlewares
                 case UnclearOperationsResultException unclearOperationsResultException:
                     statusCode = HttpStatusCode.InternalServerError;
                     break;
+                    case ValidationException validationException:
+                        statusCode = HttpStatusCode.BadRequest;
+                        break;
                 default:
                     break;
             }

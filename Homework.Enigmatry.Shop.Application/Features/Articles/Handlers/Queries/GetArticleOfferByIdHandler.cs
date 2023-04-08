@@ -6,6 +6,7 @@ using Homework.Enigmatry.Application.Shared.DTOs.Common;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Extensions;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
+using Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Queries;
 using Homework.Enigmatry.Shop.Application.Models;
 using Homework.Enigmatry.Shop.Domain.Entities;
 using Homework.Enigmatry.Shop.Domain.Enums;
@@ -36,9 +37,21 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
         }
         public async Task<OperationResult<ArticleDto>> Handle(GetArticleOfferByIdRequest request, CancellationToken cancellationToken)
         {
+            var validator = new GetArticleOfferByIdValidator();
+            var validationResult = await validator.ValidateAsync(request,cancellationToken);
+
+            if (validationResult != null && !validationResult.IsValid)
+            {
+                return new OperationResult<ArticleDto>(OperationStatus.InvalidValues,
+                    ErrorMessage:string.Join(',',validationResult.Errors
+                                                .Select(x=>x.ErrorMessage)));
+            }
+
+
             var key =request.Id.CreateArticleCacheKey();
             var article = (Article) _memoryCache.Get(key);
-            if (article != null)
+            if (article != null && 
+                article.Price<=request.MaxPriceLimit)
             {
                 return new OperationResult<ArticleDto>(OperationStatus.Success,_mapper.Map<ArticleDto>(article));
             }
@@ -48,7 +61,8 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
 
             var inventoryArticle = await _articleRepository.Get(request.Id);
 
-            if (inventoryArticle != null)
+            if (inventoryArticle != null &&
+                inventoryArticle.Price <= request.MaxPriceLimit)
             {
                 if (await _orderRepository.ExistForArticle(request.Id, cancellationToken))
                 {
@@ -69,8 +83,18 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
             }
 
             var bestVendorOffer = availableArticlesFromVendors.MinBy(x => x.Price);
+
+            if (bestVendorOffer != null && 
+                    bestVendorOffer.Price > request.MaxPriceLimit)
+            {
+
+                return new OperationResult<ArticleDto>(OperationStatus.PriceGreaterThanLimit);
+            }
+
             var articleFromVendor = _mapper.Map<Article>(bestVendorOffer);
-            
+
+           
+
             itemForCaching = new CacheItem(key, articleFromVendor);
             _memoryCache.Set(itemForCaching, cacheItemPolicy);
 

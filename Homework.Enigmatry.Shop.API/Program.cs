@@ -25,9 +25,14 @@ builder.Services.AddOptions<CacheSettings>()
     .BindConfiguration(nameof(CacheSettings))
     .ValidateDataAnnotations()
     .ValidateOnStart();
+builder.Services.AddOptions<ExternalGrpcSettings>()
+    .BindConfiguration(nameof(ExternalGrpcSettings))
+    .ValidateDataAnnotations()
+    .ValidateOnStart();
 
 builder.Services.Configure<TokenSettings>(
     builder.Configuration.GetSection(nameof(TokenSettings)));
+
 
 
 builder.Services.ConfigureInMemoryPersistenceServices(builder.Configuration);
