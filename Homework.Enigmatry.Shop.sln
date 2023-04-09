@@ -43,7 +43,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Vendor.I
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Logging.Shared", "Homework.Enigmatry.Logging.Shared\Homework.Enigmatry.Logging.Shared.csproj", "{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Application.Shared.UnitTests", "Homework.Enigmatry.Application.Shared.UnitTests\Homework.Enigmatry.Application.Shared.UnitTests.csproj", "{53E1E945-C760-41B8-9C75-578E963F6009}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Application.Shared.UnitTests", "Homework.Enigmatry.Application.Shared.UnitTests\Homework.Enigmatry.Application.Shared.UnitTests.csproj", "{53E1E945-C760-41B8-9C75-578E963F6009}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Application.UnitTests", "Homework.Enigmatry.Shop.Application.UnitTests\Homework.Enigmatry.Shop.Application.UnitTests.csproj", "{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{53E1E945-C760-41B8-9C75-578E963F6009}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{53E1E945-C760-41B8-9C75-578E963F6009}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{53E1E945-C760-41B8-9C75-578E963F6009}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -134,6 +140,7 @@ Global
 		{E3754475-2348-4EA0-ABDB-CADC77A26739} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 		{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 		{53E1E945-C760-41B8-9C75-578E963F6009} = {C89D19CA-D005-4DAB-B37C-983B11207CAC}
+		{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C} = {C89D19CA-D005-4DAB-B37C-983B11207CAC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {401ECF21-7003-434E-9D9A-A8C1BFFD16F5}

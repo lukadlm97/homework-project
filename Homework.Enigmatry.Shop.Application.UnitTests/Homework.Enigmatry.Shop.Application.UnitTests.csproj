@@ -25,7 +25,13 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="Features\Customer\" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Homework.Enigmatry.Application.Shared\Homework.Enigmatry.Application.Shared.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Shop.Application\Homework.Enigmatry.Shop.Application.csproj" />
+    <ProjectReference Include="..\Homework.Enigmatry.Shop.Infrastructure\Homework.Enigmatry.Shop.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
