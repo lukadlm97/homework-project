@@ -3,8 +3,10 @@ using AutoMapper;
 using Homework.Enigmatry.Application.Shared.Contracts;
 using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Application.Shared.DTOs.Common;
+using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Extensions;
+using Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Commands;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Queries;
 using Homework.Enigmatry.Shop.Application.Models;
@@ -24,9 +26,10 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
         private readonly MemoryCache _memoryCache;
         private readonly CacheSettings _cacheItemPolicy;
         private readonly IOrderRepository _orderRepository;
+        private readonly LogTraceData _logTraceData;
 
         public GetArticleOfferByIdHandler(IArticleRepository articleRepository,IVendorService vendorService,
-            IMapper mapper,MemoryCache memoryCache,IOptions<CacheSettings> cacheItemPolicySettings,IOrderRepository orderRepository)
+            IMapper mapper,MemoryCache memoryCache,IOptions<CacheSettings> cacheItemPolicySettings,IOrderRepository orderRepository,LogTraceData logTraceData)
         {
             _articleRepository = articleRepository;
             _vendorService = vendorService;
@@ -34,9 +37,11 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
             _memoryCache = memoryCache;
             _cacheItemPolicy = cacheItemPolicySettings.Value;
             _orderRepository= orderRepository;
+            _logTraceData = logTraceData;
         }
         public async Task<OperationResult<ArticleDto>> Handle(GetArticleOfferByIdRequest request, CancellationToken cancellationToken)
         {
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(GetArticleOfferByIdHandler), nameof(Handle)));
             var validator = new GetArticleOfferByIdValidator();
             var validationResult = await validator.ValidateAsync(request,cancellationToken);
 

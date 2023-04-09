@@ -41,7 +41,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Vendor.A
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Application.Shared", "Homework.Enigmatry.Application.Shared\Homework.Enigmatry.Application.Shared.csproj", "{8E0EA008-E872-4194-99FE-5B664424FD30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Vendor.Infrastructure", "Homework.Enigmatry.Vendor.Infrastructure\Homework.Enigmatry.Vendor.Infrastructure.csproj", "{E3754475-2348-4EA0-ABDB-CADC77A26739}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Vendor.Infrastructure", "Homework.Enigmatry.Vendor.Infrastructure\Homework.Enigmatry.Vendor.Infrastructure.csproj", "{E3754475-2348-4EA0-ABDB-CADC77A26739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Logging.Shared", "Homework.Enigmatry.Logging.Shared\Homework.Enigmatry.Logging.Shared.csproj", "{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -105,6 +107,10 @@ Global
 		{E3754475-2348-4EA0-ABDB-CADC77A26739}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E3754475-2348-4EA0-ABDB-CADC77A26739}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E3754475-2348-4EA0-ABDB-CADC77A26739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,6 +133,7 @@ Global
 		{1B519AAA-C36C-499A-8FF9-1A86D52045D3} = {C07325CA-56BC-4505-8365-79090F27DD29}
 		{8E0EA008-E872-4194-99FE-5B664424FD30} = {C07325CA-56BC-4505-8365-79090F27DD29}
 		{E3754475-2348-4EA0-ABDB-CADC77A26739} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
+		{B5997AF1-B1EB-4139-9FD8-BC794D03CB8F} = {F6A8151B-790C-4F65-A831-3585FEBE1537}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {401ECF21-7003-434E-9D9A-A8C1BFFD16F5}

@@ -1,0 +1,318 @@
+[14:02:17 INF] Now listening on: https://localhost:7245
+[14:02:18 INF] Now listening on: http://localhost:5219
+[14:02:18 INF] Application started. Press Ctrl+C to shut down.
+[14:02:18 INF] Hosting environment: Development
+[14:02:18 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorAPI
+[14:02:20 INF] Request starting HTTP/2 GET https://localhost:7245/swagger/index.html - -
+[14:02:20 INF] Information details: 
+[14:02:20 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[14:02:20 INF] Request finished HTTP/2 GET https://localhost:7245/swagger/index.html - - - 200 - text/html;charset=utf-8 266.9906ms
+[14:02:20 INF] Request starting HTTP/2 GET https://localhost:7245/_vs/browserLink - -
+[14:02:20 INF] Request finished HTTP/2 GET https://localhost:7245/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.2551ms
+[14:02:20 INF] Request starting HTTP/2 GET https://localhost:7245/swagger/favicon-32x32.png - -
+[14:02:20 INF] Request starting HTTP/2 GET https://localhost:7245/swagger/v1/swagger.json - -
+[14:02:20 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[14:02:20 INF] Information details: 
+[14:02:20 INF] Request finished HTTP/2 GET https://localhost:7245/swagger/favicon-32x32.png - - - 0 628 image/png 138.6682ms
+[14:02:20 INF] Information details: 
+[14:02:20 INF] Request finished HTTP/2 GET https://localhost:7245/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 128.9856ms
+[14:03:34 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/1 - -
+[14:03:34 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:34 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:34 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:35 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 123.8847ms.
+[14:03:35 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[14:03:35 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 238.1948ms
+[14:03:35 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:35 INF] Information details: ArticleController -> Get (id:1)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:35 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/1 - - - 200 - application/json;+charset=utf-8 285.7771ms
+[14:03:38 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:38 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:38 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:38 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:38 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 1.4098ms.
+[14:03:38 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:38 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 27.3879ms
+[14:03:38 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:38 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:38 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 38.4643ms
+[14:03:39 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:39 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:39 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:39 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:39 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 1.8449ms.
+[14:03:39 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:39 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 25.1605ms
+[14:03:39 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:39 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:39 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 34.3468ms
+[14:03:40 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:40 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:40 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:40 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:40 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0653ms.
+[14:03:40 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:40 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 19.9472ms
+[14:03:40 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:40 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:40 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 29.1116ms
+[14:03:40 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:40 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:40 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:40 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:40 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0763ms.
+[14:03:40 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:40 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 20.2641ms
+[14:03:40 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:40 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:40 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 29.3305ms
+[14:03:41 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:41 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:41 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:41 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:41 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0909ms.
+[14:03:41 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:41 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 21.2294ms
+[14:03:41 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:41 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:41 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 30.9024ms
+[14:03:41 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:41 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:41 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:41 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:41 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.1029ms.
+[14:03:41 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:41 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 25.8709ms
+[14:03:41 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:41 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:41 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 35.5054ms
+[14:03:42 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:42 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:42 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0982ms.
+[14:03:42 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:42 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 19.5559ms
+[14:03:42 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:42 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 28.1495ms
+[14:03:42 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:42 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:42 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.2178ms.
+[14:03:42 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:42 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 24.7903ms
+[14:03:42 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:42 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 33.4685ms
+[14:03:42 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:42 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:42 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0733ms.
+[14:03:42 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:42 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 20.7132ms
+[14:03:42 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:42 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 29.7976ms
+[14:03:42 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:42 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:42 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0981ms.
+[14:03:42 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:42 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 19.8325ms
+[14:03:42 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:42 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 30.0717ms
+[14:03:42 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:42 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:42 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.1112ms.
+[14:03:42 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:42 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 21.0759ms
+[14:03:42 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:42 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 29.2987ms
+[14:03:42 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:42 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:42 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0844ms.
+[14:03:42 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:42 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 20.9962ms
+[14:03:42 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:42 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:42 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 29.0421ms
+[14:03:43 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:43 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:43 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:43 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0995ms.
+[14:03:43 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:43 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 20.3772ms
+[14:03:43 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:43 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 30.0703ms
+[14:03:43 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:43 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:43 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:43 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0631ms.
+[14:03:43 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:43 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 21.5032ms
+[14:03:43 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:43 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 32.0857ms
+[14:03:43 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:43 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:43 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:43 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0703ms.
+[14:03:43 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:43 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 23.5101ms
+[14:03:43 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:43 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 33.9121ms
+[14:03:43 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:43 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:43 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:43 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0598ms.
+[14:03:43 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:43 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 26.18ms
+[14:03:43 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:43 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 34.8651ms
+[14:03:43 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:43 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:43 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:43 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0918ms.
+[14:03:43 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:43 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 19.0695ms
+[14:03:43 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:43 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:43 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 25.3639ms
+[14:03:44 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:44 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:44 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:44 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0708ms.
+[14:03:44 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:44 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 23.0648ms
+[14:03:44 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:44 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 44.6563ms
+[14:03:44 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:44 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:44 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:44 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.1111ms.
+[14:03:44 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:44 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 21.1513ms
+[14:03:44 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:44 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 31.1061ms
+[14:03:44 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:44 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:44 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:44 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0732ms.
+[14:03:44 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:44 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 21.0867ms
+[14:03:44 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:44 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 31.8981ms
+[14:03:44 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:03:44 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:03:44 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:03:44 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.0704ms.
+[14:03:44 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:03:44 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 19.5984ms
+[14:03:44 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:03:44 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:03:44 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 28.3121ms
+[14:04:00 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:04:00 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:04:00 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:04:00 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:04:29 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 29863.3395ms.
+[14:04:29 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[14:04:29 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 29909.6287ms
+[14:04:29 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:04:29 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:04:29 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 404 - text/plain;+charset=utf-8 29917.0262ms
+[14:04:36 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12/exist - -
+[14:04:36 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[14:04:36 INF] Route matched with {action = "Exist", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Exist(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:04:36 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:04:36 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkResult in 14.398ms.
+[14:04:36 INF] Executing StatusCodeResult, setting HTTP status code 200
+[14:04:36 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) in 43.3632ms
+[14:04:36 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[14:04:36 INF] Information details: ArticleController -> Exist (id:12)=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Add
+[14:04:36 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12/exist - - - 200 0 - 57.4693ms
+[14:04:40 INF] Request starting HTTP/2 GET https://localhost:7245/api/v1/Article/12 - -
+[14:04:40 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:04:40 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[14:04:40 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[14:04:43 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3022.4418ms.
+[14:04:43 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[14:04:43 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 3041.4957ms
+[14:04:43 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[14:04:43 INF] Information details: ArticleController -> Get (id:12)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[14:04:43 INF] Request finished HTTP/2 GET https://localhost:7245/api/v1/Article/12 - - - 200 - application/json;+charset=utf-8 3047.6341ms

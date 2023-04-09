@@ -8,9 +8,13 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.4" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Homework.Enigmatry.Logging.Shared\Homework.Enigmatry.Logging.Shared.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Persistence.Shared.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Vendor.Presentation\Homework.Enigmatry.Vendor.Presentation.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj" />

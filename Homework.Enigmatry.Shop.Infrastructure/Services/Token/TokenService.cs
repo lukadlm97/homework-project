@@ -1,6 +1,7 @@
 ﻿using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
+using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Constants;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Models;
@@ -13,13 +14,17 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Token
     public class TokenService:ITokenService
     {
         private readonly TokenSettings _tokenSettings;
+        private readonly LogTraceData _logTraceData;
 
-        public TokenService(IOptions<TokenSettings> options)
+        public TokenService(IOptions<TokenSettings> options,LogTraceData logTraceData)
         {
             _tokenSettings = options.Value;
+            _logTraceData = logTraceData;
         }
         public string CreateToken(Customer customer, string role)
         {
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(TokenService), nameof(CreateToken)));
+
             var tokenHandler = new JwtSecurityTokenHandler();
             var tokenKey = Encoding.UTF8.GetBytes(_tokenSettings.JwtSecretKey);
             var tokenDescriptor = new SecurityTokenDescriptor

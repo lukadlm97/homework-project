@@ -1,17 +1,23 @@
+using Homework.Enigmatry.Logging.Shared;
 using Homework.Enigmatry.Persistence.Shared;
 using Homework.Enigmatry.Shop.Presentation.Middlewares;
 using Homework.Enigmatry.Shop.Presentation.Swagger;
 using Homework.Enigmatry.Vendor.Application;
 using Homework.Enigmatry.Vendor.Infrastructure;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 
-/*
-builder.Services.AddOptions<PersistenceSettings>()
-    .BindConfiguration(nameof(PersistenceSettings))
-    .ValidateDataAnnotations()
-    .ValidateOnStart();*/
+
+builder.Logging.ClearProviders();
+builder.Host.UseSerilog((hostContext, services, configuration) => {
+    configuration
+        .WriteTo.File($"log-.txt", outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}", rollingInterval: RollingInterval.Day)
+        .WriteTo.Console();
+});
+builder.Services.ConfigureLoggingServices();
+builder.Services.AddScoped<ExceptionMiddleware>();
 
 builder.Services.ConfigureInMemoryVendorPersistenceServices(builder.Configuration);
 builder.Services.ConfigureVendorApplicationServices();

@@ -1,4 +1,5 @@
 ﻿using Homework.Enigmatry.Application.Shared.DTOs.Common;
+using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.DTOs.Customer;
 using Homework.Enigmatry.Shop.Application.Features.Customer.Requests.Queries;
@@ -11,14 +12,17 @@ namespace Homework.Enigmatry.Shop.Application.Features.Customer.Handlers.Queries
     {
         private readonly ICustomerRepository _customerRepository;
         private readonly ITokenService _tokenService;
+        private readonly LogTraceData _logTraceData;
 
-        public LoginHandler(ICustomerRepository customerRepository,ITokenService tokenService)
+        public LoginHandler(ICustomerRepository customerRepository,ITokenService tokenService,LogTraceData logTraceData)
         {
             _customerRepository = customerRepository;
-            _tokenService = tokenService;
+            _tokenService = tokenService; _logTraceData = logTraceData;
         }
         public async Task<OperationResult<AuthDto>> Handle(LoginRequest request, CancellationToken cancellationToken)
         {
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(LoginHandler), nameof(Handle)));
+
             var customer = await _customerRepository.GetByUsername(request.Username, cancellationToken);
             if (customer == null)
             {

@@ -1,6 +1,7 @@
 ﻿using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Application.Shared.Exceptions;
 using Homework.Enigmatry.Application.Shared.Features.Articles.Requests.Queries;
+using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Domain.Enums;
 using Homework.Enigmatry.Vendor.Application.Features.Requests.Queries;
 using MediatR;
@@ -13,16 +14,20 @@ namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
     public class ArticleController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public ArticleController(IMediator mediator)
+        private readonly LogTraceData _logTraceData;
+
+        public ArticleController(IMediator mediator, LogTraceData logTraceData)
         {
             _mediator = mediator;
+            _logTraceData = logTraceData;
         }
         // GET:
         [HttpGet("{id}")]
         public async Task<ActionResult<ArticleDetailsDto>> Get(int id)
         {
-            var articleOperationResult = await _mediator.Send(new GetArticleByIdRequest() { Id = id });
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(ArticleController), nameof(Get), id));
 
+            var articleOperationResult = await _mediator.Send(new GetArticleByIdRequest() { Id = id });
             return articleOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(articleOperationResult.Result),
@@ -34,9 +39,11 @@ namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
         [HttpGet("{id}/exist")]
         public async Task<ActionResult<ArticleDetailsDto>> Exist(int id)
         {
-            var isArticleExist = await _mediator.Send(new IsVendorArticleExistRequest() { Id = id });
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(ArticleController), nameof(Exist), id));
 
-            return isArticleExist ? Ok() : NotFound();
+            var isArticleExist = await _mediator.Send(new IsVendorArticleExistRequest() { Id = id });
+            return isArticleExist ?
+                Ok() : NotFound();
         }
     }
 }

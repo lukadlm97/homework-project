@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
 
 namespace Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Queries
@@ -12,9 +7,12 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Queri
     {
         public GetArticleOfferByIdValidator()
         {
-            RuleFor(article => article).NotNull();
-            RuleFor(article => article.Id).NotEmpty().GreaterThan(0);
-            RuleFor(article => article.MaxPriceLimit).GreaterThan(0);
+            RuleFor(request => request).NotNull()
+                                                .WithMessage("Your get offers for article by id request cannot be empty"); 
+            RuleFor(article => article.Id);
+            RuleFor(article => article.MaxPriceLimit)
+                .GreaterThan(0)
+                .WithMessage("Max price limit should be greater than 0"); 
         }
 
     }

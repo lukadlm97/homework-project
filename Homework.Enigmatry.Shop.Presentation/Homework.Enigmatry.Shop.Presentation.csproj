@@ -13,6 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Homework.Enigmatry.Logging.Shared\Homework.Enigmatry.Logging.Shared.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Application\Homework.Enigmatry.Shop.Application.csproj" />
   </ItemGroup>
 

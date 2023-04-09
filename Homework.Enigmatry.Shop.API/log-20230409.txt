@@ -1,0 +1,226 @@
+[13:07:47 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[13:07:47 INF] Now listening on: https://localhost:7221
+[13:07:47 INF] Now listening on: http://localhost:5232
+[13:07:47 INF] Application started. Press Ctrl+C to shut down.
+[13:07:47 INF] Hosting environment: Development
+[13:07:47 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[13:07:48 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/index.html - -
+[13:07:48 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[13:07:48 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/index.html - - - 200 - text/html;charset=utf-8 308.6208ms
+[13:07:48 INF] Request starting HTTP/2 GET https://localhost:7221/_vs/browserLink - -
+[13:07:49 INF] Request finished HTTP/2 GET https://localhost:7221/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 92.0164ms
+[13:07:49 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/favicon-32x32.png - -
+[13:07:49 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - -
+[13:07:49 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[13:07:49 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/favicon-32x32.png - - - 0 628 image/png 247.9692ms
+[13:07:49 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 159.3887ms
+[13:07:56 INF] Request starting HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 50
+[13:07:56 INF] CORS policy execution successful.
+[13:07:57 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:07:57 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[13:07:57 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:07:57 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 26.6806ms.
+[13:07:57 INF] Executing StatusCodeResult, setting HTTP status code 404
+[13:07:57 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 178.2221ms
+[13:07:57 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:07:57 INF] Request finished HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 50 - 404 0 - 364.3248ms
+[13:47:10 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[13:47:10 FTL] Application startup exception
+System.InvalidOperationException: Cannot resolve scoped service 'Homework.Enigmatry.Logging.Shared.Contracts.LogTraceData' from root provider.
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteValidator.ValidateResolution(Type serviceType, IServiceScope scope, IServiceScope rootScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.ConstructorMatcher.CreateInstance(IServiceProvider provider)
+   at Microsoft.Extensions.Internal.ActivatorUtilities.CreateInstance(IServiceProvider provider, Type instanceType, Object[] parameters)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass5_0.<UseMiddleware>b__0(RequestDelegate next)
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Builder.ApplicationBuilder.Build()
+   at Microsoft.AspNetCore.Hosting.GenericWebHostService.StartAsync(CancellationToken cancellationToken)
+[13:50:22 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[13:50:23 INF] Now listening on: https://localhost:7221
+[13:50:23 INF] Now listening on: http://localhost:5232
+[13:50:23 INF] Application started. Press Ctrl+C to shut down.
+[13:50:23 INF] Hosting environment: Development
+[13:50:23 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[13:50:24 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/index.html - -
+[13:50:25 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'Homework.Enigmatry.Shop.Presentation.Middlewares.ExceptionMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[13:50:26 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/index.html - - - 500 - text/html;+charset=utf-8 1551.0162ms
+[13:50:26 INF] Request starting HTTP/2 GET https://localhost:7221/_vs/browserLink - -
+[13:50:26 INF] Request starting HTTP/2 GET https://localhost:7221/_framework/aspnetcore-browser-refresh.js - -
+[13:50:26 INF] Request finished HTTP/2 GET https://localhost:7221/_framework/aspnetcore-browser-refresh.js - - - 200 12024 application/javascript;+charset=utf-8 13.0279ms
+[13:50:26 INF] Request finished HTTP/2 GET https://localhost:7221/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 57.6550ms
+[13:50:26 INF] Request starting HTTP/2 GET https://localhost:7221/favicon.ico - -
+[13:50:26 ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: No service for type 'Homework.Enigmatry.Shop.Presentation.Middlewares.ExceptionMiddleware' has been registered.
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.AspNetCore.Http.MiddlewareFactory.Create(Type middlewareType)
+   at Microsoft.AspNetCore.Builder.UseMiddlewareExtensions.<>c__DisplayClass6_1.<<UseMiddlewareInterface>b__1>d.MoveNext()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+[13:50:26 INF] Request finished HTTP/2 GET https://localhost:7221/favicon.ico - - - 500 - text/plain;+charset=utf-8 64.0994ms
+[13:52:08 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[13:52:08 INF] Now listening on: https://localhost:7221
+[13:52:08 INF] Now listening on: http://localhost:5232
+[13:52:08 INF] Application started. Press Ctrl+C to shut down.
+[13:52:08 INF] Hosting environment: Development
+[13:52:08 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[13:52:09 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/index.html - -
+[13:52:10 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[13:52:10 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/index.html - - - 200 - text/html;charset=utf-8 438.0545ms
+[13:52:10 INF] Request starting HTTP/2 GET https://localhost:7221/_vs/browserLink - -
+[13:52:10 INF] Request finished HTTP/2 GET https://localhost:7221/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 216.8641ms
+[13:52:10 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/favicon-32x32.png - -
+[13:52:10 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - -
+[13:52:10 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[13:52:10 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/favicon-32x32.png - - - 0 628 image/png 307.8027ms
+[13:52:11 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 309.6066ms
+[13:52:33 INF] Request starting HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 74
+[13:52:33 INF] CORS policy execution successful.
+[13:52:33 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:52:33 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[13:52:33 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:52:33 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 483.8085ms.
+[13:52:33 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[13:52:33 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 623.9134ms
+[13:52:33 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:52:33 INF] Request finished HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 74 - 200 - application/json;+charset=utf-8 811.0338ms
+[13:52:52 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=100 - -
+[13:52:52 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:52:52 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[13:52:52 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:52:53 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 309.7732ms
+[13:52:53 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:52:53 ERR] Error details: Unknown error
+[13:52:53 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=100 - - - 500 - application/json 617.0289ms
+[13:53:08 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=-10 - -
+[13:53:08 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:53:08 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[13:53:08 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:53:09 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 305.5096ms
+[13:53:09 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:53:09 ERR] Error details: Unknown error
+[13:53:09 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=-10 - - - 500 - application/json 562.3311ms
+[13:53:59 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[13:54:00 INF] Now listening on: https://localhost:7221
+[13:54:00 INF] Now listening on: http://localhost:5232
+[13:54:00 INF] Application started. Press Ctrl+C to shut down.
+[13:54:00 INF] Hosting environment: Development
+[13:54:00 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[13:54:01 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/index.html - -
+[13:54:01 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[13:54:01 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/index.html - - - 200 - text/html;charset=utf-8 395.0904ms
+[13:54:01 INF] Request starting HTTP/2 GET https://localhost:7221/_vs/browserLink - -
+[13:54:01 INF] Request finished HTTP/2 GET https://localhost:7221/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 69.3546ms
+[13:54:01 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - -
+[13:54:02 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 309.1489ms
+[13:54:20 INF] Request starting HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 74
+[13:54:20 INF] CORS policy execution successful.
+[13:54:20 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:54:20 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[13:54:20 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:54:21 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 438.3331ms.
+[13:54:21 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[13:54:21 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 577.4214ms
+[13:54:21 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:54:21 INF] Request finished HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 74 - 200 - application/json;+charset=utf-8 731.3686ms
+[13:54:39 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=123 - -
+[13:54:39 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:54:39 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[13:54:39 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:54:40 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 259.855ms.
+[13:54:40 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[13:54:40 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 307.2405ms
+[13:54:40 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:54:40 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=123 - - - 200 - application/json;+charset=utf-8 376.0642ms
+[13:54:50 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - -
+[13:54:50 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[13:54:50 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[13:54:50 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:54:50 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 27.088ms.
+[13:54:50 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Order.OrderDto'.
+[13:54:50 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 52.0143ms
+[13:54:50 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[13:54:50 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - - - 200 - application/json;+charset=utf-8 69.8831ms
+[13:54:59 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - -
+[13:54:59 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[13:54:59 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[13:54:59 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:54:59 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 8.3084ms.
+[13:54:59 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[13:54:59 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 28.3254ms
+[13:54:59 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[13:54:59 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - - - 400 - text/plain;+charset=utf-8 37.7106ms
+[13:55:07 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=123 - -
+[13:55:07 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:55:07 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[13:55:07 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:55:07 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 2.6691ms.
+[13:55:07 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[13:55:07 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 25.2429ms
+[13:55:07 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[13:55:07 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=123 - - - 404 - text/plain;+charset=utf-8 34.0993ms
+[13:55:11 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - -
+[13:55:11 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[13:55:11 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[13:55:11 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:55:11 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1.8272ms.
+[13:55:11 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[13:55:11 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 24.5529ms
+[13:55:11 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[13:55:11 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - - - 400 - text/plain;+charset=utf-8 34.0825ms
+[13:56:17 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[13:56:17 INF] Now listening on: https://localhost:7221
+[13:56:17 INF] Now listening on: http://localhost:5232
+[13:56:17 INF] Application started. Press Ctrl+C to shut down.
+[13:56:17 INF] Hosting environment: Development
+[13:56:17 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[13:56:18 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/index.html - -
+[13:56:22 INF] Request starting HTTP/2 GET https://localhost:7221/_vs/browserLink - -
+[13:56:22 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[13:56:22 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/index.html - - - 200 - text/html;charset=utf-8 3690.1317ms
+[13:56:22 INF] Request finished HTTP/2 GET https://localhost:7221/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 50.0495ms
+[13:56:22 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - -
+[13:56:24 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 1815.9224ms
+[13:56:30 INF] Request starting HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 50
+[13:56:30 INF] CORS policy execution successful.
+[13:56:30 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:56:30 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[13:56:30 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:56:30 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 16.0485ms.
+[13:56:30 INF] Executing StatusCodeResult, setting HTTP status code 404
+[13:56:30 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 140.5957ms
+[13:56:30 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:56:51 INF] Request finished HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 50 - 404 0 - 21173.8573ms
+[13:57:16 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[13:57:16 INF] Now listening on: https://localhost:7221
+[13:57:16 INF] Now listening on: http://localhost:5232
+[13:57:16 INF] Application started. Press Ctrl+C to shut down.
+[13:57:16 INF] Hosting environment: Development
+[13:57:16 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[13:57:17 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/index.html - -
+[13:57:20 INF] Information details: 
+[13:57:20 INF] Request starting HTTP/2 GET https://localhost:7221/_vs/browserLink - -
+[13:57:20 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[13:57:20 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/index.html - - - 200 - text/html;charset=utf-8 3275.8849ms
+[13:57:20 INF] Request finished HTTP/2 GET https://localhost:7221/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 70.7532ms
+[13:57:20 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - -
+[13:57:21 INF] Information details: 
+[13:57:21 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 861.3003ms
+[13:57:26 INF] Request starting HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 50
+[13:57:26 INF] CORS policy execution successful.
+[13:57:26 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:57:26 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[13:57:26 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[13:57:26 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundResult in 19.3862ms.
+[13:57:26 INF] Executing StatusCodeResult, setting HTTP status code 404
+[13:57:26 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 153.6776ms
+[13:57:27 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[13:57:28 INF] Information details: AuthController -> Login (username:string)=>
+LoginHandler -> Handle=>
+ArticleRepository -> GetByUsername
+[13:57:28 INF] Request finished HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 50 - 404 0 - 1818.7264ms

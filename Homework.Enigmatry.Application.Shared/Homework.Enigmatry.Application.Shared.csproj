@@ -15,6 +15,7 @@
 
 
 	<ItemGroup>
+	  <ProjectReference Include="..\Homework.Enigmatry.Logging.Shared\Homework.Enigmatry.Logging.Shared.csproj" />
 	  <ProjectReference Include="..\Homework.Enigmatry.Shop.Domain\Homework.Enigmatry.Domain.csproj" />
 	</ItemGroup>
 

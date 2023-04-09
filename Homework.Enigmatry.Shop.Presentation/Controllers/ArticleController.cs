@@ -2,6 +2,7 @@
 using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Application.Shared.Exceptions;
 using Homework.Enigmatry.Application.Shared.Features.Articles.Requests.Queries;
+using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Constants;
 using Homework.Enigmatry.Shop.Application.DTOs.Article;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Commands;
@@ -18,17 +19,21 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
     public class ArticleController : ControllerBase
     {
         private readonly IMediator _mediator;
-        public ArticleController(IMediator mediator)
+        private readonly LogTraceData _logTraceData;
+
+        public ArticleController(IMediator mediator,LogTraceData logTraceData)
         {
             _mediator = mediator;
+            _logTraceData = logTraceData;
         }
 
         [Authorize(Roles = Constants.ADMIN_ROLE)]
         [HttpGet("{id}")]
         public async Task<ActionResult<ArticleDto>> Get(int id, CancellationToken cancellationToken = default)
         {
-            var articleOperationResult = await _mediator.Send(new GetArticleByIdRequest() { Id = id }, cancellationToken);
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})",nameof(ArticleController),nameof(Get),id));
 
+            var articleOperationResult = await _mediator.Send(new GetArticleByIdRequest() { Id = id }, cancellationToken);
             return articleOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(articleOperationResult.Result),
@@ -42,17 +47,19 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
         [HttpGet("")]
         public async Task<ActionResult<ArticleDto>> Get([FromQuery]ArticlePagingDto articlePagingDto, CancellationToken cancellationToken = default)
         {
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (params=size:{2},number:{3},filter:{4})", 
+                nameof(ArticleController), nameof(Get), articlePagingDto.PageSize,articlePagingDto.PageNumber,articlePagingDto.Filter));
+
             var articleOperationResult = await _mediator.Send(new GetArticlesRequest()
             {
                 Filter = articlePagingDto.Filter,
                 PageSize = articlePagingDto.PageSize,
                 PageNumber = articlePagingDto.PageNumber
             }, cancellationToken);
-
             return articleOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(articleOperationResult.Results),
-                OperationStatus.InvalidValues => BadRequest(),
+                OperationStatus.InvalidValues => BadRequest(articleOperationResult.ErrorMessage),
                 OperationStatus.NotExist or OperationStatus.NotFound => NotFound(),
                 _ => throw new UnclearOperationsResultException("")
             };
@@ -62,9 +69,11 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
         [HttpGet("{id}/offers")]
         public async Task<ActionResult<ArticleDto>> GetOffers(int id, [FromQuery]ArticleRequestDto articleRequestDto,CancellationToken cancellationToken=default)
         {
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},maxPrice:{3})",
+                nameof(ArticleController), nameof(GetOffers), id, articleRequestDto.MaxArticlePrice));
+
             var articleOperationResult = await _mediator.Send(new GetArticleOfferByIdRequest() { Id = id,
                 MaxPriceLimit = articleRequestDto.MaxArticlePrice }, cancellationToken);
-
             return articleOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(articleOperationResult.Result),
@@ -85,16 +94,21 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
                 if (!int.TryParse(HttpContext.User.FindFirst(Constants.USER_ID_LABEL)!.Value, NumberStyles.None,
                         CultureInfo.InvariantCulture, out int customerId))
                 {
+                    _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},unauthorized)",
+                        nameof(ArticleController), nameof(Buy), id));
+
                     return Unauthorized();
                 }
+                _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},customerId)",
+                    nameof(ArticleController), nameof(Buy), id, customerId));
 
-                var articleOperationResult = await _mediator.Send(new BuyArticleRequest() { ArticleId = id,
-                    CustomerId = customerId }, cancellationToken);
+                var articleOperationResult = await _mediator.Send(new BuyArticleRequest() 
+                { ArticleId = id, CustomerId = customerId }, cancellationToken);
 
                 return articleOperationResult.Status switch
                 {
                     OperationStatus.Success => Ok(articleOperationResult.Result),
-                    OperationStatus.InvalidValues => BadRequest(),
+                    OperationStatus.InvalidValues => BadRequest(articleOperationResult.ErrorMessage),
                     OperationStatus.NotExist or OperationStatus.NotFound => NotFound($"Article with id: {id} not exist"),
                     OperationStatus.ArticleSold => BadRequest($"Article with id: {id} is sold"),
                     _ => throw new UnclearOperationsResultException("")

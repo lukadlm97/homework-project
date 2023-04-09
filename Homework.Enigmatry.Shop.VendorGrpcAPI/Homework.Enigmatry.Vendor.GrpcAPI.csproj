@@ -18,9 +18,13 @@
 
   <ItemGroup>
     <PackageReference Include="Grpc.AspNetCore" Version="2.49.0" />
+    <PackageReference Include="Serilog.AspNetCore" Version="6.1.0" />
+    <PackageReference Include="Serilog.Sinks.Console" Version="4.1.0" />
+    <PackageReference Include="Serilog.Sinks.File" Version="5.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Homework.Enigmatry.Logging.Shared\Homework.Enigmatry.Logging.Shared.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Shop.Persistence\Homework.Enigmatry.Persistence.Shared.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Vendor.Application\Homework.Enigmatry.Vendor.Application.csproj" />
     <ProjectReference Include="..\Homework.Enigmatry.Vendor.Infrastructure\Homework.Enigmatry.Vendor.Infrastructure.csproj" />

@@ -1,5 +1,7 @@
+using System.Runtime.InteropServices.JavaScript;
 using System.Text;
 using Homework.Enigmatry.Application.Shared.Models;
+using Homework.Enigmatry.Logging.Shared;
 using Homework.Enigmatry.Persistence.Shared;
 using Homework.Enigmatry.Shop.API.Extensions;
 using Homework.Enigmatry.Shop.Application;
@@ -9,8 +11,18 @@ using Homework.Enigmatry.Shop.Presentation.Middlewares;
 using Homework.Enigmatry.Shop.Presentation.Swagger;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Logging.ClearProviders();
+builder.Host.UseSerilog((hostContext, services, configuration) => {
+    configuration
+        .WriteTo.File($"log-.txt", outputTemplate: "[{Timestamp:HH:mm:ss} {Level:u3}] {Message:lj}{NewLine}{Exception}",rollingInterval:RollingInterval.Day)
+        .WriteTo.Console();
+});
+builder.Services.ConfigureLoggingServices();
+builder.Services.AddScoped<ExceptionMiddleware>();
 
 
 builder.Services.AddOptions<PersistenceSettings>()
@@ -29,10 +41,8 @@ builder.Services.AddOptions<ExternalGrpcSettings>()
     .BindConfiguration(nameof(ExternalGrpcSettings))
     .ValidateDataAnnotations()
     .ValidateOnStart();
-
 builder.Services.Configure<TokenSettings>(
     builder.Configuration.GetSection(nameof(TokenSettings)));
-
 
 
 builder.Services.ConfigureInMemoryPersistenceServices(builder.Configuration);

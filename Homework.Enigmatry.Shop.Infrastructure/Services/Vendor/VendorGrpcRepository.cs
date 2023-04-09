@@ -1,4 +1,5 @@
 ﻿using Homework.Enigmatry.Application.Shared.DTOs.Article;
+using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Infrastructure.Factories.Contract;
 using Homework.Enigmatry.Shop.VendorGrpcAPI;
@@ -9,15 +10,18 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
     public class VendorGrpcRepository:IVendorGrpcRepository
     {
         private readonly IVendorGrpcFactory _vendorGrpcFactory;
-        private readonly ILogger<VendorGrpcRepository> _logger;
+        private readonly IHighPerformanceLogger _logger;
+        private readonly LogTraceData _logTraceData;
 
-        public VendorGrpcRepository(ILogger<VendorGrpcRepository> logger, IVendorGrpcFactory vendorGrpcFactory)
+        public VendorGrpcRepository(IHighPerformanceLogger logger, IVendorGrpcFactory vendorGrpcFactory,LogTraceData logTraceData)
         {
             _logger = logger;
             _vendorGrpcFactory = vendorGrpcFactory;
+            _logTraceData = logTraceData;
         }
         public async Task<ArticleDetailsDto?> GetArticle(int id, CancellationToken cancellationToken = default)
         {
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{3})", nameof(VendorGrpcRepository), nameof(GetArticle),id));
             try
             {
                 var grpcClient = _vendorGrpcFactory.GetVendorClient();
@@ -33,10 +37,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
             }
             catch (Exception ex)
             {
-                if (_logger.IsEnabled(LogLevel.Error))
-                {
-                    _logger.LogError(ex.Message,ex);
-                }
+                _logger.Log(ex.Message,ex.InnerException,LogLevel.Error);
                 return null;
             }
         }
@@ -53,10 +54,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
             }
             catch (Exception ex)
             {
-                if (_logger.IsEnabled(LogLevel.Error))
-                {
-                    _logger.LogError(ex.Message, ex);
-                }
+                _logger.Log(ex.Message, ex.InnerException, LogLevel.Error);
                 return false;
             }
         }
