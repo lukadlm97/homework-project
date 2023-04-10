@@ -18,14 +18,14 @@ namespace Homework.Enigmatry.Persistence.Shared
                 Id = 1,
                 Username = "acc-test-one@gmail.com",
                 Password = "$2b$10$2d0SUdDlNUAf8PYaEk3HduN.7Njy/jB8avpjBWgveQHT2CUbi6L9G",
-                Role =  Constants.ADMIN_ROLE
+                Role =  Constants.AdminRole
             },
             new Customer()
             {
                 Id = 2,
                 Username = "acc-test-two@gmail.com",
                 Password = "$2b$10$2d0SUdDlNUAf8PYaEk3HduN.7Njy/jB8avpjBWgveQHT2CUbi6L9G",
-                Role =  Constants.ADMIN_ROLE
+                Role =  Constants.AdminRole
             }, 
             new Customer()
             {
@@ -33,7 +33,7 @@ namespace Homework.Enigmatry.Persistence.Shared
                 Username = "acc-test-three@gmail.com",
                 Password = "$2b$10$2d0SUdDlNUAf8PYaEk3HduN.7Njy/jB8avpjBWgveQHT2CUbi6L9G",
                 Role=
-                    Constants.CUSTOMER_ROLE
+                    Constants.CustomerRole
             }
         };
 
@@ -43,19 +43,19 @@ namespace Homework.Enigmatry.Persistence.Shared
             {
                 Id = 1,
                 Name = "article 1",
-                Price = new decimal(new Random(100).NextDouble())
+                Price = new decimal(Math.Round(new Random(1).NextDouble() * 100)),
             },
             new Article()
             {    
                 Id = 2,
                 Name = "article 2",
-                Price = new decimal(new Random(200).NextDouble())
+                Price = new decimal(Math.Round(new Random(2).NextDouble() * 100)),
             },
             new Article()
             {
                 Id = 3, 
                 Name = "article 3",
-                Price = new decimal(new Random(300).NextDouble())
+                Price = new decimal(Math.Round(new Random(3).NextDouble() * 100)),
             }
         };
         

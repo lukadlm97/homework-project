@@ -27,7 +27,7 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Comma
                 {
                     var customer= await _customerRepository.Get(id);
                     return customer != null &&
-                           string.Compare(customer.Role,Constants.Constants.CUSTOMER_ROLE,StringComparison.InvariantCulture)==0;
+                           string.Compare(customer.Role,Constants.Constants.CustomerRole,StringComparison.InvariantCulture)==0;
                 }).WithMessage("Customer must be authorized at customer role.");
             RuleFor(request => request.ArticleId)
                 .MustAsync(async (id, token) =>

@@ -1,4 +1,6 @@
-﻿namespace Homework.Enigmatry.Application.Shared.DTOs.Common
+﻿using System.Text.Json.Serialization;
+
+namespace Homework.Enigmatry.Application.Shared.DTOs.Common
 {
-    public record BaseDto(int Id);
+    public record BaseDto([property: JsonPropertyName("id")] int Id);
 }

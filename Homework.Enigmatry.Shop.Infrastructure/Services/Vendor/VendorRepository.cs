@@ -29,10 +29,8 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
 
                 if (httpResponseMessage.IsSuccessStatusCode)
                 {
-                    using var contentStream =
-                        await httpResponseMessage.Content.ReadAsStreamAsync(cancellationToken);
-                    return await JsonSerializer.DeserializeAsync
-                        <ArticleDetailsDto>(contentStream, cancellationToken: cancellationToken);
+                    var responseStr = await httpResponseMessage.Content.ReadAsStringAsync(cancellationToken);
+                    return JsonSerializer.Deserialize<ArticleDetailsDto>(responseStr);
                 }
 
                 return null;

@@ -31,7 +31,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Token
             {
                 Subject = new ClaimsIdentity(new Claim[]
                 {
-                    new Claim(Constants.USER_ID_LABEL, customer.Id.ToString()),
+                    new Claim(Constants.UserIdLabel, customer.Id.ToString()),
                     new Claim(ClaimTypes.Name, customer.Username),
                     new Claim(ClaimTypes.Role, role),
                 }),

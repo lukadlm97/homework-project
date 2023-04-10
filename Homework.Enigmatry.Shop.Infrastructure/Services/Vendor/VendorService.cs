@@ -2,6 +2,7 @@
 using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Models;
+using Homework.Enigmatry.Shop.Domain.Entities;
 using Microsoft.Extensions.Options;
 
 namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
@@ -28,26 +29,17 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
             List<ArticleDetailsDto> articles = new List<ArticleDetailsDto>();
 
 
-            ArticleDetailsDto? article = null;
-            if (await _vendorRepository.IsArticleExist(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken))
+            ArticleDetailsDto? article = await GetArticleFromVendor(id,_vendorSettings.FirstVendorHttpClientName,cancellationToken);
+            if (article != null)
             {
-                article=
-                    await _vendorRepository.GetArticle(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken); 
-                
-                if (article != null)
-                {
-                    articles.Add(article);
-                }
+                articles.Add(article);
             }
-            if (await _vendorRepository.IsArticleExist(id, _vendorSettings.FirstVendorHttpClientName, cancellationToken))
+            article = await GetArticleFromVendor(id, _vendorSettings.SecoundVendorHttpClientName, cancellationToken); 
+            if (article != null)
             {
-                article =
-                    await _vendorRepository.GetArticle(id, _vendorSettings.SecoundVendorHttpClientName, cancellationToken);
-                if (article != null)
-                {
-                    articles.Add(article);
-                }
+                articles.Add(article);
             }
+          
 
             if (await _vendorGrpcRepository.IsArticleExist(id, cancellationToken))
             {
@@ -60,6 +52,22 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
             }
 
             return articles;
+        }
+
+        private async Task<ArticleDetailsDto?> GetArticleFromVendor(int id, 
+            string clientName,
+            CancellationToken cancellationToken)
+        {
+            ArticleDetailsDto? article= null;
+            if (await _vendorRepository.IsArticleExist(id, clientName, cancellationToken))
+            {
+                article =
+                    await _vendorRepository.GetArticle(id, clientName, cancellationToken);
+
+               
+            }
+
+            return article;
         }
     }
 }

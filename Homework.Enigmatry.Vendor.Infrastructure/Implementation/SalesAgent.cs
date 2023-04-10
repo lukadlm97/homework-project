@@ -21,7 +21,7 @@ namespace Homework.Enigmatry.Vendor.Infrastructure.Implementation
                 {
                     Id = productId,
                     Name = "product" + productId,
-                    Price = new decimal(new Random(productId*100).NextDouble()),
+                    Price = new decimal(Math.Round(new Random(productId).NextDouble() * 100)),
                 };
                 await _articleRepository.Add(article);
                 return true;

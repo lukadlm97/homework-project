@@ -27,7 +27,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             _logTraceData = logTraceData;
         }
 
-        [Authorize(Roles = Constants.ADMIN_ROLE)]
+        [Authorize(Roles = Constants.AdminRole)]
         [HttpGet("{id}")]
         public async Task<ActionResult<ArticleDto>> Get(int id, CancellationToken cancellationToken = default)
         {
@@ -43,7 +43,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             };
         }
 
-        [Authorize(Roles = Constants.ADMIN_ROLE)]
+        [Authorize(Roles = Constants.AdminRole)]
         [HttpGet("")]
         public async Task<ActionResult<ArticleDto>> Get([FromQuery]ArticlePagingDto articlePagingDto, CancellationToken cancellationToken = default)
         {
@@ -65,7 +65,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             };
         }
 
-        [Authorize(Roles = Constants.CUSTOMER_ROLE)]
+        [Authorize(Roles = Constants.CustomerRole)]
         [HttpGet("{id}/offers")]
         public async Task<ActionResult<ArticleDto>> GetOffers(int id, [FromQuery]ArticleRequestDto articleRequestDto,CancellationToken cancellationToken=default)
         {
@@ -85,13 +85,13 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             };
         }
 
-        [Authorize(Roles = Constants.CUSTOMER_ROLE)]
+        [Authorize(Roles = Constants.CustomerRole)]
         [HttpGet("{id}/buy")]
         public async Task<ActionResult<ArticleDto>> Buy(int id,CancellationToken cancellationToken=default)
         {
-            if (HttpContext.User.HasClaim(claim => claim.Type == Constants.USER_ID_LABEL))
+            if (HttpContext.User.HasClaim(claim => claim.Type == Constants.UserIdLabel))
             {
-                if (!int.TryParse(HttpContext.User.FindFirst(Constants.USER_ID_LABEL)!.Value, NumberStyles.None,
+                if (!int.TryParse(HttpContext.User.FindFirst(Constants.UserIdLabel)!.Value, NumberStyles.None,
                         CultureInfo.InvariantCulture, out int customerId))
                 {
                     _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},unauthorized)",

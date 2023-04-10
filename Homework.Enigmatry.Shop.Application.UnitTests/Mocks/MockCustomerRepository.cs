@@ -13,16 +13,16 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Mocks
                 new Customer()
                 {
                     Id = 1,
-                    Role = Homework.Enigmatry.Shop.Application.Constants.Constants.CUSTOMER_ROLE
+                    Role = Homework.Enigmatry.Shop.Application.Constants.Constants.CustomerRole
                 },
                 new Customer()
                 {
                     Id = 2,
-                    Role = Homework.Enigmatry.Shop.Application.Constants.Constants.CUSTOMER_ROLE
+                    Role = Homework.Enigmatry.Shop.Application.Constants.Constants.CustomerRole
                 },
                 new Customer()
                 {Id = 3,
-                    Role = Homework.Enigmatry.Shop.Application.Constants.Constants.ADMIN_ROLE}
+                    Role = Homework.Enigmatry.Shop.Application.Constants.Constants.AdminRole}
             };
 
             var mockRepository = new Mock<ICustomerRepository>();

@@ -1,0 +1,1114 @@
+[20:56:35 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[20:56:35 INF] Now listening on: https://localhost:7221
+[20:56:35 INF] Now listening on: http://localhost:5232
+[20:56:35 INF] Application started. Press Ctrl+C to shut down.
+[20:56:35 INF] Hosting environment: Development
+[20:56:35 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[20:56:36 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/index.html - -
+[20:56:36 INF] Information details: 
+[20:56:36 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[20:56:36 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/index.html - - - 200 - text/html;charset=utf-8 231.4772ms
+[20:56:37 INF] Request starting HTTP/2 GET https://localhost:7221/_vs/browserLink - -
+[20:56:37 INF] Request finished HTTP/2 GET https://localhost:7221/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 49.8844ms
+[20:56:37 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/favicon-32x32.png - -
+[20:56:37 INF] Request starting HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - -
+[20:56:37 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[20:56:37 INF] Information details: 
+[20:56:37 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/favicon-32x32.png - - - 0 628 image/png 121.3839ms
+[20:56:37 INF] Information details: 
+[20:56:37 INF] Request finished HTTP/2 GET https://localhost:7221/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 130.2912ms
+[20:57:13 INF] Request starting HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 74
+[20:57:13 INF] CORS policy execution successful.
+[20:57:13 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[20:57:13 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[20:57:14 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:57:14 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 705.4901ms.
+[20:57:14 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[20:57:14 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 857.6274ms
+[20:57:14 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[20:57:14 INF] Information details: AuthController -> Login (username:acc-test-three@gmail.com)=>
+LoginHandler -> Handle=>
+ArticleRepository -> GetByUsername=>
+TokenService -> CreateToken
+[20:57:14 INF] Request finished HTTP/2 POST https://localhost:7221/api/v1/Auth/login application/json 74 - 200 - application/json;+charset=utf-8 1496.8945ms
+[20:57:32 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers - -
+[20:57:32 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:57:32 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:57:32 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:57:36 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 3794.5958ms.
+[20:57:36 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[20:57:36 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 3830.3792ms
+[20:57:36 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:57:36 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:0)=>
+GetArticleOfferByIdHandler -> Handle
+[20:57:36 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers - - - 400 - text/plain;+charset=utf-8 3913.0465ms
+[20:57:42 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=10 - -
+[20:57:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:57:42 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:57:42 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:57:42 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[20:57:42 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[20:57:42 INF] Request starting HTTP/1.1 GET https://localhost:7221/api/v1/Article/1/exist - -
+[20:57:42 INF] Information details: 
+[20:57:42 INF] Request finished HTTP/1.1 GET https://localhost:7221/api/v1/Article/1/exist - - - 404 0 - 3.6142ms
+[20:57:42 INF] Received HTTP response headers after 157.1011ms - 404
+[20:57:42 INF] End processing HTTP request after 168.4803ms - 404
+[20:57:42 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[20:57:42 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[20:57:43 INF] Request starting HTTP/1.1 GET https://localhost:7221/api/v1/Article/1/exist - -
+[20:57:43 INF] Information details: 
+[20:57:43 INF] Request finished HTTP/1.1 GET https://localhost:7221/api/v1/Article/1/exist - - - 404 0 - 2.2885ms
+[20:57:43 INF] Received HTTP response headers after 45.1249ms - 404
+[20:57:43 INF] End processing HTTP request after 48.3797ms - 404
+[20:57:47 ERR] Error details: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(ConnectContext context)")
+[20:57:47 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 4746.4594ms.
+[20:57:47 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[20:57:47 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 4776.1826ms
+[20:57:47 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:57:47 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:10)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:1,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:1,vendorHttpClientName:vendor1)
+[20:57:47 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=10 - - - 404 - text/plain;+charset=utf-8 4792.0656ms
+[20:57:57 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=1000 - -
+[20:57:57 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:57:57 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:57:57 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:57:57 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 19.2582ms.
+[20:57:57 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[20:57:57 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 49.6125ms
+[20:57:57 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:57:57 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:1000)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[20:57:57 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=1000 - - - 200 - application/json;+charset=utf-8 58.9929ms
+[20:58:06 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - -
+[20:58:06 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:06 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:58:06 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:58:09 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3471.6914ms.
+[20:58:09 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Order.OrderDto'.
+[20:58:09 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 3495.0872ms
+[20:58:09 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:09 INF] Information details: ArticleController -> Buy (id:1,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle=>
+ArticleRepository -> Get=>
+OrderRepository -> Add
+[20:58:09 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - - - 200 - application/json;+charset=utf-8 3508.6084ms
+[20:58:12 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - -
+[20:58:12 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:12 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:58:12 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:58:12 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 3.473ms.
+[20:58:12 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[20:58:12 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 35.027ms
+[20:58:12 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:12 INF] Information details: ArticleController -> Buy (id:1,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get
+[20:58:12 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - - - 400 - text/plain;+charset=utf-8 44.3958ms
+[20:58:17 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - -
+[20:58:17 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:17 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:58:17 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:58:17 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 1.5932ms.
+[20:58:17 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[20:58:17 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 22.5728ms
+[20:58:17 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:17 INF] Information details: ArticleController -> Buy (id:1,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get
+[20:58:17 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - - - 400 - text/plain;+charset=utf-8 33.6375ms
+[20:58:25 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=1000 - -
+[20:58:25 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:58:25 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:58:25 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:58:25 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 0.9586ms.
+[20:58:25 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[20:58:25 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 23.4343ms
+[20:58:25 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:58:25 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:1000)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[20:58:25 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/offers?MaxArticlePrice=1000 - - - 404 - text/plain;+charset=utf-8 34.9996ms
+[20:58:30 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - -
+[20:58:30 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:30 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:58:30 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:58:30 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.3763ms.
+[20:58:30 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[20:58:30 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 20.4558ms
+[20:58:30 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[20:58:30 INF] Information details: ArticleController -> Buy (id:1,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get
+[20:58:30 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/1/buy - - - 400 - text/plain;+charset=utf-8 29.4460ms
+[20:58:42 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/122/offers?MaxArticlePrice=1000 - -
+[20:58:42 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:58:42 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:58:42 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:58:42 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:42 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:42 INF] Request starting HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - -
+[20:58:42 INF] Information details: 
+[20:58:42 INF] Request finished HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - - - 404 0 - 3.5074ms
+[20:58:42 INF] Received HTTP response headers after 47.3278ms - 404
+[20:58:42 INF] End processing HTTP request after 51.8389ms - 404
+[20:58:42 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:42 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:42 INF] Request starting HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - -
+[20:58:42 INF] Information details: 
+[20:58:42 INF] Request finished HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - - - 404 0 - 1.5882ms
+[20:58:42 INF] Received HTTP response headers after 37.134ms - 404
+[20:58:42 INF] End processing HTTP request after 41.8471ms - 404
+[20:58:46 ERR] Error details: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(ConnectContext context)")
+[20:58:46 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 4344.1043ms.
+[20:58:46 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[20:58:46 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 4363.6071ms
+[20:58:46 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:58:46 INF] Information details: ArticleController -> GetOffers (id:122,maxPrice:1000)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:122,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:122,vendorHttpClientName:vendor1)
+[20:58:46 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/122/offers?MaxArticlePrice=1000 - - - 404 - text/plain;+charset=utf-8 4372.6303ms
+[20:58:51 INF] Request starting HTTP/2 GET https://localhost:7221/api/v1/Article/122/offers?MaxArticlePrice=1000 - -
+[20:58:51 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:58:51 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[20:58:51 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[20:58:51 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:52 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:52 INF] Request starting HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - -
+[20:58:52 INF] Information details: 
+[20:58:52 INF] Request finished HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - - - 404 0 - 2.8719ms
+[20:58:52 INF] Received HTTP response headers after 39.4823ms - 404
+[20:58:52 INF] End processing HTTP request after 43.2961ms - 404
+[20:58:52 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:52 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/122/exist
+[20:58:52 INF] Request starting HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - -
+[20:58:52 INF] Information details: 
+[20:58:52 INF] Request finished HTTP/1.1 GET https://localhost:7221/api/v1/Article/122/exist - - - 404 0 - 2.0483ms
+[20:58:52 INF] Received HTTP response headers after 38.9752ms - 404
+[20:58:52 INF] End processing HTTP request after 43.3494ms - 404
+[20:58:56 ERR] Error details: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(ConnectContext context)")
+[20:58:56 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 4334.2244ms.
+[20:58:56 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[20:58:56 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 4356.4114ms
+[20:58:56 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[20:58:56 INF] Information details: ArticleController -> GetOffers (id:122,maxPrice:1000)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:122,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:122,vendorHttpClientName:vendor1)
+[20:58:56 INF] Request finished HTTP/2 GET https://localhost:7221/api/v1/Article/122/offers?MaxArticlePrice=1000 - - - 404 - text/plain;+charset=utf-8 4364.8926ms
+[20:59:53 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[20:59:53 INF] Now listening on: https://localhost:7111
+[20:59:53 INF] Now listening on: http://localhost:5111
+[20:59:53 INF] Application started. Press Ctrl+C to shut down.
+[20:59:53 INF] Hosting environment: Development
+[20:59:53 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/swagger - -
+[20:59:58 INF] Information details: 
+[20:59:58 INF] Request finished HTTP/2 GET https://localhost:7111/swagger - - - 301 0 - 70.1828ms
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/index.html - -
+[20:59:58 INF] Information details: 
+[20:59:58 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[20:59:58 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/index.html - - - 200 - text/html;charset=utf-8 202.6817ms
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/swagger-ui.css - -
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/swagger-ui-bundle.js - -
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/swagger-ui-standalone-preset.js - -
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/_vs/browserLink - -
+[20:59:58 INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[20:59:58 INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+[20:59:58 INF] Information details: 
+[20:59:58 INF] Information details: 
+[20:59:58 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/swagger-ui.css - - - 200 143943 text/css 103.4544ms
+[20:59:58 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/swagger-ui-standalone-preset.js - - - 200 339486 text/javascript 105.7876ms
+[20:59:58 INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+[20:59:58 INF] Information details: 
+[20:59:58 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/swagger-ui-bundle.js - - - 200 1096145 text/javascript 154.6068ms
+[20:59:58 INF] Request finished HTTP/2 GET https://localhost:7111/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 165.0734ms
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/favicon-32x32.png - -
+[20:59:58 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[20:59:58 INF] Information details: 
+[20:59:58 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/favicon-32x32.png - - - 200 628 image/png 3.6853ms
+[20:59:58 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - -
+[20:59:59 INF] Information details: 
+[20:59:59 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 165.8125ms
+[21:00:20 INF] Request starting HTTP/2 POST https://localhost:7111/api/v1/Auth/register application/json 58
+[21:00:20 INF] CORS policy execution successful.
+[21:00:20 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Register (Homework.Enigmatry.Shop.Presentation)'
+[21:00:20 INF] Route matched with {action = "Register", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Register(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[21:00:20 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Register (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:00:21 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Register (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 471.6672ms.
+[21:00:21 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[21:00:21 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Register (Homework.Enigmatry.Shop.Presentation) in 615.3867ms
+[21:00:21 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Register (Homework.Enigmatry.Shop.Presentation)'
+[21:00:21 INF] Information details: Register -> Login (username:public.man.321,password:string)=>
+RegisterHandler -> Handle=>
+ArticleRepository -> GetByUsername=>
+ArticleRepository -> Add=>
+TokenService -> CreateToken
+[21:00:21 INF] Request finished HTTP/2 POST https://localhost:7111/api/v1/Auth/register application/json 58 - 200 - application/json;+charset=utf-8 771.0981ms
+[21:00:59 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=12 - -
+[21:00:59 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:00:59 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:00:59 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:00:59 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[21:00:59 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[21:01:04 ERR] Error details: No connection could be made because the target machine actively refused it. (localhost:7221)
+System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+[21:01:04 INF] Start processing HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[21:01:04 INF] Sending HTTP request GET https://localhost:7221/api/v1/Article/1/exist
+[21:01:09 ERR] Error details: No connection could be made because the target machine actively refused it. (localhost:7221)
+System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at System.Net.Http.HttpConnectionPool.ConnectToTcpHostAsync(String host, Int32 port, HttpRequestMessage initialRequest, Boolean async, CancellationToken cancellationToken)
+[21:01:13 ERR] Error details: Status(StatusCode="Unavailable", Detail="Error connecting to subchannel.", DebugException="System.Net.Sockets.SocketException (10061): No connection could be made because the target machine actively refused it.
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.ThrowException(SocketError error, CancellationToken cancellationToken)
+   at System.Net.Sockets.Socket.AwaitableSocketAsyncEventArgs.System.Threading.Tasks.Sources.IValueTaskSource.GetResult(Int16 token)
+   at System.Net.Sockets.Socket.<ConnectAsync>g__WaitForConnectWithCancellation|281_0(AwaitableSocketAsyncEventArgs saea, ValueTask connectTask, CancellationToken cancellationToken)
+   at Grpc.Net.Client.Balancer.Internal.SocketConnectivitySubchannelTransport.TryConnectAsync(ConnectContext context)")
+[21:01:13 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 14156.4584ms.
+[21:01:13 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[21:01:13 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 14190.5972ms
+[21:01:13 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:01:13 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:12)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:1,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:1,vendorHttpClientName:vendor1)
+[21:01:13 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=12 - - - 404 - text/plain;+charset=utf-8 14266.2148ms
+[21:01:19 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=1200 - -
+[21:01:19 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:01:19 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:01:19 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:01:19 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 15.9296ms.
+[21:01:19 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:01:19 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 46.2665ms
+[21:01:19 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:01:19 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:1200)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[21:01:19 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=1200 - - - 200 - application/json;+charset=utf-8 58.8767ms
+[21:01:29 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1/buy - -
+[21:01:29 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:01:29 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:01:29 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:01:29 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 24.9178ms.
+[21:01:29 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Order.OrderDto'.
+[21:01:29 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 47.5296ms
+[21:01:29 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:01:29 INF] Information details: ArticleController -> Buy (id:1,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle=>
+ArticleRepository -> Get=>
+OrderRepository -> Add
+[21:01:29 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1/buy - - - 200 - application/json;+charset=utf-8 60.9954ms
+[21:01:37 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1/buy - -
+[21:01:37 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:01:37 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:01:37 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:01:37 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 7.8358ms.
+[21:01:37 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[21:01:37 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 34.2995ms
+[21:01:37 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:01:37 INF] Information details: ArticleController -> Buy (id:1,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get
+[21:01:37 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1/buy - - - 400 - text/plain;+charset=utf-8 44.6330ms
+[21:05:01 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[21:05:01 INF] Now listening on: https://localhost:7111
+[21:05:01 INF] Now listening on: http://localhost:5111
+[21:05:01 INF] Application started. Press Ctrl+C to shut down.
+[21:05:01 INF] Hosting environment: Development
+[21:05:01 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[21:05:05 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/index.html - -
+[21:05:06 INF] Information details: 
+[21:05:06 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:05:06 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/index.html - - - 200 - text/html;charset=utf-8 1390.1446ms
+[21:05:06 INF] Request starting HTTP/2 GET https://localhost:7111/_vs/browserLink - -
+[21:05:06 INF] Request finished HTTP/2 GET https://localhost:7111/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 87.3453ms
+[21:05:07 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - -
+[21:05:07 INF] Information details: 
+[21:05:07 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 205.3124ms
+[21:05:15 INF] Request starting HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 50
+[21:05:15 INF] CORS policy execution successful.
+[21:05:15 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:05:15 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[21:05:15 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:05:15 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 417.7183ms
+[21:05:15 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:05:16 ERR] Error details: Internal server error
+Homework.Enigmatry.Application.Shared.Exceptions.UnclearOperationsResultException
+   at Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login(AuthRequestDto requestDto, CancellationToken cancellationToken) in C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.Presentation\Controllers\AuthController.cs:line 41
+   at lambda_method6(Closure, Object)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.AwaitableObjectResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Logged|12_1(ControllerActionInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Homework.Enigmatry.Shop.Presentation.Middlewares.ExceptionMiddleware.InvokeAsync(HttpContext context, RequestDelegate next) in C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.Presentation\Middleware\ExceptionMiddleware.cs:line 53
+[21:05:16 INF] Information details: AuthController -> Login (username:string)=>
+LoginHandler -> Handle=>
+ArticleRepository -> GetByUsername
+[21:05:16 INF] Request finished HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 50 - 500 - application/json 880.7457ms
+[21:05:56 INF] Request starting HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74
+[21:05:56 INF] CORS policy execution successful.
+[21:05:56 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:05:56 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[21:05:57 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:05:57 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 404.0219ms.
+[21:05:57 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[21:05:57 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 445.1026ms
+[21:05:57 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:05:57 INF] Information details: AuthController -> Login (username:acc-test-three@gmail.com)=>
+LoginHandler -> Handle=>
+ArticleRepository -> GetByUsername=>
+TokenService -> CreateToken
+[21:05:57 INF] Request finished HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74 - 200 - application/json;+charset=utf-8 465.8872ms
+[21:06:20 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=124 - -
+[21:06:20 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:20 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:06:20 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:06:20 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 248.2033ms.
+[21:06:20 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:06:20 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 290.8584ms
+[21:06:20 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:20 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[21:06:20 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 365.0383ms
+[21:06:26 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/13/offers?MaxArticlePrice=124 - -
+[21:06:26 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:26 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:06:26 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:06:26 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:26 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:26 INF] Received HTTP response headers after 343.181ms - 404
+[21:06:26 INF] End processing HTTP request after 352.4952ms - 404
+[21:06:26 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:26 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:26 INF] Received HTTP response headers after 109.6472ms - 404
+[21:06:26 INF] End processing HTTP request after 115.47ms - 404
+[21:06:27 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 841.8869ms.
+[21:06:27 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[21:06:27 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 866.5498ms
+[21:06:27 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:27 INF] Information details: ArticleController -> GetOffers (id:13,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:13,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:13,vendorHttpClientName:vendor1)
+[21:06:27 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/13/offers?MaxArticlePrice=124 - - - 404 - text/plain;+charset=utf-8 881.4254ms
+[21:06:30 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/13/offers?MaxArticlePrice=124 - -
+[21:06:30 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:30 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:06:30 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:06:30 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:30 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:30 INF] Received HTTP response headers after 89.8149ms - 404
+[21:06:30 INF] End processing HTTP request after 93.9551ms - 404
+[21:06:30 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:30 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/13/exist
+[21:06:31 INF] Received HTTP response headers after 90.115ms - 200
+[21:06:31 INF] End processing HTTP request after 93.9883ms - 200
+[21:06:31 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/13
+[21:06:31 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/13
+[21:06:31 INF] Received HTTP response headers after 237.655ms - 200
+[21:06:31 INF] End processing HTTP request after 242.2892ms - 200
+[21:06:31 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 494.318ms.
+[21:06:31 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:06:31 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 515.0266ms
+[21:06:31 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:31 INF] Information details: ArticleController -> GetOffers (id:13,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:13,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:13,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:13,vendorHttpClientName:vendor2)
+[21:06:31 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/13/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 524.5732ms
+[21:06:35 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/13/offers?MaxArticlePrice=124 - -
+[21:06:35 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:35 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:06:35 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:06:35 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 3.4391ms.
+[21:06:35 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:06:35 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 23.8779ms
+[21:06:35 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:06:35 INF] Information details: ArticleController -> GetOffers (id:13,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle
+[21:06:35 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/13/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 33.2826ms
+[21:07:08 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=124 - -
+[21:07:08 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:08 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:07:08 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:07:08 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.4768ms.
+[21:07:08 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:07:08 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 29.2885ms
+[21:07:08 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:08 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle
+[21:07:08 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 48.9484ms
+[21:07:12 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/16/offers?MaxArticlePrice=124 - -
+[21:07:12 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:12 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:07:12 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:07:12 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16/exist
+[21:07:12 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16/exist
+[21:07:12 INF] Received HTTP response headers after 102.9362ms - 200
+[21:07:12 INF] End processing HTTP request after 106.8285ms - 200
+[21:07:12 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16
+[21:07:12 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16
+[21:07:12 INF] Received HTTP response headers after 77.2013ms - 200
+[21:07:12 INF] End processing HTTP request after 80.4018ms - 200
+[21:07:12 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16/exist
+[21:07:12 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16/exist
+[21:07:12 INF] Received HTTP response headers after 93.0263ms - 200
+[21:07:12 INF] End processing HTTP request after 96.0098ms - 200
+[21:07:12 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16
+[21:07:12 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16
+[21:07:12 INF] Received HTTP response headers after 92.5961ms - 200
+[21:07:12 INF] End processing HTTP request after 97.68ms - 200
+[21:07:12 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 424.6409ms.
+[21:07:12 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:07:12 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 446.8146ms
+[21:07:12 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:12 INF] Information details: ArticleController -> GetOffers (id:16,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:16,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:16,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:16,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:16,vendorHttpClientName:vendor2)
+[21:07:12 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/16/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 456.7286ms
+[21:07:21 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/16/offers?MaxArticlePrice=124 - -
+[21:07:21 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:21 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:07:21 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:07:21 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.6179ms.
+[21:07:21 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:07:21 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 20.5465ms
+[21:07:21 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:21 INF] Information details: ArticleController -> GetOffers (id:16,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle
+[21:07:21 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/16/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 29.8342ms
+[21:07:24 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/161/offers?MaxArticlePrice=124 - -
+[21:07:24 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:24 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:07:24 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:07:24 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/161/exist
+[21:07:24 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/161/exist
+[21:07:24 INF] Received HTTP response headers after 98.0711ms - 200
+[21:07:24 INF] End processing HTTP request after 101.7133ms - 200
+[21:07:24 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/161
+[21:07:24 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/161
+[21:07:24 INF] Received HTTP response headers after 86.9232ms - 200
+[21:07:24 INF] End processing HTTP request after 90.95ms - 200
+[21:07:24 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/161/exist
+[21:07:24 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/161/exist
+[21:07:24 INF] Received HTTP response headers after 91.8575ms - 200
+[21:07:24 INF] End processing HTTP request after 95.1224ms - 200
+[21:07:24 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/161
+[21:07:24 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/161
+[21:07:25 INF] Received HTTP response headers after 94.7728ms - 200
+[21:07:25 INF] End processing HTTP request after 98.5763ms - 200
+[21:07:25 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 430.9953ms.
+[21:07:25 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:07:25 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 450.9788ms
+[21:07:25 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:07:25 INF] Information details: ArticleController -> GetOffers (id:161,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:161,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:161,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:161,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:161,vendorHttpClientName:vendor2)
+[21:07:25 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/161/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 460.0149ms
+[21:08:07 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/161/offers?MaxArticlePrice=124 - -
+[21:08:07 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:08:07 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:08:07 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:08:47 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 39689.7321ms.
+[21:08:47 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:08:47 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 39758.4765ms
+[21:08:47 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:08:47 INF] Information details: ArticleController -> GetOffers (id:161,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle
+[21:08:47 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/161/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 39908.8875ms
+[21:08:52 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1612/offers?MaxArticlePrice=124 - -
+[21:08:52 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:08:52 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:08:52 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:08:53 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1612/exist
+[21:08:53 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1612/exist
+[21:08:53 INF] Received HTTP response headers after 105.333ms - 404
+[21:08:53 INF] End processing HTTP request after 108.5443ms - 404
+[21:08:53 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1612/exist
+[21:08:53 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1612/exist
+[21:08:53 INF] Received HTTP response headers after 85.4939ms - 200
+[21:08:53 INF] End processing HTTP request after 89.1332ms - 200
+[21:08:53 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1612
+[21:08:53 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1612
+[21:08:53 INF] Received HTTP response headers after 99.656ms - 200
+[21:08:53 INF] End processing HTTP request after 104.0759ms - 200
+[21:08:54 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1990.2125ms.
+[21:08:54 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:08:54 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 2010.3938ms
+[21:08:54 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:08:54 INF] Information details: ArticleController -> GetOffers (id:1612,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:1612,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:1612,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:1612,vendorHttpClientName:vendor2)
+[21:08:54 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1612/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 2017.6814ms
+[21:08:58 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1612/offers?MaxArticlePrice=124 - -
+[21:08:58 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:08:58 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:08:58 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:09:00 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2125.2553ms.
+[21:09:00 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:09:00 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 2148.0127ms
+[21:09:00 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:09:00 INF] Information details: ArticleController -> GetOffers (id:1612,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle
+[21:09:00 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1612/offers?MaxArticlePrice=124 - - - 200 - application/json;+charset=utf-8 2155.5344ms
+[21:09:05 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/16121/offers?MaxArticlePrice=124 - -
+[21:09:05 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:09:05 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:09:05 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:09:59 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:09:59 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:09:59 INF] Received HTTP response headers after 203.8194ms - 404
+[21:09:59 INF] End processing HTTP request after 274.0464ms - 404
+[21:09:59 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:09:59 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:09:59 INF] Received HTTP response headers after 87.7621ms - 404
+[21:09:59 INF] End processing HTTP request after 90.9673ms - 404
+[21:10:00 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 54727.9718ms
+[21:10:00 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:10:00 ERR] Error details: Unknown error
+[21:10:00 INF] Information details: ArticleController -> GetOffers (id:16121,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:16121,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:16121,vendorHttpClientName:vendor1)
+[21:10:00 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/16121/offers?MaxArticlePrice=124 - - - 500 - application/json 55290.9434ms
+[21:10:12 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/16121/offers?MaxArticlePrice=124 - -
+[21:10:12 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:10:12 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:10:12 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:10:14 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:10:14 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:10:15 INF] Received HTTP response headers after 77.8485ms - 404
+[21:10:15 INF] End processing HTTP request after 81.3098ms - 404
+[21:10:15 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:10:15 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/16121/exist
+[21:10:15 INF] Received HTTP response headers after 74.4855ms - 404
+[21:10:15 INF] End processing HTTP request after 77.6114ms - 404
+[21:10:15 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 2908.05ms
+[21:10:16 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:10:16 ERR] Error details: Unknown error
+[21:10:16 INF] Information details: ArticleController -> GetOffers (id:16121,maxPrice:124)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:16121,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:16121,vendorHttpClientName:vendor1)
+[21:10:16 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/16121/offers?MaxArticlePrice=124 - - - 500 - application/json 3576.0506ms
+[21:10:30 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/161212/offers?MaxArticlePrice=124 - -
+[21:10:30 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:10:30 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:10:30 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:11:04 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/161212/exist
+[21:11:04 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/161212/exist
+[21:11:04 INF] Received HTTP response headers after 132.744ms - 200
+[21:11:04 INF] End processing HTTP request after 149.6234ms - 200
+[21:11:35 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/161212
+[21:11:35 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/161212
+[21:11:35 INF] Received HTTP response headers after 90.3217ms - 200
+[21:11:35 INF] End processing HTTP request after 95.4973ms - 200
+[21:15:03 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[21:15:04 INF] Now listening on: https://localhost:7111
+[21:15:04 INF] Now listening on: http://localhost:5111
+[21:15:04 INF] Application started. Press Ctrl+C to shut down.
+[21:15:04 INF] Hosting environment: Development
+[21:15:04 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[21:15:07 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/index.html - -
+[21:15:07 INF] Information details: 
+[21:15:07 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:15:07 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/index.html - - - 200 - text/html;charset=utf-8 490.6111ms
+[21:15:07 INF] Request starting HTTP/2 GET https://localhost:7111/_vs/browserLink - -
+[21:15:08 INF] Request finished HTTP/2 GET https://localhost:7111/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 358.5413ms
+[21:15:08 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - -
+[21:15:09 INF] Information details: 
+[21:15:09 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 172.4062ms
+[21:15:14 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/index.html - -
+[21:15:14 INF] Information details: 
+[21:15:14 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:15:14 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/index.html - - - 200 - text/html;charset=utf-8 18.9780ms
+[21:15:14 INF] Request starting HTTP/2 GET https://localhost:7111/_vs/browserLink - -
+[21:15:14 INF] Request finished HTTP/2 GET https://localhost:7111/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 32.5093ms
+[21:15:15 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - -
+[21:15:15 INF] Information details: 
+[21:15:15 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 7.3417ms
+[21:15:30 INF] Request starting HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74
+[21:15:30 INF] CORS policy execution successful.
+[21:15:30 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:15:30 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[21:15:30 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:15:31 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 445.8372ms.
+[21:15:31 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[21:15:31 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 592.5805ms
+[21:15:31 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:15:31 INF] Information details: AuthController -> Login (username:acc-test-three@gmail.com)=>
+LoginHandler -> Handle=>
+ArticleRepository -> GetByUsername=>
+TokenService -> CreateToken
+[21:15:31 INF] Request finished HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74 - 200 - application/json;+charset=utf-8 753.9073ms
+[21:15:51 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=100 - -
+[21:15:51 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:15:51 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:15:51 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:15:58 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 6474.2756ms.
+[21:15:58 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:15:58 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 6519.6734ms
+[21:15:58 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:15:58 INF] Information details: ArticleController -> GetOffers (id:1,maxPrice:100)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[21:15:58 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1/offers?MaxArticlePrice=100 - - - 200 - application/json;+charset=utf-8 6595.3051ms
+[21:16:04 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/122/offers?MaxArticlePrice=100 - -
+[21:16:04 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:16:04 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:16:04 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:16:13 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:16:13 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:16:13 INF] Received HTTP response headers after 334.1928ms - 200
+[21:16:13 INF] End processing HTTP request after 342.6933ms - 200
+[21:16:20 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/122
+[21:16:20 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/122
+[21:16:20 INF] Received HTTP response headers after 198.0039ms - 200
+[21:16:20 INF] End processing HTTP request after 201.2134ms - 200
+[21:16:54 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:16:54 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:16:55 INF] Received HTTP response headers after 147.4627ms - 200
+[21:16:55 INF] End processing HTTP request after 150.4925ms - 200
+[21:16:57 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/122
+[21:16:57 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/122
+[21:16:57 INF] Received HTTP response headers after 133.6723ms - 200
+[21:16:57 INF] End processing HTTP request after 137.1569ms - 200
+[21:19:30 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[21:19:30 INF] Now listening on: https://localhost:7111
+[21:19:30 INF] Now listening on: http://localhost:5111
+[21:19:30 INF] Application started. Press Ctrl+C to shut down.
+[21:19:30 INF] Hosting environment: Development
+[21:19:30 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[21:19:36 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/index.html - -
+[21:19:37 INF] Information details: 
+[21:19:37 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:19:37 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/index.html - - - 200 - text/html;charset=utf-8 428.6680ms
+[21:19:37 INF] Request starting HTTP/2 GET https://localhost:7111/_vs/browserLink - -
+[21:19:37 INF] Request finished HTTP/2 GET https://localhost:7111/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 208.1056ms
+[21:19:37 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/favicon-32x32.png - -
+[21:19:37 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - -
+[21:19:37 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[21:19:37 INF] Information details: 
+[21:19:37 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/favicon-32x32.png - - - 0 628 image/png 241.2873ms
+[21:19:38 INF] Information details: 
+[21:19:38 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 211.6541ms
+[21:20:01 INF] Request starting HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74
+[21:20:01 INF] CORS policy execution successful.
+[21:20:02 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:20:02 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[21:20:02 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:20:02 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 431.3866ms.
+[21:20:02 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[21:20:02 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 561.5372ms
+[21:20:02 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:20:02 INF] Information details: AuthController -> Login (username:acc-test-three@gmail.com)=>
+LoginHandler -> Handle=>
+ArticleRepository -> GetByUsername=>
+TokenService -> CreateToken
+[21:20:02 INF] Request finished HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74 - 200 - application/json;+charset=utf-8 743.3016ms
+[21:20:23 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/122/offers?MaxArticlePrice=1222 - -
+[21:20:23 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:20:23 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:20:23 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:20:36 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:20:36 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:20:36 INF] Received HTTP response headers after 328.8331ms - 404
+[21:20:36 INF] End processing HTTP request after 337.7539ms - 404
+[21:20:39 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:20:39 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/122/exist
+[21:20:39 INF] Received HTTP response headers after 124.7237ms - 200
+[21:20:39 INF] End processing HTTP request after 128.1143ms - 200
+[21:20:44 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/122
+[21:20:44 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/122
+[21:20:45 INF] Received HTTP response headers after 252.5001ms - 200
+[21:20:45 INF] End processing HTTP request after 255.7723ms - 200
+[21:21:27 INF] User profile is available. Using 'C:\Users\luka.radovanovic\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+[21:21:28 INF] Now listening on: https://localhost:7111
+[21:21:28 INF] Now listening on: http://localhost:5111
+[21:21:28 INF] Application started. Press Ctrl+C to shut down.
+[21:21:28 INF] Hosting environment: Development
+[21:21:28 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.API
+[21:21:32 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/index.html - -
+[21:21:32 INF] Information details: 
+[21:21:32 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:21:32 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/index.html - - - 200 - text/html;charset=utf-8 290.1872ms
+[21:21:32 INF] Request starting HTTP/2 GET https://localhost:7111/_vs/browserLink - -
+[21:21:33 INF] Request finished HTTP/2 GET https://localhost:7111/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 157.3923ms
+[21:21:33 INF] Request starting HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - -
+[21:21:33 INF] Information details: 
+[21:21:33 INF] Request finished HTTP/2 GET https://localhost:7111/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 147.4503ms
+[21:21:59 INF] Request starting HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74
+[21:21:59 INF] CORS policy execution successful.
+[21:21:59 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:21:59 INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Login(Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.AuthController (Homework.Enigmatry.Shop.Presentation).
+[21:21:59 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:21:59 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 435.8008ms.
+[21:21:59 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Customer.AuthDto'.
+[21:21:59 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation) in 562.6758ms
+[21:21:59 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.AuthController.Login (Homework.Enigmatry.Shop.Presentation)'
+[21:21:59 INF] Information details: AuthController -> Login (username:acc-test-three@gmail.com)=>
+LoginHandler -> Handle=>
+ArticleRepository -> GetByUsername=>
+TokenService -> CreateToken
+[21:21:59 INF] Request finished HTTP/2 POST https://localhost:7111/api/v1/Auth/login application/json 74 - 200 - application/json;+charset=utf-8 740.9526ms
+[21:22:20 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/123/offers?MaxArticlePrice=1222 - -
+[21:22:20 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:22:20 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:22:20 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:22:28 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:22:28 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:22:29 INF] Received HTTP response headers after 353.3124ms - 200
+[21:22:29 INF] End processing HTTP request after 362.7909ms - 200
+[21:22:34 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:22:34 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:22:35 INF] Received HTTP response headers after 266.1954ms - 200
+[21:22:35 INF] End processing HTTP request after 269.91ms - 200
+[21:22:44 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:22:44 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:22:44 INF] Received HTTP response headers after 102.2985ms - 200
+[21:22:44 INF] End processing HTTP request after 106.233ms - 200
+[21:22:45 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:22:45 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:22:46 INF] Received HTTP response headers after 114.6214ms - 200
+[21:22:46 INF] End processing HTTP request after 118.6354ms - 200
+[21:23:22 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 61704.5424ms.
+[21:23:22 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:23:22 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 61742.3179ms
+[21:23:22 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:23:22 INF] Information details: ArticleController -> GetOffers (id:123,maxPrice:1222)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:123,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:123,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:123,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:123,vendorHttpClientName:vendor2)
+[21:23:22 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/123/offers?MaxArticlePrice=1222 - - - 200 - application/json;+charset=utf-8 61824.2674ms
+[21:23:29 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/123/offers?MaxArticlePrice=1222 - -
+[21:23:29 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:23:29 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:23:29 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:23:32 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 2643.8077ms.
+[21:23:32 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:23:32 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 2664.2505ms
+[21:23:32 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:23:32 INF] Information details: ArticleController -> GetOffers (id:123,maxPrice:1222)=>
+GetArticleOfferByIdHandler -> Handle
+[21:23:32 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/123/offers?MaxArticlePrice=1222 - - - 200 - application/json;+charset=utf-8 2674.8542ms
+[21:23:39 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - -
+[21:23:39 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:23:39 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:23:40 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:23:40 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 28.0705ms.
+[21:23:40 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Order.OrderDto'.
+[21:23:40 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 86.9759ms
+[21:23:40 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:23:40 INF] Information details: ArticleController -> Buy (id:123,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle=>
+ArticleRepository -> Get=>
+OrderRepository -> Add
+[21:23:40 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - - - 200 - application/json;+charset=utf-8 102.8316ms
+[21:23:44 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - -
+[21:23:44 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:23:44 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:23:44 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:23:44 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 8.309ms.
+[21:23:44 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[21:23:44 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 28.7342ms
+[21:23:44 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:23:44 INF] Information details: ArticleController -> Buy (id:123,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get
+[21:23:44 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - - - 400 - text/plain;+charset=utf-8 35.9486ms
+[21:23:48 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/123/offers?MaxArticlePrice=1222 - -
+[21:23:48 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:23:48 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:23:48 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:23:51 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:23:51 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:23:51 INF] Received HTTP response headers after 129.372ms - 200
+[21:23:51 INF] End processing HTTP request after 186.7937ms - 200
+[21:23:51 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:23:51 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:23:51 INF] Received HTTP response headers after 89.0779ms - 200
+[21:23:51 INF] End processing HTTP request after 92.474ms - 200
+[21:23:53 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:23:53 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123/exist
+[21:23:54 INF] Received HTTP response headers after 95.5263ms - 200
+[21:23:54 INF] End processing HTTP request after 98.9507ms - 200
+[21:23:54 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:23:54 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/123
+[21:23:54 INF] Received HTTP response headers after 107.5197ms - 200
+[21:23:54 INF] End processing HTTP request after 110.7787ms - 200
+[21:23:57 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 9013.8954ms.
+[21:23:57 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:23:57 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 9033.7646ms
+[21:23:57 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:23:57 INF] Information details: ArticleController -> GetOffers (id:123,maxPrice:1222)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:123,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:123,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:123,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:123,vendorHttpClientName:vendor2)
+[21:23:57 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/123/offers?MaxArticlePrice=1222 - - - 200 - application/json;+charset=utf-8 9041.6935ms
+[21:24:04 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - -
+[21:24:04 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:24:04 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:24:04 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:24:04 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 2.3773ms.
+[21:24:04 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[21:24:04 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 24.7419ms
+[21:24:04 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:24:04 INF] Information details: ArticleController -> Buy (id:123,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[21:24:04 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - - - 400 - text/plain;+charset=utf-8 34.5297ms
+[21:24:28 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=1222 - -
+[21:24:28 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:24:28 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:24:28 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:24:32 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:32 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:32 INF] Received HTTP response headers after 102.1262ms - 404
+[21:24:32 INF] End processing HTTP request after 105.1983ms - 404
+[21:24:32 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:32 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:32 INF] Received HTTP response headers after 83.4646ms - 200
+[21:24:32 INF] End processing HTTP request after 86.5556ms - 200
+[21:24:32 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:24:32 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:24:32 INF] Received HTTP response headers after 93.6573ms - 200
+[21:24:32 INF] End processing HTTP request after 96.8715ms - 200
+[21:24:35 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 7544.7173ms.
+[21:24:35 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:24:35 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 7562.1486ms
+[21:24:35 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:24:35 INF] Information details: ArticleController -> GetOffers (id:1232,maxPrice:1222)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:1232,vendorHttpClientName:vendor2)
+[21:24:35 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=1222 - - - 200 - application/json;+charset=utf-8 7569.3105ms
+[21:24:43 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=12 - -
+[21:24:43 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:24:43 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:24:43 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:24:43 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:43 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:43 INF] Received HTTP response headers after 80.4531ms - 200
+[21:24:43 INF] End processing HTTP request after 84.6998ms - 200
+[21:24:43 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:24:43 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:24:43 INF] Received HTTP response headers after 81.6082ms - 200
+[21:24:43 INF] End processing HTTP request after 84.3845ms - 200
+[21:24:43 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:43 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:24:43 INF] Received HTTP response headers after 73.7483ms - 200
+[21:24:43 INF] End processing HTTP request after 77.2279ms - 200
+[21:24:43 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:24:43 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:24:43 INF] Received HTTP response headers after 87.0082ms - 200
+[21:24:43 INF] End processing HTTP request after 92.4575ms - 200
+[21:24:43 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.NotFoundObjectResult in 379.9059ms.
+[21:24:43 INF] Executing NotFoundObjectResult, writing value of type 'System.String'.
+[21:24:43 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 398.4999ms
+[21:24:43 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:24:43 INF] Information details: ArticleController -> GetOffers (id:1232,maxPrice:12)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:1232,vendorHttpClientName:vendor2)
+[21:24:43 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=12 - - - 404 - text/plain;+charset=utf-8 406.2388ms
+[21:24:50 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=122 - -
+[21:24:50 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:24:50 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:24:50 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:24:50 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.9638ms.
+[21:24:50 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:24:50 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 29.4528ms
+[21:24:50 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:24:50 INF] Information details: ArticleController -> GetOffers (id:1232,maxPrice:122)=>
+GetArticleOfferByIdHandler -> Handle
+[21:24:50 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=122 - - - 200 - application/json;+charset=utf-8 36.6979ms
+[21:24:54 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - -
+[21:24:54 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:24:54 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:24:54 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:24:54 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.451ms.
+[21:24:54 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[21:24:54 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 19.8368ms
+[21:24:54 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:24:54 INF] Information details: ArticleController -> Buy (id:123,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[21:24:54 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/123/buy - - - 400 - text/plain;+charset=utf-8 28.5558ms
+[21:25:00 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1232/buy - -
+[21:25:00 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:25:00 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:25:00 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:25:00 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.5087ms.
+[21:25:00 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Shop.Application.DTOs.Order.OrderDto'.
+[21:25:00 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 19.2048ms
+[21:25:00 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:25:00 INF] Information details: ArticleController -> Buy (id:1232,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle=>
+ArticleRepository -> Get=>
+OrderRepository -> Add
+[21:25:00 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1232/buy - - - 200 - application/json;+charset=utf-8 27.2796ms
+[21:25:03 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1232/buy - -
+[21:25:03 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:25:03 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:25:03 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:25:03 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.5465ms.
+[21:25:03 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[21:25:03 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 22.5393ms
+[21:25:03 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:25:03 INF] Information details: ArticleController -> Buy (id:1232,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get
+[21:25:03 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1232/buy - - - 400 - text/plain;+charset=utf-8 30.9071ms
+[21:25:09 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=122 - -
+[21:25:09 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:25:09 INF] Route matched with {action = "GetOffers", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] GetOffers(Int32, Homework.Enigmatry.Shop.Application.DTOs.Article.ArticleRequestDto, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:25:09 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:25:09 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:25:09 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:25:09 INF] Received HTTP response headers after 89.2003ms - 200
+[21:25:09 INF] End processing HTTP request after 93.2711ms - 200
+[21:25:09 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:25:09 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:25:09 INF] Received HTTP response headers after 94.793ms - 200
+[21:25:09 INF] End processing HTTP request after 97.6558ms - 200
+[21:25:09 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:25:09 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232/exist
+[21:25:10 INF] Received HTTP response headers after 75.0814ms - 200
+[21:25:10 INF] End processing HTTP request after 77.8808ms - 200
+[21:25:10 INF] Start processing HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:25:10 INF] Sending HTTP request GET http://localhost:5222/api/v1/Article/1232
+[21:25:10 INF] Received HTTP response headers after 89.1141ms - 200
+[21:25:10 INF] End processing HTTP request after 92.095ms - 200
+[21:25:10 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 435.5781ms.
+[21:25:10 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto'.
+[21:25:10 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation) in 454.8702ms
+[21:25:10 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.GetOffers (Homework.Enigmatry.Shop.Presentation)'
+[21:25:10 INF] Information details: ArticleController -> GetOffers (id:1232,maxPrice:122)=>
+GetArticleOfferByIdHandler -> Handle=>
+ArticleRepository -> Get=>
+VendorService -> GetAvailableArticles =>
+VendorRepository -> IsArticleExist (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> IsArticleExist (id:1232,vendorHttpClientName:vendor1)=>
+VendorRepository -> GetArticle (id:1232,vendorHttpClientName:vendor2)
+[21:25:10 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1232/offers?MaxArticlePrice=122 - - - 200 - application/json;+charset=utf-8 464.5902ms
+[21:25:13 INF] Request starting HTTP/2 GET https://localhost:7111/api/v1/Article/1232/buy - -
+[21:25:13 INF] Executing endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:25:13 INF] Route matched with {action = "Buy", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDto]] Buy(Int32, System.Threading.CancellationToken) on controller Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController (Homework.Enigmatry.Shop.Presentation).
+[21:25:13 INF] Executing action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) - Validation state: "Valid"
+[21:25:13 INF] Executed action method Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 0.6121ms.
+[21:25:13 INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+[21:25:13 INF] Executed action Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation) in 21.0558ms
+[21:25:13 INF] Executed endpoint 'Homework.Enigmatry.Shop.Presentation.Controllers.ArticleController.Buy (Homework.Enigmatry.Shop.Presentation)'
+[21:25:13 INF] Information details: ArticleController -> Buy (id:1232,customerId)=>
+BuyArticleCommand -> Handle=>
+ArticleRepository -> Exists=>
+ArticleRepository -> Get=>
+OrderRepository -> ExistForArticle
+[21:25:13 INF] Request finished HTTP/2 GET https://localhost:7111/api/v1/Article/1232/buy - - - 400 - text/plain;+charset=utf-8 29.3134ms

@@ -35,7 +35,7 @@ namespace Homework.Enigmatry.Shop.Application.Features.Customer.Handlers.Command
             {
                 Username = request.Username,
                 Password = GenerateHash(request.Password),
-                Role = Constants.Constants.CUSTOMER_ROLE
+                Role = Constants.Constants.CustomerRole
             };
 
             existingCustomer =await _customerRepository.Add(customer);
