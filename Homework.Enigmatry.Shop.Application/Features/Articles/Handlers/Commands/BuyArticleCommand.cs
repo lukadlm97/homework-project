@@ -52,11 +52,6 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Command
             var key = request.ArticleId.CreateArticleCacheKey();
             var itemFromCache = _memoryCache.Get(key);
 
-            if (customer == null || itemFromCache == null)
-            {
-                return new OperationResult<OrderDto>(OperationStatus.NotFound);
-            }
-
             Article article = (Article)itemFromCache;
             var order = new Order()
             {

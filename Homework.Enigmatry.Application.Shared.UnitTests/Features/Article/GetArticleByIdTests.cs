@@ -52,7 +52,7 @@ namespace Homework.Enigmatry.Application.Shared.UnitTests.Features.Article
 
             var result = await handler.Handle(new GetArticleByIdRequest() { Id = id }, CancellationToken.None);
 
-            result.Status.Should().Be(OperationStatus.NotFound);
+            result.Status.Should().Be(OperationStatus.NotExist);
         }
 
 

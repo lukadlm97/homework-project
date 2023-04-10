@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Homework.Enigmatry.Application.Shared.Contracts;
-using Homework.Enigmatry.Application.Shared.DTOs.Article;
+﻿using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Domain.Entities;
 using Moq;
@@ -19,35 +13,35 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Mocks
             {
                 new Article()
                 {
-                    Id = 1,
-                    Name = "article 1",
-                    Price = new decimal(new Random(100).NextDouble())
+                    Id = 111,
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,111),
+                    Price = 2000
                 },
                 new Article()
                 {
-                    Id = 5,
-                    Name = "article 2",
-                    Price = new decimal(new Random(200).NextDouble())
+                    Id = 112,
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,112),
+                    Price =2000
                 },
                 new Article()
                 {
-                    Id = 13,
-                    Name = "article 3",
-                    Price = new decimal(new Random(300).NextDouble())
+                    Id = 113,
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,113),
+                    Price = 2000
                 }
             };
 
             var mockRepository = new Mock<IVendorRepository>();
 
             mockRepository.Setup(r => r
-                    .IsArticleExist(It.IsAny<int>(),"asd",It.IsAny<CancellationToken>()))
+                    .IsArticleExist(It.IsAny<int>(),It.IsAny<string>(),It.IsAny<CancellationToken>()))
                 .ReturnsAsync((int articleId, string vendorName, CancellationToken cancellationToken) =>
                 {
                     return articles.Any(x=>x.Id==articleId);
                 });
 
             mockRepository.Setup(r => r
-                    .GetArticle(It.IsAny<int>(), "asd", It.IsAny<CancellationToken>()))
+                    .GetArticle(It.IsAny<int>(), It.IsAny<string>(), It.IsAny<CancellationToken>()))
                 .ReturnsAsync((int articleId,string vendorName,CancellationToken cancellationToken) =>
                 {
                     var selectedArticle = articles.FirstOrDefault(x => x.Id == articleId);

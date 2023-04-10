@@ -37,7 +37,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             return logInOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(logInOperationResult.Result),
-                OperationStatus.NotExist or OperationStatus.NotFound => NotFound(),
+                OperationStatus.NotExist => NotFound(),
                 _ => throw new UnclearOperationsResultException("")
             };
         }

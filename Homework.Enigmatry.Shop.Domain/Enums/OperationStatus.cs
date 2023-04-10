@@ -3,7 +3,6 @@
     public enum OperationStatus
     {
         Success,
-        NotFound,
         NotExist,
         InvalidValues,
         InvalidPassword,

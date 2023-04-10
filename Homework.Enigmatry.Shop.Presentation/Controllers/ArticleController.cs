@@ -38,7 +38,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             {
                 OperationStatus.Success => Ok(articleOperationResult.Result),
                 OperationStatus.InvalidValues => BadRequest(),
-                OperationStatus.NotExist or OperationStatus.NotFound => NotFound($"Article with id: {id} not exist"),
+                OperationStatus.NotExist => NotFound($"Article with id: {id} not exist"),
                 _ => throw new UnclearOperationsResultException("")
             };
         }
@@ -60,7 +60,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             {
                 OperationStatus.Success => Ok(articleOperationResult.Results),
                 OperationStatus.InvalidValues => BadRequest(articleOperationResult.ErrorMessage),
-                OperationStatus.NotExist or OperationStatus.NotFound => NotFound(),
+                OperationStatus.NotExist => NotFound(),
                 _ => throw new UnclearOperationsResultException("")
             };
         }
@@ -78,7 +78,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             {
                 OperationStatus.Success => Ok(articleOperationResult.Result),
                 OperationStatus.InvalidValues  => BadRequest(articleOperationResult.ErrorMessage),
-                OperationStatus.NotExist or OperationStatus.NotFound => NotFound($"Article with id: {id} not exist"),
+                OperationStatus.NotExist => NotFound($"Article with id: {id} not exist"),
                 OperationStatus.ArticleSold  => NotFound($"Article with id: {id} is sold"),
                 OperationStatus.PriceGreaterThanLimit  => NotFound($"Article with id: {id} don\'t fit at price limit"),
                 _ => throw new UnclearOperationsResultException("")
@@ -109,7 +109,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
                 {
                     OperationStatus.Success => Ok(articleOperationResult.Result),
                     OperationStatus.InvalidValues => BadRequest(articleOperationResult.ErrorMessage),
-                    OperationStatus.NotExist or OperationStatus.NotFound => NotFound($"Article with id: {id} not exist"),
+                    OperationStatus.NotExist => NotFound($"Article with id: {id} not exist"),
                     OperationStatus.ArticleSold => BadRequest($"Article with id: {id} is sold"),
                     _ => throw new UnclearOperationsResultException("")
                 };

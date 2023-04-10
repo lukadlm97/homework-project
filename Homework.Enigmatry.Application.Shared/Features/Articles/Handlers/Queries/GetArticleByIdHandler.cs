@@ -28,7 +28,7 @@ namespace Homework.Enigmatry.Application.Shared.Features.Articles.Handlers.Queri
             var inventoryArticle = await _articleRepository.Get(request.Id);
             if (inventoryArticle == null)
             {
-                return new OperationResult<ArticleDetailsDto>(OperationStatus.NotFound);
+                return new OperationResult<ArticleDetailsDto>(OperationStatus.NotExist);
             }
 
             return new OperationResult<ArticleDetailsDto>(OperationStatus.Success, _mapper.Map<ArticleDetailsDto>(inventoryArticle));

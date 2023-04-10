@@ -82,11 +82,11 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
 
 
             var availableArticlesFromVendors = await _vendorService.GetAvailableArticles(request.Id, cancellationToken);
-            if (availableArticlesFromVendors.IsNullOrEmpty())
+            if (availableArticlesFromVendors.IsNullOrEmpty() && inventoryArticle!=null)
             {
-                return new OperationResult<ArticleDto>(OperationStatus.NotExist);
+                return new OperationResult<ArticleDto>(OperationStatus.PriceGreaterThanLimit);
             }
-
+            
             var bestVendorOffer = availableArticlesFromVendors.MinBy(x => x.Price);
 
             if (bestVendorOffer != null && 
@@ -94,6 +94,11 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
             {
 
                 return new OperationResult<ArticleDto>(OperationStatus.PriceGreaterThanLimit);
+            }
+
+            if (bestVendorOffer == null)
+            {
+                return new OperationResult<ArticleDto>(OperationStatus.NotExist);
             }
 
             var articleFromVendor = _mapper.Map<Article>(bestVendorOffer);

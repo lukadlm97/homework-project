@@ -40,7 +40,7 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
             var articles = await _articleRepository.GetAll();
             if (articles.IsNullOrEmpty())
             {
-                return new OperationResult<ArticleDto>(OperationStatus.NotFound);
+                return new OperationResult<ArticleDto>(OperationStatus.NotExist);
             }
             var filteredArticles = articles.AsEnumerable();
             if (!string.IsNullOrWhiteSpace(request.Filter))

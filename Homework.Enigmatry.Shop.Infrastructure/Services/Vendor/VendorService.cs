@@ -22,7 +22,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
         }
         public async Task<List<ArticleDetailsDto>> GetAvailableArticles(int id, CancellationToken cancellationToken = default)
         {
-            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},vendorHttpClientName:{3})",
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} ",
                 nameof(VendorService), nameof(GetAvailableArticles)));
 
             List<ArticleDetailsDto> articles = new List<ArticleDetailsDto>();

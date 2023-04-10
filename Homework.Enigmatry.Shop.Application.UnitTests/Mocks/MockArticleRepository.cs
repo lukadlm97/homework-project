@@ -13,20 +13,20 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Mocks
                 new Article()
                 {
                     Id = 1,
-                    Name = "article 1",
-                    Price = new decimal(new Random(100).NextDouble())
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,1),
+                    Price = 2000
                 },
                 new Article()
                 {
                     Id = 2,
-                    Name = "article 2",
-                    Price = new decimal(new Random(200).NextDouble())
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,2),
+                    Price = 2000
                 },
                 new Article()
                 {
                     Id = 3,
-                    Name = "article 3",
-                    Price = new decimal(new Random(300).NextDouble())
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,3),
+                    Price = 2000
                 }
             };
 

@@ -29,7 +29,7 @@ namespace Homework.Enigmatry.Vendor.GrpcAPI.Services
                     Name = result.Result.Name,
                     Status = Shop.VendorGrpcAPI.OperationStatus.Success
                 },
-                OperationStatus.NotFound => new ArticleReply()
+                OperationStatus.NotExist => new ArticleReply()
                 {
 
                     Status = Shop.VendorGrpcAPI.OperationStatus.NotFound

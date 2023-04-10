@@ -26,7 +26,7 @@ namespace Homework.Enigmatry.Shop.Application.Features.Customer.Handlers.Queries
             var customer = await _customerRepository.GetByUsername(request.Username, cancellationToken);
             if (customer == null)
             {
-                return new OperationResult<AuthDto>(OperationStatus.NotExist);
+                return new OperationResult<AuthDto>(OperationStatus.CustomerNotExist);
             }
 
             if (!CheckPassword(request.Password, customer.Password))

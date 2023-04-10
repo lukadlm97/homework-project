@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Homework.Enigmatry.Application.Shared.Contracts;
-using Homework.Enigmatry.Shop.Application.Contracts;
+﻿using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Domain.Entities;
 using Moq;
 
@@ -19,7 +13,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Mocks
                 new Order()
                 {
                     Id = 1,
-                    ArticleId = 1,
+                    ArticleId = 11111,
                     CustomerId = 1,
                     Date = DateTime.UtcNow.AddDays(-20),
                     Price = 20.22m

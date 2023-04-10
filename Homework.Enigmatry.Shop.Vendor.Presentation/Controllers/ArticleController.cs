@@ -32,7 +32,7 @@ namespace Homework.Enigmatry.Shop.Vendor.Presentation.Controllers
             {
                 OperationStatus.Success => Ok(articleOperationResult.Result),
                 OperationStatus.InvalidValues => BadRequest(),
-                OperationStatus.NotExist or OperationStatus.NotFound => NotFound($"Article with id: {id} not exist"),
+                OperationStatus.NotExist => NotFound($"Article with id: {id} not exist"),
                 _ => throw new UnclearOperationsResultException("")
             };
         }

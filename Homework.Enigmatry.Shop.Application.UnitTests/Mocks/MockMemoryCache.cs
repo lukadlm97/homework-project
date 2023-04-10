@@ -7,34 +7,39 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Mocks
 {
     public static class MockMemoryCache
     {
-        public static Mock<MemoryCache> GetMemoryCache()
+        public static MemoryCache GetMemoryCache()
         {
-            var memoryCacheMock = new Mock<MemoryCache>("cache");
+            var memoryCacheMock = new MemoryCache("cache");
             var articles = new List<Article>()
             {
                 new Article()
                 {
-                    Id = 1,
-                    Name = "article 1",
-                    Price = new decimal(new Random(100).NextDouble())
+                    Id = 11,
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,11),
+                    Price = 2000
                 },
                 new Article()
                 {
-                    Id = 2,
-                    Name = "article 2",
-                    Price = new decimal(new Random(200).NextDouble())
+                    Id = 12,
+                    Name = string.Format("{0} {1}", Constants.Constants.ArticleName, 12),
+                    Price = 2000
                 },
                 new Article()
                 {
-                    Id = 3,
-                    Name = "article 3",
-                    Price = new decimal(new Random(300).NextDouble())
-                }
+                    Id = 13,
+                    Name = string.Format("{0} {1}",Constants.Constants.ArticleName,13),
+                    Price = 2000
+                }, new Article()
+                {
+                Id = 11111,
+                Name = string.Format("{0} {1}",Constants.Constants.ArticleName,11),
+                Price = 2000
+            }
             };
 
             foreach (var article in articles)
             {
-                memoryCacheMock.Object.Add(article.Id.CreateArticleCacheKey(), article,new CacheItemPolicy()
+                memoryCacheMock.Add(article.Id.CreateArticleCacheKey(), article,new CacheItemPolicy()
                 {
                     SlidingExpiration = TimeSpan.FromMinutes(20)
                 });
