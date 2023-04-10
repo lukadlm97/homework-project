@@ -7,6 +7,7 @@ using Homework.Enigmatry.Logging.Shared.Contracts;
 using Microsoft.Extensions.Logging;
 using ValidationException = FluentValidation.ValidationException;
 using System.Net.Http;
+using Homework.Enigmatry.Shop.Application.Exceptions;
 
 namespace Homework.Enigmatry.Shop.Presentation.Middlewares
 {
@@ -32,6 +33,10 @@ namespace Homework.Enigmatry.Shop.Presentation.Middlewares
                 case UnclearOperationsResultException unclearOperationsResultException:
                     statusCode = HttpStatusCode.InternalServerError;
                     _highPerformanceLogger.Log("Internal server error", unclearOperationsResultException, LogLevel.Error);
+                    break;
+                case UnavailableAtLocalPersistenceStorageException ex:
+                    statusCode = HttpStatusCode.InternalServerError;
+                    _highPerformanceLogger.Log("Internal server error:"+ex.Message, ex, LogLevel.Error);
                     break;
                 case ValidationException validationException:
                     statusCode = HttpStatusCode.BadRequest;

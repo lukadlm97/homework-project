@@ -139,3 +139,143 @@
 [21:25:10 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
 [21:25:10 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
 [21:25:10 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 41.6987ms
+[21:55:06 INF] Now listening on: https://localhost:7333
+[21:55:06 INF] Now listening on: http://localhost:5333
+[21:55:06 INF] Application started. Press Ctrl+C to shut down.
+[21:55:06 INF] Hosting environment: Development
+[21:55:06 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[21:56:15 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[21:56:15 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[21:56:15 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[21:56:15 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 117.9047ms
+[21:56:26 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[21:56:26 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[21:56:26 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[21:56:26 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 14.8300ms
+[21:57:30 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[21:57:30 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[21:57:30 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[21:57:30 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 7.0150ms
+[21:58:27 INF] Now listening on: https://localhost:7333
+[21:58:27 INF] Now listening on: http://localhost:5333
+[21:58:27 INF] Application started. Press Ctrl+C to shut down.
+[21:58:27 INF] Hosting environment: Development
+[21:58:27 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[22:00:02 INF] Now listening on: https://localhost:7333
+[22:00:02 INF] Now listening on: http://localhost:5333
+[22:00:02 INF] Application started. Press Ctrl+C to shut down.
+[22:00:02 INF] Hosting environment: Development
+[22:00:02 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[22:00:38 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[22:00:38 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[22:00:38 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[22:00:38 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 120.3525ms
+[22:00:55 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[22:00:55 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[22:00:55 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[22:00:55 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 102.0432ms
+[22:03:51 INF] Now listening on: https://localhost:7333
+[22:03:51 INF] Now listening on: http://localhost:5333
+[22:03:51 INF] Application started. Press Ctrl+C to shut down.
+[22:03:51 INF] Hosting environment: Development
+[22:03:51 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[22:05:32 INF] Now listening on: https://localhost:7333
+[22:05:32 INF] Now listening on: http://localhost:5333
+[22:05:32 INF] Application started. Press Ctrl+C to shut down.
+[22:05:32 INF] Hosting environment: Development
+[22:05:32 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[22:09:09 INF] Now listening on: https://localhost:7333
+[22:09:09 INF] Now listening on: http://localhost:5333
+[22:09:09 INF] Application started. Press Ctrl+C to shut down.
+[22:09:09 INF] Hosting environment: Development
+[22:09:09 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[22:17:36 INF] Now listening on: https://localhost:7333
+[22:17:36 INF] Now listening on: http://localhost:5333
+[22:17:36 INF] Application started. Press Ctrl+C to shut down.
+[22:17:36 INF] Hosting environment: Development
+[22:17:36 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[22:19:18 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[22:19:18 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[22:19:18 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[22:19:18 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 135.1481ms
+[22:19:23 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[22:19:23 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[22:19:23 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[22:19:23 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 107.5315ms
+[23:35:26 INF] Now listening on: https://localhost:7333
+[23:35:26 INF] Now listening on: http://localhost:5333
+[23:35:26 INF] Application started. Press Ctrl+C to shut down.
+[23:35:26 INF] Hosting environment: Development
+[23:35:26 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[23:36:01 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[23:36:01 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:36:01 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:36:01 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 239.1122ms
+[23:36:06 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[23:36:06 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:36:06 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:36:06 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 9.9740ms
+[23:36:06 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[23:36:06 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:36:06 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:36:06 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 162.0456ms
+[23:36:13 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[23:36:13 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:36:13 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:36:13 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 6.6062ms
+[23:36:13 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[23:36:13 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:36:13 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:36:13 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 5.1835ms
+[23:37:39 INF] Now listening on: https://localhost:7333
+[23:37:39 INF] Now listening on: http://localhost:5333
+[23:37:39 INF] Application started. Press Ctrl+C to shut down.
+[23:37:39 INF] Hosting environment: Development
+[23:37:39 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[23:38:07 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[23:38:07 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:38:07 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:38:07 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 234.5185ms
+[23:38:07 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[23:38:07 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:38:07 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:38:07 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 225.5647ms
+[23:39:25 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[23:39:25 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:39:25 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:39:25 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 10.0342ms
+[23:39:25 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[23:39:25 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:39:25 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:39:25 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 7.9147ms
+[23:40:09 INF] Now listening on: https://localhost:7333
+[23:40:09 INF] Now listening on: http://localhost:5333
+[23:40:09 INF] Application started. Press Ctrl+C to shut down.
+[23:40:09 INF] Hosting environment: Development
+[23:40:09 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[23:40:34 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[23:40:34 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:40:34 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:40:34 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 284.6522ms
+[23:40:34 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[23:40:34 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:40:34 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:40:34 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 167.6268ms
+[23:43:23 INF] Now listening on: https://localhost:7333
+[23:43:23 INF] Now listening on: http://localhost:5333
+[23:43:23 INF] Application started. Press Ctrl+C to shut down.
+[23:43:23 INF] Hosting environment: Development
+[23:43:23 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[23:45:15 INF] Now listening on: https://localhost:7333
+[23:45:15 INF] Now listening on: http://localhost:5333
+[23:45:15 INF] Application started. Press Ctrl+C to shut down.
+[23:45:15 INF] Hosting environment: Development
+[23:45:15 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorGrpcAPI
+[23:46:13 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc -
+[23:46:13 INF] Executing endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:46:13 INF] Executed endpoint 'gRPC - /vendor.Vendor/IsArticleExist'
+[23:46:13 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/IsArticleExist application/grpc - - 200 - application/grpc 197.2719ms
+[23:46:13 INF] Request starting HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc -
+[23:46:13 INF] Executing endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:46:13 INF] Executed endpoint 'gRPC - /vendor.Vendor/GetArticle'
+[23:46:13 INF] Request finished HTTP/2 POST http://localhost:5333/vendor.Vendor/GetArticle application/grpc - - 200 - application/grpc 141.1045ms

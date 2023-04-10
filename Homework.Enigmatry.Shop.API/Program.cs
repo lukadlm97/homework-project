@@ -45,7 +45,7 @@ builder.Services.Configure<TokenSettings>(
     builder.Configuration.GetSection(nameof(TokenSettings)));
 
 
-builder.Services.ConfigureInMemoryPersistenceServices(builder.Configuration);
+builder.Services.ConfigurePersistenceService(builder.Configuration);
 builder.Services.ConfigureShopApplicationServices();
 builder.Services.ConfigureVendorsHttpClient(builder.Configuration);
 builder.Services.ConfigureInfrastructureServices();

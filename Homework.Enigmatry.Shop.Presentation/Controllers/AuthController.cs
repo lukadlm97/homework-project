@@ -37,7 +37,8 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             return logInOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(logInOperationResult.Result),
-                OperationStatus.NotExist => NotFound(),
+                OperationStatus.CustomerNotExist => NotFound(),
+                OperationStatus.InvalidPassword => Unauthorized(),
                 _ => throw new UnclearOperationsResultException("")
             };
         }
@@ -58,7 +59,8 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
             return registerOperationResult.Status switch
             {
                 OperationStatus.Success => Ok(registerOperationResult.Result),
-                OperationStatus.CustomerExist => BadRequest(),
+                OperationStatus.CustomerExist => BadRequest(string.Format("customer with username:{0} exist",requestDto.Username)),
+                OperationStatus.InvalidValues => BadRequest(registerOperationResult.ErrorMessage),
                 _ => throw new UnclearOperationsResultException("")
             };
         }

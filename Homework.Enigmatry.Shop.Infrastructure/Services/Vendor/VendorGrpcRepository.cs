@@ -21,7 +21,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
         }
         public async Task<ArticleDetailsDto?> GetArticle(int id, CancellationToken cancellationToken = default)
         {
-            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{3})", nameof(VendorGrpcRepository), nameof(GetArticle),id));
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(VendorGrpcRepository), nameof(GetArticle),id));
             try
             {
                 var grpcClient = _vendorGrpcFactory.GetVendorClient();
@@ -44,6 +44,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
 
         public async Task<bool> IsArticleExist(int id, CancellationToken cancellationToken = default)
         {
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(VendorGrpcRepository), nameof(IsArticleExist), id));
             try
             {
                 var grpcClient = _vendorGrpcFactory.GetVendorClient();

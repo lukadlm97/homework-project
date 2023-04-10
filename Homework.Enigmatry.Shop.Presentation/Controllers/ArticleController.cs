@@ -79,8 +79,8 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
                 OperationStatus.Success => Ok(articleOperationResult.Result),
                 OperationStatus.InvalidValues  => BadRequest(articleOperationResult.ErrorMessage),
                 OperationStatus.NotExist => NotFound($"Article with id: {id} not exist"),
-                OperationStatus.ArticleSold  => NotFound($"Article with id: {id} is sold"),
-                OperationStatus.PriceGreaterThanLimit  => NotFound($"Article with id: {id} don\'t fit at price limit"),
+                OperationStatus.ArticleSold  => StatusCode(302, $"Article with id: {id} is sold"),
+                OperationStatus.PriceGreaterThanLimit  => StatusCode(302,$"Article with id: {id} don\'t fit at price limit"),
                 _ => throw new UnclearOperationsResultException("")
             };
         }

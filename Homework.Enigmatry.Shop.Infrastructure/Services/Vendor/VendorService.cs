@@ -2,7 +2,6 @@
 using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Models;
-using Homework.Enigmatry.Shop.Domain.Entities;
 using Microsoft.Extensions.Options;
 
 namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor

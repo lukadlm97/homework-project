@@ -6,7 +6,6 @@ using Homework.Enigmatry.Application.Shared.DTOs.Common;
 using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
 using Homework.Enigmatry.Shop.Application.Extensions;
-using Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Commands;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Queries;
 using Homework.Enigmatry.Shop.Application.Models;
@@ -88,11 +87,9 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
             }
             
             var bestVendorOffer = availableArticlesFromVendors.MinBy(x => x.Price);
-
             if (bestVendorOffer != null && 
-                    bestVendorOffer.Price > request.MaxPriceLimit)
+                bestVendorOffer.Price > request.MaxPriceLimit)
             {
-
                 return new OperationResult<ArticleDto>(OperationStatus.PriceGreaterThanLimit);
             }
 
@@ -102,9 +99,6 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
             }
 
             var articleFromVendor = _mapper.Map<Article>(bestVendorOffer);
-
-           
-
             itemForCaching = new CacheItem(key, articleFromVendor);
             _memoryCache.Set(itemForCaching, cacheItemPolicy);
 
