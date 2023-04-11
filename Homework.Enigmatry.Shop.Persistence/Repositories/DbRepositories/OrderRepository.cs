@@ -19,9 +19,12 @@ namespace Homework.Enigmatry.Persistence.Shared.Repositories.DbRepositories
             throw new NotImplementedException();
         }
 
-        public Task<IReadOnlyList<Order>> GetAll()
+        public async Task<IReadOnlyList<Order>> GetAll()
         {
-            throw new NotImplementedException();
+            return await _shopDbContext.Orders
+                .Include(x=>x.Article)
+                .Include(x=>x.Customer)
+                .ToListAsync();
         }
 
         public async Task<Order> Add(Order entity)

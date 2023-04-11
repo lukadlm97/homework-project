@@ -423,3 +423,273 @@ ArticleRepository -> Exists
 GetArticleByIdHandler -> Handle=>
 ArticleRepository -> Get
 [21:00:10 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/31 - - - 200 - application/json;+charset=utf-8 25.6704ms
+[21:03:22 INF] Now listening on: https://localhost:7222
+[21:03:22 INF] Now listening on: http://localhost:5222
+[21:03:22 INF] Application started. Press Ctrl+C to shut down.
+[21:03:22 INF] Hosting environment: Development
+[21:03:22 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorAPI
+[21:03:24 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/index.html - -
+[21:03:24 INF] Information details: 
+[21:03:24 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:03:24 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/index.html - - - 200 - text/html;charset=utf-8 540.7018ms
+[21:03:24 INF] Request starting HTTP/2 GET https://localhost:7222/_vs/browserLink - -
+[21:03:24 INF] Request finished HTTP/2 GET https://localhost:7222/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 133.7215ms
+[21:03:25 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - -
+[21:03:25 INF] Information details: 
+[21:03:25 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 175.0099ms
+[21:05:07 INF] Now listening on: https://localhost:7222
+[21:05:07 INF] Now listening on: http://localhost:5222
+[21:05:07 INF] Application started. Press Ctrl+C to shut down.
+[21:05:07 INF] Hosting environment: Development
+[21:05:07 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorAPI
+[21:05:08 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/index.html - -
+[21:05:09 INF] Information details: 
+[21:05:09 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:05:09 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/index.html - - - 200 - text/html;charset=utf-8 575.2231ms
+[21:05:09 INF] Request starting HTTP/2 GET https://localhost:7222/_vs/browserLink - -
+[21:05:09 INF] Request finished HTTP/2 GET https://localhost:7222/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 100.3109ms
+[21:05:10 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - -
+[21:05:10 INF] Information details: 
+[21:05:10 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 150.8434ms
+[21:06:12 INF] Now listening on: https://localhost:7222
+[21:06:12 INF] Now listening on: http://localhost:5222
+[21:06:12 INF] Application started. Press Ctrl+C to shut down.
+[21:06:12 INF] Hosting environment: Development
+[21:06:12 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorAPI
+[21:06:14 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/index.html - -
+[21:06:15 INF] Information details: 
+[21:06:15 INF] Request starting HTTP/2 GET https://localhost:7222/_vs/browserLink - -
+[21:06:15 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:06:15 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/index.html - - - 200 - text/html;charset=utf-8 682.1811ms
+[21:06:15 INF] Request finished HTTP/2 GET https://localhost:7222/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 171.6031ms
+[21:06:15 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - -
+[21:06:16 INF] Information details: 
+[21:06:16 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 183.7643ms
+[21:08:32 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/1/exist - -
+[21:08:32 INF] Information details: 
+[21:08:32 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/1/exist - - - 307 0 - 12.0893ms
+[21:08:32 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/1/exist - -
+[21:08:32 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:32 INF] Route matched with {action = "Exist", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Exist(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:32 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:32 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkResult in 16.1955ms.
+[21:08:32 INF] Executing StatusCodeResult, setting HTTP status code 200
+[21:08:32 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) in 100.4262ms
+[21:08:32 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:32 INF] Information details: ArticleController -> Exist (id:1)=>
+ArticleRepository -> Exists
+[21:08:32 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/1/exist - - - 200 0 - 143.9422ms
+[21:08:32 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/1 - -
+[21:08:32 INF] Information details: 
+[21:08:32 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/1 - - - 307 0 - 2.7950ms
+[21:08:32 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/1 - -
+[21:08:32 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:32 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:32 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:32 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 97.6754ms.
+[21:08:32 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[21:08:32 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 139.0826ms
+[21:08:32 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:32 INF] Information details: ArticleController -> Get (id:1)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[21:08:32 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/1 - - - 200 - application/json;+charset=utf-8 153.6837ms
+[21:08:32 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/1/exist - -
+[21:08:32 INF] Information details: 
+[21:08:32 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/1/exist - - - 307 0 - 1.8418ms
+[21:08:32 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/1/exist - -
+[21:08:33 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:33 INF] Route matched with {action = "Exist", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Exist(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:33 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:33 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkResult in 0.8835ms.
+[21:08:33 INF] Executing StatusCodeResult, setting HTTP status code 200
+[21:08:33 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) in 18.2277ms
+[21:08:33 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:33 INF] Information details: ArticleController -> Exist (id:1)=>
+ArticleRepository -> Exists
+[21:08:33 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/1/exist - - - 200 0 - 23.0521ms
+[21:08:33 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/1 - -
+[21:08:33 INF] Information details: 
+[21:08:33 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/1 - - - 307 0 - 1.3929ms
+[21:08:33 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/1 - -
+[21:08:33 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:33 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:33 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:33 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 1.1507ms.
+[21:08:33 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[21:08:33 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 25.8585ms
+[21:08:33 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:33 INF] Information details: ArticleController -> Get (id:1)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[21:08:33 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/1 - - - 200 - application/json;+charset=utf-8 34.0142ms
+[21:08:51 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/3/exist - -
+[21:08:51 INF] Information details: 
+[21:08:51 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/3/exist - - - 307 0 - 2.3656ms
+[21:08:51 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/3/exist - -
+[21:08:51 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Route matched with {action = "Exist", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Exist(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:51 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:51 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkResult in 1.6469ms.
+[21:08:51 INF] Executing StatusCodeResult, setting HTTP status code 200
+[21:08:51 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) in 23.2801ms
+[21:08:51 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Information details: ArticleController -> Exist (id:3)=>
+ArticleRepository -> Exists
+[21:08:51 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/3/exist - - - 200 0 - 31.0822ms
+[21:08:51 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/3 - -
+[21:08:51 INF] Information details: 
+[21:08:51 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/3 - - - 307 0 - 3.0276ms
+[21:08:51 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/3 - -
+[21:08:51 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:51 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:51 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.7463ms.
+[21:08:51 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[21:08:51 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 24.3111ms
+[21:08:51 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Information details: ArticleController -> Get (id:3)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[21:08:51 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/3 - - - 200 - application/json;+charset=utf-8 30.5743ms
+[21:08:51 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/3/exist - -
+[21:08:51 INF] Information details: 
+[21:08:51 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/3/exist - - - 307 0 - 1.8957ms
+[21:08:51 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/3/exist - -
+[21:08:51 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Route matched with {action = "Exist", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Exist(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:51 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:51 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkResult in 0.2033ms.
+[21:08:51 INF] Executing StatusCodeResult, setting HTTP status code 200
+[21:08:51 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) in 29.6504ms
+[21:08:51 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Information details: ArticleController -> Exist (id:3)=>
+ArticleRepository -> Exists
+[21:08:51 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/3/exist - - - 200 0 - 37.2234ms
+[21:08:51 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/3 - -
+[21:08:51 INF] Information details: 
+[21:08:51 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/3 - - - 307 0 - 3.3034ms
+[21:08:51 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/3 - -
+[21:08:51 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:08:51 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:08:51 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0833ms.
+[21:08:51 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[21:08:51 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 25.5033ms
+[21:08:51 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:08:51 INF] Information details: ArticleController -> Get (id:3)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[21:08:51 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/3 - - - 200 - application/json;+charset=utf-8 35.3416ms
+[21:11:50 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/2/exist - -
+[21:11:50 INF] Information details: 
+[21:11:50 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/2/exist - - - 307 0 - 7.0421ms
+[21:11:50 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/2/exist - -
+[21:11:50 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Route matched with {action = "Exist", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Exist(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:11:50 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:11:50 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkResult in 0.0768ms.
+[21:11:50 INF] Executing StatusCodeResult, setting HTTP status code 200
+[21:11:50 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) in 31.6116ms
+[21:11:50 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Information details: ArticleController -> Exist (id:2)=>
+ArticleRepository -> Exists
+[21:11:50 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/2/exist - - - 200 0 - 38.4461ms
+[21:11:50 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/2 - -
+[21:11:50 INF] Information details: 
+[21:11:50 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/2 - - - 307 0 - 3.8711ms
+[21:11:50 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/2 - -
+[21:11:50 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:11:50 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:11:50 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.0962ms.
+[21:11:50 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[21:11:50 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 21.2514ms
+[21:11:50 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Information details: ArticleController -> Get (id:2)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[21:11:50 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/2 - - - 200 - application/json;+charset=utf-8 28.7680ms
+[21:11:50 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/2/exist - -
+[21:11:50 INF] Information details: 
+[21:11:50 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/2/exist - - - 307 0 - 2.0774ms
+[21:11:50 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/2/exist - -
+[21:11:50 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Route matched with {action = "Exist", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Exist(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:11:50 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:11:50 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkResult in 0.0573ms.
+[21:11:50 INF] Executing StatusCodeResult, setting HTTP status code 200
+[21:11:50 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation) in 23.798ms
+[21:11:50 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Exist (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Information details: ArticleController -> Exist (id:2)=>
+ArticleRepository -> Exists
+[21:11:50 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/2/exist - - - 200 0 - 39.0342ms
+[21:11:50 INF] Request starting HTTP/1.1 GET http://localhost:5222/api/v1/Article/2 - -
+[21:11:50 INF] Information details: 
+[21:11:50 INF] Request finished HTTP/1.1 GET http://localhost:5222/api/v1/Article/2 - - - 307 0 - 2.0234ms
+[21:11:50 INF] Request starting HTTP/1.1 GET https://localhost:7222/api/v1/Article/2 - -
+[21:11:50 INF] Executing endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Route matched with {action = "Get", controller = "Article"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto]] Get(Int32) on controller Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController (Homework.Enigmatry.Vendor.Presentation).
+[21:11:50 INF] Executing action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) - Validation state: "Valid"
+[21:11:50 INF] Executed action method Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 0.1678ms.
+[21:11:50 INF] Executing OkObjectResult, writing value of type 'Homework.Enigmatry.Application.Shared.DTOs.Article.ArticleDetailsDto'.
+[21:11:50 INF] Executed action Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation) in 23.9772ms
+[21:11:50 INF] Executed endpoint 'Homework.Enigmatry.Shop.Vendor.Presentation.Controllers.ArticleController.Get (Homework.Enigmatry.Vendor.Presentation)'
+[21:11:50 INF] Information details: ArticleController -> Get (id:2)=>
+GetArticleByIdHandler -> Handle=>
+ArticleRepository -> Get
+[21:11:50 INF] Request finished HTTP/1.1 GET https://localhost:7222/api/v1/Article/2 - - - 200 - application/json;+charset=utf-8 29.7584ms
+[21:14:29 INF] Now listening on: https://localhost:7222
+[21:14:29 INF] Now listening on: http://localhost:5222
+[21:14:29 INF] Application started. Press Ctrl+C to shut down.
+[21:14:29 INF] Hosting environment: Development
+[21:14:29 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorAPI
+[21:14:31 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/index.html - -
+[21:14:31 INF] Information details: 
+[21:14:31 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:14:31 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/index.html - - - 200 - text/html;charset=utf-8 503.9899ms
+[21:14:31 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/swagger-ui.css - -
+[21:14:32 INF] Request starting HTTP/2 GET https://localhost:7222/_vs/browserLink - -
+[21:14:32 INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+[21:14:32 INF] Information details: 
+[21:14:32 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/swagger-ui.css - - - 0 143943 text/css 234.7454ms
+[21:14:32 INF] Request finished HTTP/2 GET https://localhost:7222/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 101.6935ms
+[21:14:32 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - -
+[21:14:32 INF] Information details: 
+[21:14:32 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 134.0208ms
+[21:59:18 INF] Now listening on: https://localhost:7222
+[21:59:18 INF] Now listening on: http://localhost:5222
+[21:59:18 INF] Application started. Press Ctrl+C to shut down.
+[21:59:18 INF] Hosting environment: Development
+[21:59:18 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorAPI
+[21:59:19 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/index.html - -
+[21:59:20 INF] Information details: 
+[21:59:20 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[21:59:20 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/index.html - - - 200 - text/html;charset=utf-8 726.1596ms
+[21:59:20 INF] Request starting HTTP/2 GET https://localhost:7222/_vs/browserLink - -
+[21:59:20 INF] Request finished HTTP/2 GET https://localhost:7222/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 64.3211ms
+[21:59:20 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/favicon-32x32.png - -
+[21:59:20 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - -
+[21:59:20 INF] Sending file. Request path: '/favicon-32x32.png'. Physical path: 'N/A'
+[21:59:20 INF] Information details: 
+[21:59:20 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/favicon-32x32.png - - - 0 628 image/png 244.9610ms
+[21:59:21 INF] Information details: 
+[21:59:21 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 126.7716ms
+[22:24:06 INF] Now listening on: https://localhost:7222
+[22:24:06 INF] Now listening on: http://localhost:5222
+[22:24:06 INF] Application started. Press Ctrl+C to shut down.
+[22:24:06 INF] Hosting environment: Development
+[22:24:06 INF] Content root path: C:\Users\luka.radovanovic\Desktop\Admin\Homework.Enigmatry.Shop\Homework.Enigmatry.Shop.VendorAPI
+[22:24:08 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/index.html - -
+[22:24:08 INF] Information details: 
+[22:24:08 WRN] Unable to configure browser refresh script injection on the response. Consider manually adding '<script src="/_framework/aspnetcore-browser-refresh.js"></script>' to the body of the page.
+[22:24:08 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/index.html - - - 200 - text/html;charset=utf-8 705.8966ms
+[22:24:08 INF] Request starting HTTP/2 GET https://localhost:7222/_vs/browserLink - -
+[22:24:09 INF] Request finished HTTP/2 GET https://localhost:7222/_vs/browserLink - - - 200 - text/javascript;+charset=UTF-8 167.2604ms
+[22:24:09 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/favicon-16x16.png - -
+[22:24:09 INF] Sending file. Request path: '/favicon-16x16.png'. Physical path: 'N/A'
+[22:24:09 INF] Information details: 
+[22:24:09 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/favicon-16x16.png - - - 200 665 image/png 41.1992ms
+[22:24:10 INF] Request starting HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - -
+[22:24:10 INF] Information details: 
+[22:24:10 INF] Request finished HTTP/2 GET https://localhost:7222/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 173.4507ms

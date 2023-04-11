@@ -8,6 +8,13 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{C89D19CA-D005-4DAB-B37C-983B11207CAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{41F5173F-FA30-4C2B-A9C8-FEC0D306CCF5}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\class-diagram.png = ..\..\..\Downloads\class-diagram.png
+		..\..\content-script.sql = ..\..\content-script.sql
+		..\..\..\Downloads\GetArticleOfferById-activity-diagram.png = ..\..\..\Downloads\GetArticleOfferById-activity-diagram.png
+		..\..\Local SQL Server Installation Guid.docx = ..\..\Local SQL Server Installation Guid.docx
+		..\..\migration-script.sql = ..\..\migration-script.sql
+	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{5A99A7B5-3C32-4BE1-B3BB-B87E574679E1}"
 EndProject
@@ -45,7 +52,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Logging.
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Application.Shared.UnitTests", "Homework.Enigmatry.Application.Shared.UnitTests\Homework.Enigmatry.Application.Shared.UnitTests.csproj", "{53E1E945-C760-41B8-9C75-578E963F6009}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework.Enigmatry.Shop.Application.UnitTests", "Homework.Enigmatry.Shop.Application.UnitTests\Homework.Enigmatry.Shop.Application.UnitTests.csproj", "{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Homework.Enigmatry.Shop.Application.UnitTests", "Homework.Enigmatry.Shop.Application.UnitTests\Homework.Enigmatry.Shop.Application.UnitTests.csproj", "{EEE179BD-8BAA-4C05-A52F-1EEFA2F1F75C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

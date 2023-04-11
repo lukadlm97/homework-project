@@ -68,7 +68,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
         }
 
         [Authorize(Roles = Constants.CustomerRole)]
-        [HttpGet("{id}/offers")]
+        [HttpGet("{id}/offer")]
         public async Task<ActionResult<ArticleDto>> GetOffers(int id, [FromQuery]ArticleRequestDto articleRequestDto,CancellationToken cancellationToken=default)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},maxPrice:{3})",
