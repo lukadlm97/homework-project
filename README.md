@@ -16,3 +16,24 @@ Before you run the application, please take a look at the appsettings.json file.
 Business logic notes:
 - If you are using SQL persistence configuration section ('UseInMemory' is set to 'true'), orders will be created only for articles that are stored in TheShop inventory in the database.
 - An article can be sold only once with the status 'IsDelete' set to 'false'. It can have just one order for an article with ID=1 and 'IsDelete' set to 'false' at any given time.
+
+## Useful links that I used as inspiration for the final solution
+Http client factory - https://learn.microsoft.com/en-us/dotnet/core/extensions/httpclient-factory
+
+Validation of strongly typed configuration - https://andrewlock.net/adding-validation-to-strongly-typed-configuration-objects-using-flentvalidation/
+
+High-Performance Logging in .NET Core -https://www.stevejgordon.co.uk/high-performance-logging-in-net-core
+
+Leave Management System - SOLID and Clean Architecture - https://github.com/trevoirwilliams/HR.LeaveManagement.NET6
+
+gRPC - https://learn.microsoft.com/en-us/aspnet/core/grpc/?view=aspnetcore-7.0
+
+Bcrypt - https://code-maze.com/dotnet-secure-passwords-bcrypt/
+
+CQRS - https://learn.microsoft.com/en-us/azure/architecture/patterns/cqrs
+
+xUnit - https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-dotnet-test
+
+Operation result pattern - https://medium.com/@cummingsi1993/the-operation-result-pattern-a-simple-guide-fe10ff959080
+
+Fluent Validation - https://github.com/FluentValidation/FluentValidation.AspNetCore
