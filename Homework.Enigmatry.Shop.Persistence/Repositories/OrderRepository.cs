@@ -23,9 +23,10 @@ namespace Homework.Enigmatry.Persistence.Shared
             throw new NotImplementedException();
         }
 
-        public Task<IReadOnlyList<Order>> GetAll()
+        public async Task<IReadOnlyList<Order>> GetAll()
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(OrderRepository), nameof(GetAll)));
+            return _inMemoryDbContext.List;
             throw new NotImplementedException();
         }
 

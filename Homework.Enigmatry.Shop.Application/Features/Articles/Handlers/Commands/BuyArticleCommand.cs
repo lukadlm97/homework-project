@@ -1,9 +1,11 @@
 ﻿using System.Runtime.Caching;
 using AutoMapper;
+using Homework.Enigmatry.Application.Shared.DTOs.Article;
 using Homework.Enigmatry.Application.Shared.DTOs.Common;
 using Homework.Enigmatry.Application.Shared.Models;
 using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
+using Homework.Enigmatry.Shop.Application.DTOs.Customer;
 using MediatR;
 using Homework.Enigmatry.Shop.Application.DTOs.Order;
 using Homework.Enigmatry.Shop.Application.Extensions;
@@ -81,7 +83,13 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Command
 
             _memoryCache.Remove(article.Id.CreateArticleCacheKey());
 
-            return new OperationResult<OrderDto>(OperationStatus.Success, _mapper.Map<OrderDto>(createdOrder));
+            return new OperationResult<OrderDto>(OperationStatus.Success, 
+                new OrderDto(
+                    order.Id,
+                    new ArticleDto(order.ArticleId,order.Article.Name,order.Article.Price),
+                    order.Price,
+                    new CustomerDto(order.CustomerId,order.Customer.Username))
+                );
         }
     }
 }

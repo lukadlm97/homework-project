@@ -45,7 +45,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
         }
 
         [Authorize(Roles = Constants.AdminRole)]
-        [HttpGet("")]
+        [HttpGet("local-inventory")]
         public async Task<ActionResult<ArticleDto>> Get([FromQuery]PagingRequestDto articlePagingDto, CancellationToken cancellationToken = default)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (params=size:{2},number:{3},filter:{4})", 

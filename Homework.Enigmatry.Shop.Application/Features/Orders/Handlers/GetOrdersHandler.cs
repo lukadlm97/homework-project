@@ -13,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Homework.Enigmatry.Shop.Application.Contracts;
+using Homework.Enigmatry.Shop.Application.DTOs.Customer;
 using Homework.Enigmatry.Shop.Application.DTOs.Order;
 using Homework.Enigmatry.Shop.Application.Features.Orders.Requests;
 using Homework.Enigmatry.Shop.Application.Features.Orders.Validators;
@@ -55,9 +56,13 @@ namespace Homework.Enigmatry.Shop.Application.Features.Orders.Handlers
            
 
             return new OperationResult<OrderDto>(OperationStatus.Success,
-                Results: _mapper.Map<IReadOnlyList<OrderDto>>(orders
+                Results: orders.Select(x=>new OrderDto(
+                    x.Id,
+                    new ArticleDto(x.ArticleId, x.Article.Name, x.Article.Price),
+                    x.Price,
+                    new CustomerDto(x.CustomerId, x.Customer.Username)))
                                 .Skip((request.PageNumber - 1) * request.PageSize)
-                                .Take(request.PageSize)),
+                                .Take(request.PageSize).ToList(),
                 TotalAvailable: orders.Count());
         }
     }
