@@ -12,8 +12,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{41F5173F-F
 		..\..\..\Downloads\class-diagram.png = ..\..\..\Downloads\class-diagram.png
 		..\..\content-script.sql = ..\..\content-script.sql
 		..\..\..\Downloads\GetArticleOfferById-activity-diagram.png = ..\..\..\Downloads\GetArticleOfferById-activity-diagram.png
-		..\..\Local SQL Server Installation Guid.docx = ..\..\Local SQL Server Installation Guid.docx
 		..\..\migration-script.sql = ..\..\migration-script.sql
+		..\..\Local SQL Server Installation Guide.docx = ..\..\Local SQL Server Installation Guide.docx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{5A99A7B5-3C32-4BE1-B3BB-B87E574679E1}"
