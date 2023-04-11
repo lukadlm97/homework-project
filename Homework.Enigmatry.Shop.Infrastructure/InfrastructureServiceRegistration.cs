@@ -11,8 +11,8 @@ namespace Homework.Enigmatry.Shop.Infrastructure
     {
         public static IServiceCollection ConfigureInfrastructureServices(this IServiceCollection services)
         {
-            services.AddScoped<IVendorRepository, VendorRepository>();
-            services.AddScoped<IVendorGrpcRepository, VendorGrpcRepository>();
+            services.AddScoped<IVendorProvider, VendorProvider>();
+            services.AddScoped<IVendorGrpcProvider, VendorGrpcProvider>();
             services.AddScoped<IVendorGrpcFactory, VendorGrpcFactory>();
             services.AddScoped<IVendorService, VendorService>();
             services.AddScoped<ITokenService, TokenService>();

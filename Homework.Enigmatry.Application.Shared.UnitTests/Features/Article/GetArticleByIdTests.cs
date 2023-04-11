@@ -32,7 +32,7 @@ namespace Homework.Enigmatry.Application.Shared.UnitTests.Features.Article
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
-        public async Task GetArticleById_ShouldReturnArticle(int id)
+        public async Task GetArticleById_ExistingArticleIds_ReturnArticle(int id)
         {
             var handler = new GetArticleByIdHandler(_articleRepositoryMock.Object,_mapper,new LogTraceData());
 
@@ -46,7 +46,7 @@ namespace Homework.Enigmatry.Application.Shared.UnitTests.Features.Article
         [InlineData(-1)]
         [InlineData(0)]
         [InlineData(10)]
-        public async Task GetArticleById_ShouldNotReturnArticle(int id)
+        public async Task GetArticleById_NotExistingArticleIds_NotReturnArticle(int id)
         {
             var handler = new GetArticleByIdHandler(_articleRepositoryMock.Object, _mapper, new LogTraceData());
 

@@ -6,13 +6,13 @@ using Microsoft.Extensions.Logging;
 
 namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
 {
-    public class VendorRepository : IVendorRepository
+    public class VendorProvider : IVendorProvider
     {
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly IHighPerformanceLogger _logger;
         private readonly LogTraceData _logTraceData;
 
-        public VendorRepository(IHighPerformanceLogger logger, IHttpClientFactory clientFactory,LogTraceData logTraceData)
+        public VendorProvider(IHighPerformanceLogger logger, IHttpClientFactory clientFactory,LogTraceData logTraceData)
         {
             _logger = logger;
             _httpClientFactory = clientFactory;
@@ -21,7 +21,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
         public async Task<ArticleDetailsDto?> GetArticle(int id, string vendorHttpClientName, CancellationToken cancellationToken = default)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},vendorHttpClientName:{3})",
-                nameof(VendorRepository), nameof(GetArticle),id,vendorHttpClientName));
+                nameof(VendorProvider), nameof(GetArticle),id,vendorHttpClientName));
             try
             {
                 var httpClient = _httpClientFactory.CreateClient(vendorHttpClientName);
@@ -45,7 +45,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
         public async Task<bool> IsArticleExist(int id, string vendorHttpClientName, CancellationToken cancellationToken = default)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2},vendorHttpClientName:{3})",
-                nameof(VendorRepository), nameof(IsArticleExist), id, vendorHttpClientName));
+                nameof(VendorProvider), nameof(IsArticleExist), id, vendorHttpClientName));
             try
             {
                 var httpClient = _httpClientFactory.CreateClient(vendorHttpClientName);

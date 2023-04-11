@@ -21,8 +21,8 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Features.Article
         private readonly IMapper _mapper;
         private readonly Mock<IArticleRepository> _articleRepositoryMock;
         private readonly Mock<IOrderRepository> _orderRepositoryMock;
-        private readonly Mock<IVendorRepository> _vendorRepositoryMock;
-        private readonly Mock<IVendorGrpcRepository> _grpcVendor;
+        private readonly Mock<IVendorProvider> _vendorRepositoryMock;
+        private readonly Mock<IVendorGrpcProvider> _grpcVendor;
         private readonly MemoryCache _memoryCache;
         private const decimal MaxLimitPricePass = 2200;
         private const int ArticleIdPass = 2;
@@ -49,7 +49,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Features.Article
         [InlineData(11)]
         [InlineData(12)]
         [InlineData(13)]
-        public async Task GetArticleOfferById_ShouldReturnArticleFromCache(int id)
+        public async Task GetArticleOfferById_ArticleExistingAtCache_ReturnArticle(int id)
         {
             var vendorOptions = Options.Create(new VendorSettings());
             var vendorService = new VendorService(vendorOptions, _vendorRepositoryMock.Object,_grpcVendor.Object,new LogTraceData());
@@ -67,7 +67,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Features.Article
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
-        public async Task GetArticleOfferById_ShouldReturnArticleFromArticleRepository(int id)
+        public async Task GetArticleOfferById_ArticleExistingAtRepository_ReturnArticle(int id)
         {
             var vendorOptions = Options.Create(new VendorSettings());
             var vendorService = new VendorService(vendorOptions, _vendorRepositoryMock.Object, _grpcVendor.Object, new LogTraceData());
@@ -85,7 +85,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Features.Article
         [InlineData(111)]
         [InlineData(112)]
         [InlineData(113)]
-        public async Task GetArticleOfferById_ShouldReturnArticleFromVendorRepository(int id)
+        public async Task GetArticleOfferById_ArticleExistingAtVendor_ReturnArticle(int id)
         {
             var vendorOptions = Options.Create(new VendorSettings());
             var vendorService = new VendorService(vendorOptions, _vendorRepositoryMock.Object, _grpcVendor.Object, new LogTraceData());
@@ -103,7 +103,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Features.Article
         [InlineData(1111)]
         [InlineData(1112)]
         [InlineData(1113)]
-        public async Task GetArticleOfferById_ShouldReturnArticleFromVendorGrpcRepository(int id)
+        public async Task GetArticleOfferById_ArticleExistingAtVendorGrpc_ReturnArticle(int id)
         {
             var vendorOptions = Options.Create(new VendorSettings());
             var vendorService = new VendorService(vendorOptions, _vendorRepositoryMock.Object, _grpcVendor.Object, new LogTraceData());
@@ -120,7 +120,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Features.Article
         [InlineData(20)]
         [InlineData(21)]
         [InlineData(22)]
-        public async Task GetArticleOfferById_ShouldReturnNotFoundArticle(int id)
+        public async Task GetArticleOfferById_ArticleNotExist_ReturnNotFoundArticle(int id)
         {
             var vendorOptions = Options.Create(new VendorSettings());
             var vendorService = new VendorService(vendorOptions, _vendorRepositoryMock.Object, _grpcVendor.Object, new LogTraceData());

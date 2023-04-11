@@ -7,7 +7,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Mocks
 {
     public static class MockVendorRepository
     {
-        public static Mock<IVendorRepository> GetVendorRepositoryMock()
+        public static Mock<IVendorProvider> GetVendorRepositoryMock()
         {
             var articles = new List<Article>()
             {
@@ -31,7 +31,7 @@ namespace Homework.Enigmatry.Shop.Application.UnitTests.Mocks
                 }
             };
 
-            var mockRepository = new Mock<IVendorRepository>();
+            var mockRepository = new Mock<IVendorProvider>();
 
             mockRepository.Setup(r => r
                     .IsArticleExist(It.IsAny<int>(),It.IsAny<string>(),It.IsAny<CancellationToken>()))

@@ -7,13 +7,13 @@ using Microsoft.Extensions.Logging;
 
 namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
 {
-    public class VendorGrpcRepository:IVendorGrpcRepository
+    public class VendorGrpcProvider:IVendorGrpcProvider
     {
         private readonly IVendorGrpcFactory _vendorGrpcFactory;
         private readonly IHighPerformanceLogger _logger;
         private readonly LogTraceData _logTraceData;
 
-        public VendorGrpcRepository(IHighPerformanceLogger logger, IVendorGrpcFactory vendorGrpcFactory,LogTraceData logTraceData)
+        public VendorGrpcProvider(IHighPerformanceLogger logger, IVendorGrpcFactory vendorGrpcFactory,LogTraceData logTraceData)
         {
             _logger = logger;
             _vendorGrpcFactory = vendorGrpcFactory;
@@ -21,7 +21,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
         }
         public async Task<ArticleDetailsDto?> GetArticle(int id, CancellationToken cancellationToken = default)
         {
-            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(VendorGrpcRepository), nameof(GetArticle),id));
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(VendorGrpcProvider), nameof(GetArticle),id));
             try
             {
                 var grpcClient = _vendorGrpcFactory.GetVendorClient();
@@ -44,7 +44,7 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
 
         public async Task<bool> IsArticleExist(int id, CancellationToken cancellationToken = default)
         {
-            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(VendorGrpcRepository), nameof(IsArticleExist), id));
+            _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (id:{2})", nameof(VendorGrpcProvider), nameof(IsArticleExist), id));
             try
             {
                 var grpcClient = _vendorGrpcFactory.GetVendorClient();

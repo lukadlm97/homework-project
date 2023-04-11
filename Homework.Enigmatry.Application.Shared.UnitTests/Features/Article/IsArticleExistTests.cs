@@ -38,7 +38,7 @@ namespace Homework.Enigmatry.Application.Shared.UnitTests.Features.Article
         [InlineData(1)]
         [InlineData(2)]
         [InlineData(3)]
-        public async Task IsArticleExist_ShouldReturnTrue(int id)
+        public async Task IsArticleExist_ExistingArticleIds_ReturnTrue(int id)
         {
             var handler = new IsArticleExistHandler(_articleRepositoryMock.Object, new LogTraceData());
 
@@ -51,7 +51,7 @@ namespace Homework.Enigmatry.Application.Shared.UnitTests.Features.Article
         [InlineData(-1)]
         [InlineData(0)]
         [InlineData(10)]
-        public async Task IsArticleExist_ShouldReturnFalse(int id)
+        public async Task IsArticleExist_NotExistingArticleIds_ReturnFalse(int id)
         {
             var handler = new IsArticleExistHandler(_articleRepositoryMock.Object, new LogTraceData());
 

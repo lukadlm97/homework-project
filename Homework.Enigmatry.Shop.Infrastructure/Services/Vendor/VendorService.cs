@@ -8,12 +8,12 @@ namespace Homework.Enigmatry.Shop.Infrastructure.Services.Vendor
 {
     public class VendorService : IVendorService
     {
-        private readonly IVendorRepository _vendorRepository;
+        private readonly IVendorProvider _vendorRepository;
         private readonly VendorSettings _vendorSettings;
-        private readonly IVendorGrpcRepository _vendorGrpcRepository;
+        private readonly IVendorGrpcProvider _vendorGrpcRepository;
         private readonly LogTraceData _logTraceData;
 
-        public VendorService(IOptions<VendorSettings> options, IVendorRepository vendorRepository,IVendorGrpcRepository vendorGrpcRepository,LogTraceData logTraceData)
+        public VendorService(IOptions<VendorSettings> options, IVendorProvider vendorRepository,IVendorGrpcProvider vendorGrpcRepository,LogTraceData logTraceData)
         {
             _vendorRepository = vendorRepository;
             _vendorGrpcRepository = vendorGrpcRepository;
