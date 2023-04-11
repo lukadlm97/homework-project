@@ -12,6 +12,7 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Queri
             RuleFor(article => article.Id);
             RuleFor(article => article.MaxPriceLimit)
                 .GreaterThan(0)
+                .LessThan(decimal.MaxValue)
                 .WithMessage("Max price limit should be greater than 0"); 
         }
 

@@ -1,11 +1,11 @@
 ﻿using FluentValidation;
-using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
+using Homework.Enigmatry.Shop.Application.Features.Orders.Requests;
 
-namespace Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Queries
+namespace Homework.Enigmatry.Shop.Application.Features.Orders.Validators
 {
-    public class GetArticlesValidator : AbstractValidator<GetArticlesRequest>
+    internal class GetOrdersValidator : AbstractValidator<GetOrdersRequest>
     {
-        public GetArticlesValidator()
+        public GetOrdersValidator()
         {
             RuleFor(request => request.PageSize)
                 .GreaterThan(0)

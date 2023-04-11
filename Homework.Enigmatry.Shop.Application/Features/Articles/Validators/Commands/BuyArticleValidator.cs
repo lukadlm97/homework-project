@@ -30,7 +30,7 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Validators.Comma
                            string.Compare(customer.Role,Constants.Constants.CustomerRole,StringComparison.InvariantCulture)==0;
                 }).WithMessage("Customer must be authorized at customer role.");
             RuleFor(request => request.ArticleId)
-                .MustAsync(async (id, token) =>
+                .MustAsync(async (id,cancellationToken) =>
                 {
                     var key = id.CreateArticleCacheKey();
                     object? itemFromCache = _memoryCache.Get(key);

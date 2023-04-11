@@ -10,7 +10,8 @@ namespace Homework.Enigmatry.Shop.Application.Profiles
         public MappingProfile()
         {
             CreateMap<ArticleDetailsDto, Article>();
-            CreateMap<Order, OrderDto>().ReverseMap();
+            CreateMap<Order, OrderDto>() .ReverseMap();
+
 
         }
     }

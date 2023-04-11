@@ -48,10 +48,11 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Queries
                 filteredArticles = articles.Where(x => x.Name.Contains(request.Filter));
             }
 
-            return new OperationResult<ArticleDto>(OperationStatus.Success,Results:
-                _mapper.Map<IReadOnlyList<ArticleDto>>(filteredArticles
-                    .Skip((request.PageNumber - 1)* request.PageSize)
-                    .Take(request.PageSize)));
+            return new OperationResult<ArticleDto>(OperationStatus.Success,
+                Results: _mapper.Map<IReadOnlyList<ArticleDto>>(filteredArticles
+                                .Skip((request.PageNumber - 1)* request.PageSize)
+                                .Take(request.PageSize)),
+                TotalAvailable: articles.Count());
         }
     }
 }

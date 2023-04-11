@@ -4,6 +4,7 @@ using Homework.Enigmatry.Application.Shared.Exceptions;
 using Homework.Enigmatry.Application.Shared.Features.Articles.Requests.Queries;
 using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Constants;
+using Homework.Enigmatry.Shop.Application.DTOs;
 using Homework.Enigmatry.Shop.Application.DTOs.Article;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Commands;
 using Homework.Enigmatry.Shop.Application.Features.Articles.Requests.Queries;
@@ -45,7 +46,7 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
 
         [Authorize(Roles = Constants.AdminRole)]
         [HttpGet("")]
-        public async Task<ActionResult<ArticleDto>> Get([FromQuery]ArticlePagingDto articlePagingDto, CancellationToken cancellationToken = default)
+        public async Task<ActionResult<ArticleDto>> Get([FromQuery]PagingRequestDto articlePagingDto, CancellationToken cancellationToken = default)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1} (params=size:{2},number:{3},filter:{4})", 
                 nameof(ArticleController), nameof(Get), articlePagingDto.PageSize,articlePagingDto.PageNumber,articlePagingDto.Filter));
@@ -56,9 +57,10 @@ namespace Homework.Enigmatry.Shop.Presentation.Controllers
                 PageSize = articlePagingDto.PageSize,
                 PageNumber = articlePagingDto.PageNumber
             }, cancellationToken);
+
             return articleOperationResult.Status switch
             {
-                OperationStatus.Success => Ok(articleOperationResult.Results),
+                OperationStatus.Success => Ok(new {Articles = articleOperationResult.Results,TotalAvailableArticles=articleOperationResult.TotalAvailable}),
                 OperationStatus.InvalidValues => BadRequest(articleOperationResult.ErrorMessage),
                 OperationStatus.NotExist => NotFound(),
                 _ => throw new UnclearOperationsResultException("")

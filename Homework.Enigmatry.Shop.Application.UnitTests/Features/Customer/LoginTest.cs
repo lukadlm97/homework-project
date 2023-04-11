@@ -1,15 +1,8 @@
 ﻿using Homework.Enigmatry.Application.Shared.Contracts;
 using Homework.Enigmatry.Logging.Shared.Contracts;
 using Homework.Enigmatry.Shop.Application.Contracts;
-using Homework.Enigmatry.Shop.Application.Features.Customer.Handlers.Commands;
-using Homework.Enigmatry.Shop.Application.Features.Customer.Requests.Commands;
 using Homework.Enigmatry.Shop.Application.UnitTests.Mocks;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using FluentAssertions;
 using Homework.Enigmatry.Shop.Application.Features.Customer.Handlers.Queries;
 using Homework.Enigmatry.Shop.Application.Features.Customer.Requests.Queries;

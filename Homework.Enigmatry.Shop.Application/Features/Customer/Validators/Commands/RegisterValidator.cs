@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using FluentValidation;
+﻿using FluentValidation;
 using Homework.Enigmatry.Shop.Application.Features.Customer.Requests.Commands;
 
 namespace Homework.Enigmatry.Shop.Application.Features.Customer.Validators.Commands
