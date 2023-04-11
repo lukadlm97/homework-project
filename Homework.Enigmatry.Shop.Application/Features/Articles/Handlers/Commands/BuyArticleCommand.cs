@@ -88,7 +88,8 @@ namespace Homework.Enigmatry.Shop.Application.Features.Articles.Handlers.Command
                     order.Id,
                     new ArticleDto(order.ArticleId,order.Article.Name,order.Article.Price),
                     order.Price,
-                    new CustomerDto(order.CustomerId,order.Customer.Username))
+                    new CustomerDto(order.CustomerId,order.Customer.Username),
+                    !order.IsDeleted,order.Date)
                 );
         }
     }

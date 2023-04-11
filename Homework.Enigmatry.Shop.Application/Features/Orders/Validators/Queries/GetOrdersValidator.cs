@@ -1,9 +1,9 @@
 ﻿using FluentValidation;
-using Homework.Enigmatry.Shop.Application.Features.Orders.Requests;
+using Homework.Enigmatry.Shop.Application.Features.Orders.Requests.Queries;
 
-namespace Homework.Enigmatry.Shop.Application.Features.Orders.Validators
+namespace Homework.Enigmatry.Shop.Application.Features.Orders.Validators.Queries
 {
-    internal class GetOrdersValidator : AbstractValidator<GetOrdersRequest>
+    public class GetOrdersValidator : AbstractValidator<GetOrdersRequest>
     {
         public GetOrdersValidator()
         {

@@ -2,7 +2,7 @@
 using Homework.Enigmatry.Shop.Application.DTOs.Order;
 using MediatR;
 
-namespace Homework.Enigmatry.Shop.Application.Features.Orders.Requests
+namespace Homework.Enigmatry.Shop.Application.Features.Orders.Requests.Queries
 {
     public class GetOrdersRequest : IRequest<OperationResult<OrderDto>>
     {

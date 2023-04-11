@@ -44,6 +44,7 @@ namespace Homework.Enigmatry.Persistence.Shared.Repositories.DbRepositories
             catch (Exception ex)
             {
                 _highPerformanceLogger.Log(ex.Message,ex,LogLevel.Error);
+                throw;
             }
      
         }

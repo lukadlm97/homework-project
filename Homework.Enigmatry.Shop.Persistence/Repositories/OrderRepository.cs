@@ -17,17 +17,16 @@ namespace Homework.Enigmatry.Persistence.Shared
         }
 
 
-        public Task<Order?> Get(int id)
+        public async Task<Order?> Get(int id)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(OrderRepository), nameof(Get)));
-            throw new NotImplementedException();
+            return _inMemoryDbContext.List.FirstOrDefault(x => x.Id == id);
         }
 
         public async Task<IReadOnlyList<Order>> GetAll()
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(OrderRepository), nameof(GetAll)));
             return _inMemoryDbContext.List;
-            throw new NotImplementedException();
         }
 
         public async Task<Order> Add(Order entity)
@@ -40,16 +39,20 @@ namespace Homework.Enigmatry.Persistence.Shared
             return entity;
         }
 
-        public Task<bool> Exists(int id)
+        public async Task<bool> Exists(int id)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(OrderRepository), nameof(Exists)));
-            throw new NotImplementedException();
+            return _inMemoryDbContext.List.Any(x => x.Id == id);
         }
 
-        public Task Update(Order entity)
+        public async Task Update(Order entity)
         {
             _logTraceData.RequestPath.Add(string.Format("{0} -> {1}", nameof(OrderRepository), nameof(Update)));
-            throw new NotImplementedException();
+            var item = _inMemoryDbContext.List.First(x => x.Id == entity.Id);
+            item.IsDeleted=entity.IsDeleted;
+            item.Date=entity.Date;
+            item.Price=entity.Price;
+
         }
 
         public Task Delete(Order entity)

@@ -14,9 +14,12 @@ namespace Homework.Enigmatry.Persistence.Shared.Repositories.DbRepositories
             _shopDbContext = shopDbContext;
         }
     
-        public Task<Order?> Get(int id)
+        public async Task<Order?> Get(int id)
         {
-            throw new NotImplementedException();
+            return await _shopDbContext.Orders
+                .Include(x => x.Article)
+                .Include(x => x.Customer)
+                .FirstOrDefaultAsync(x=>x.Id==id);
         }
 
         public async Task<IReadOnlyList<Order>> GetAll()
@@ -33,14 +36,14 @@ namespace Homework.Enigmatry.Persistence.Shared.Repositories.DbRepositories
              return entity;
         }
 
-        public Task<bool> Exists(int id)
+        public async Task<bool> Exists(int id)
         {
-            throw new NotImplementedException();
+            return await _shopDbContext.Orders.AnyAsync(x => x.Id == id);
         }
 
-        public Task Update(Order entity)
+        public async Task Update(Order entity)
         {
-            throw new NotImplementedException();
+             _shopDbContext.Orders.Update(entity);
         }
 
         public Task Delete(Order entity)

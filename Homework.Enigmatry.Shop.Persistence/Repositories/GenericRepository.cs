@@ -32,9 +32,11 @@ namespace Homework.Enigmatry.Persistence.Shared
             return _inMemoryDbContext.List.SingleOrDefault(x => x.Id == id)!=null;
         }
 
-        public Task Update(T entity)
+        public async Task Update(T entity)
         {
-            throw new NotImplementedException();
+            var item = _inMemoryDbContext.List.First(x => x.Id == entity.Id);
+            _inMemoryDbContext.List.Remove(item);
+            _inMemoryDbContext.List.Add(entity);
         }
 
         public async Task Delete(T entity)
