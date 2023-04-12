@@ -37,3 +37,6 @@ xUnit - https://learn.microsoft.com/en-us/dotnet/core/testing/unit-testing-with-
 Operation result pattern - https://medium.com/@cummingsi1993/the-operation-result-pattern-a-simple-guide-fe10ff959080
 
 Fluent Validation - https://github.com/FluentValidation/FluentValidation.AspNetCore
+
+
+## Note that password for all accounts is "Password123."
