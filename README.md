@@ -14,7 +14,7 @@ As you can see, the solution has 16 projects and three folders. In the docs fold
 Before you run the application, please take a look at the appsettings.json file. All the fine configurations are specified there. If you want to try the app with a persistent database (not an in-memory solution), set 'UseInMemory' to 'true' and check if the 'Data' property has the correct value. Other configurations are nice to have, but not too important to be changed.
 
 Business logic notes:
-- If you are using SQL persistence configuration section ('UseInMemory' is set to 'true'), orders will be created only for articles that are stored in TheShop inventory in the database.
+- If you are using SQL persistence configuration section ('UseInMemory' is set to 'false'), orders will be created only for articles that are stored in TheShop inventory in the database.
 - An article can be sold only once with the status 'IsDelete' set to 'false'. It can have just one order for an article with ID=1 and 'IsDelete' set to 'false' at any given time.
 
 ## Useful links that I used as inspiration for the final solution
